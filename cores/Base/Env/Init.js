@@ -92,10 +92,23 @@ module.exports = async (_opt, _param) => {
       rtn = await BaseDB.DestroyDatabase(o);
     }));
 
-    await Promise.all(_.map(_init.InitOperations, async (o, i) => {
-      await o();
-    }));
+    initoperSuccess = true;
 
+    let keys = Object.keys(_init.InitOperations);
+    for(let i=0; i<keys.length; i++){
+      o = _init.InitOperations[keys[i]];
+      try{
+        let ioRes = await o();
+        if(!ioRes.Success){
+          throw new Error(ioRes.payload.Error);
+        }
+      }catch(e){
+        let msg = "Init Operations Errors.";
+        console.error(Chalk.CLog('[x]', msg, [catName, actName]));
+        console.error(e);
+        throw new Error(msg);
+      }
+    };
 
     //FINISH
     dbName = DBNAME.Config;

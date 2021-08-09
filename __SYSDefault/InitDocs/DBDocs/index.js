@@ -4,4 +4,4 @@ const Logics = require('./Logics');
 module.exports = {
   Countries,
   Logics
-};
+}
