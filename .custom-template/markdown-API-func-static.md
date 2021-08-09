@@ -1,0 +1,1 @@
+<span style="color: #569CD6">static</span>

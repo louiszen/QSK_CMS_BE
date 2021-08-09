@@ -1,0 +1,1 @@
+| Success | `Boolean` ||| Indicates whether the operation is successful |
