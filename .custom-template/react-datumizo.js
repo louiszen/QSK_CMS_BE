@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Accessor from '__Static/Accessor';
+
+import { Box, Typography } from '@material-ui/core';
 
 import schema from './schema';
 import datalink from './datalink';
-import { VStack } from '_Labizo/Stackizo';
-import Datumizo from '_Labizo/Datumizo/Datumizo';
-import { Box, Typography } from '@material-ui/core';
-import ColorX from '__Static/ColorX';
-import Authority from '__Static/Authority';
+
+import Datumizo from '@IZOArc/LabIZO/Datumizo/Datumizo';
+import { VStack } from '@IZOArc/LabIZO/Stackizo';
+import { Accessor, ColorX, Authority } from '@IZOArc/STATIC';
 
 class ${1} extends Component {
 

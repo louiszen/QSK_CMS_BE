@@ -1,4 +1,4 @@
-const _base = require('../../../@IZOGears/__ZBase');
+const _base = require('../../../__ZBase');
 const _remote = require('../../../remoteConfig');
 
 const path = require('path');
@@ -9,7 +9,7 @@ const {Chalk, Response} = _base.Utils;
 
 module.exports = async (_opt, _param) => {
 
-  let db = await _remote.BaseDB();
+  let db = await _remote.RemoteDB();
   let dbname = await _remote.GetDBName(catName);
 
   
