@@ -28,14 +28,36 @@ module.exports = async () => {
       res = await db.Insert(dbName, o);
     }));
 
-    dbName = ConfigDocs.DBNAME.Answer;
+    dbName = ConfigDocs.DBNAME.QUAReq;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.Logics.Answer, async (o, i) => {
+    await Promise.all(_.map(DBDocs.Logics.QUAReq, async (o, i) => {
+      res = await db.Insert(dbName, o);
+    }));
+
+    dbName = ConfigDocs.DBNAME.BNEReq;
+    res = await db.DestroyDatabase(dbName);
+    res = await db.CreateDatabase(dbName);
+    if(!res.Success){
+      throw new Error(res.payload.Error)
+    }
+
+    await Promise.all(_.map(DBDocs.Logics.BNEReq, async (o, i) => {
+      res = await db.Insert(dbName, o);
+    }));
+
+    dbName = ConfigDocs.DBNAME.APProc;
+    res = await db.DestroyDatabase(dbName);
+    res = await db.CreateDatabase(dbName);
+    if(!res.Success){
+      throw new Error(res.payload.Error)
+    }
+
+    await Promise.all(_.map(DBDocs.Logics.APProc, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 

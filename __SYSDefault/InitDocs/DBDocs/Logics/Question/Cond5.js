@@ -1,5 +1,8 @@
+const moment = require('moment');
+
 const doc = {
   _id: "Cond5",
+  lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   order: 6,
   type: "question",
   variant: "yesno",

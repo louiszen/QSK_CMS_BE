@@ -2,8 +2,9 @@ const moment = require("moment");
 
 const doc = {
   _id: "4",
+  lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   display: "Taiwan",
-  destails: [
+  details: [
     {
       severity: 3,
       period: 14,
@@ -12,8 +13,7 @@ const doc = {
         End: null
       }
     }
-  ],
-  lastUpdate: moment('2021/06/03', 'YYYY/MM/DD')
+  ]
 };
 
 module.exports = doc;

@@ -1,5 +1,5 @@
-const MC = require('./MC');
+const Rec1 = require('./Rec1');
 
 module.exports = {
-  MC
+  Rec1
 };

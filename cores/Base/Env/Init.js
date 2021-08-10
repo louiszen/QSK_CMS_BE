@@ -24,7 +24,7 @@ module.exports = async (_opt, _param) => {
 
   let DBNAME = _init.ConfigDocs.DBNAME;
 
-  console.log(Chalk.CLog('[-]', "Initialize project for [" + env + "]", [catName, actName]))
+  console.log(Chalk.CLog('[-]', "Initialize project for [" + env + "]", [catName, actName]));
 
   try {
     //Create Config Database
@@ -113,6 +113,7 @@ module.exports = async (_opt, _param) => {
     //FINISH
     dbName = DBNAME.Config;
     rtn = await db.Insert(dbName, _init.ConfigDocs.INITIALIZED);
+    console.log(Chalk.CLog('[v]', "Project for [" + env + "] initialized successfully.", [catName, actName]));
 
     _remote.ClearCache();
     Authorize.RefreshRemoteUsers();

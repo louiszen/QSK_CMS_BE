@@ -6,7 +6,9 @@ const doc = {
   Grouping: 'grouping',
   Severity: 'severity',
   Question: 'question',
-  Answer: 'answer',
+  QUAReq: 'quareq',
+  APProc: 'approc',
+  BNEReq: 'bnereq',
   Scenario: 'scenario'
 };
 
