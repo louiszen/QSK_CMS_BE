@@ -9,7 +9,8 @@ const doc = {
   QUAReq: 'quareq',
   APProc: 'approc',
   BNEReq: 'bnereq',
-  Scenario: 'scenario'
+  Scenario: 'scenario',
+  Answer: 'answer'
 };
 
 module.exports = doc;

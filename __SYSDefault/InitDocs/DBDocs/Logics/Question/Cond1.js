@@ -25,14 +25,14 @@ const doc = {
     extDB: true,
     dbName: "Location",
     display: "display",
-    useMapping: true,
+    applyMapping: true,
     mapping: {
       extDB: true,
       dbName: "Grouping",
       link: "location",
-      value: "group"
+      value: "value"
     },
-    useInduction: true,
+    applyInduction: true,
     induction: "min",
   }
 }
