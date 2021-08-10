@@ -1,7 +1,7 @@
 const config = {
   Console: true,
   AutoInit: true,
-  name: "Quick Starter Kit (Backend)",
+  name: "HKAA COVID19 (Backend)",
   jwtTokenSecret: "QSK_BE",
   jwtExpire: 1000 * 60 * 60 * 24 * 7,
   Server: {

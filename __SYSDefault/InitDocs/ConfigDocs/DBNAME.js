@@ -10,7 +10,8 @@ const doc = {
   APProc: 'approc',
   BNEReq: 'bnereq',
   Scenario: 'scenario',
-  Answer: 'answer'
+  Answer: 'answer',
+  UserRec: 'xuserrecord'
 };
 
 module.exports = doc;
