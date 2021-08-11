@@ -1,7 +1,9 @@
 const moment = require('moment');
+const { v1 } = require('uuid');
 
 const doc = {
-  _id: "Verdict1",
+  _id: v1(),
+  refID: "Verdict1",
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   order: 4,
   type: "verdict",

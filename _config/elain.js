@@ -27,7 +27,7 @@ const config = {
           BASE: "http://",
           USERNAME: "admin",
           PASSWORD: "password",
-          URL: "localhost:5984",
+          URL: "192.168.100.154:5984",
         }
       },
     },
