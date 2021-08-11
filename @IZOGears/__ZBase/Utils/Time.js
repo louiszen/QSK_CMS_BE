@@ -26,6 +26,14 @@ class Time {
 
   /**
    * 
+   * @param {*} obj 
+   */
+  static IsMoment(obj){
+    return moment.isMoment(obj);
+  }
+
+  /**
+   * 
    * @param {String} str 
    * @param {String} format 
    */

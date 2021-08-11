@@ -22,10 +22,10 @@ class ${1} extends Component {
   constructor(){
     super();
     this.state = {
-      title: "${2}",
+      title: "${3}",
       serverSidePagination: false, 
       base: {
-        title: "${3}",
+        title: "${2}",
         exportDoc: "${4}",
         schema: schema,
         reqAuth: "${5}",
@@ -34,6 +34,9 @@ class ${1} extends Component {
         filterToolbar: true,
         densityToolbar: true,
         exportToolbar: false,
+        density: "standard",
+        defaultPageSize: 25,
+        showSelector: true,
 
         Connect: {
           DBInfo: datalink.Request.DBInfo,
@@ -42,38 +45,57 @@ class ${1} extends Component {
         },
 
         Add: {
-          title: "Add ${1}",
+          title: "Add ${2}",
           url: datalink.Request.Add,
-          success: "${1} Added Successfully",
-          fail: "${1} Add Failed: ",
+          success: "${2} Added Successfully",
+          fail: "${2} Add Failed: ",
           schema: schema.Add,
           buttons: ["Clear", "Submit"],
           onSubmit: "Add"
         },
         Delete: {
-          title: "Delete this ${1}?",
+          title: "Delete this ${2}?",
           content: "Caution: This is irrevertable.",
           url: datalink.Request.Delete,
-          success: "${1} Deleted Successfully.",
-          fail: "${1} Delete Failed: ",
+          success: "${2} Deleted Successfully.",
+          fail: "${2} Delete Failed: ",
           onSubmit: "Delete"
         },
         Edit: {
-          title: "Edit ${1} ",
+          title: "Edit ${2} ",
           url: datalink.Request.Edit,
-          success: "${1} Edited Successfully",
-          fail: "${1} Edit Failed: ",
+          success: "${2} Edited Successfully",
+          fail: "${2} Edit Failed: ",
           schema: schema.Edit,
           buttons: ["Revert", "Submit"],
           onSubmit: "Edit"
         },
         Info: {
-          title: "${1} ",
+          title: "${3} ",
           url: datalink.Request.Info,
-          success: "${1} Load Successfully",
-          fail: "${1} Load Failed: ",
+          success: "${3} Load Successfully",
+          fail: "${3} Load Failed: ",
           schema: schema.Info,
           readOnly: true
+        },
+        Import: {
+          title: "${2} Import",
+          content: "",
+          url: datalink.Request.Import,
+          success: "${2} Imported Successfully.",
+          fail: "${2} Import Failed: ",
+        },
+        Export: {
+          url: datalink.Request.Export,
+          schema: schema.Export,
+        },
+        DeleteBulk: {
+          title: (n) => "Delete these " + n + " ${2}?",
+          content: "Caution: This is irrevertable.",
+          url: datalink.Request.DeleteBulk,
+          success: "${2} Deleted Successfully.",
+          fail: "${2} Delete Failed: ",
+          onSubmit: "DeleteBulk",
         },
 
         buttons: {
@@ -82,9 +104,10 @@ class ${1} extends Component {
             { icon: "info", func: "Info", caption: "Details" },
             { icon: "delete", func: "Delete", caption: "Delete", reqFunc: "Delete" },
           ],
-          left: [{ icon: "add", func: "Add", caption: "Add ${1}", reqFunc: "Add" }],
+          left: [{ icon: "add", func: "Add", caption: "Add ${2}", reqFunc: "Add" }],
           right: [
-            { icon: "export", func: "Export", caption: "Export", reqFunc: "Export" },
+            { icon: "deletebulk", func: "DeleteBulk", caption: (n) => "Delete (" + n + ")", reqFunc: "Delete", theme: "caution" },
+            { icon: "export", func: "Export", caption: (n) => "Export (" + (n === 0 ? "All" : n) + ")", reqFunc: "Export" },
             { icon: "import", func: "Import", caption: "Import", reqFunc: "Import" },
           ],
         },

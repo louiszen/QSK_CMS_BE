@@ -1,9 +1,9 @@
 const Grouping = require('./Grouping');
 const Location = require('./Location');
-const Severity = require('./Severity');
+const SevGroup = require('./SevGroup');
 
 module.exports = {
   Grouping,
   Location,
-  Severity
+  SevGroup
 }

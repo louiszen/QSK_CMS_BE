@@ -4,6 +4,7 @@ const ExcelJS = require('exceljs');
 const Chalk = require('./Chalk');
 const Accessor = require('./Accessor');
 const { parseInt } = require('lodash');
+const Time = require('./Time');
 
 class Excel{
 
@@ -208,7 +209,19 @@ class Excel{
 
           iname = snames.join('.');
           let ivalue = o.getCell(v.col).value;
-          if(!_.isEmpty(ivalue) || ivalue === 0){
+          if(ivalue && v.format){
+            ivalue = this.toType(ivalue, v.format);
+            if(Time.IsMoment(ivalue) 
+              && v.dateMod 
+              && (v.format === "date" || v.format === "datetime")){
+              switch (v.dateMod){
+                case "startOfDay": ivalue = Time.StartOfDay(ivalue); break;
+                case "endOfDay": ivalue = Time.EndOfDay(ivalue); break;
+              }
+            }
+          }
+          console.log(ivalue, _.isEmpty(ivalue));
+          if(!_.isUndefined(ivalue)){
             Accessor.Set(doc, iname, typeof(ivalue) == "string"? ivalue.trim() : ivalue);
           }
 
@@ -241,19 +254,20 @@ class Excel{
         iname += ".*" + col;
         col = this.ModSchema(mod, iname, o.array, level + 1, col);
       }else{
-        this.ModSchemaValue(mod, col, iname, level, o.format, i);
+        this.ModSchemaValue(mod, col, iname, level, o.type, i, o);
         col++;
       }
     });
     return col;
   }
 
-  static ModSchemaValue(mod, col, name, level, format, idx){
+  static ModSchemaValue(mod, col, name, level, type, idx, ischema){
     mod.push({
+      ...ischema,
       col: col, 
       name: name, 
       level: level,
-      key: format == "key",
+      key: type == "key",
       startArray: idx == 0
     });
   }
@@ -332,9 +346,9 @@ class Excel{
           row = rtn._row;
           max = row > max ? row : max;
         }else{
-          switch(x.format){
+          switch(x.type){
             case "value": default: 
-              col = this.FillValue(worksheet, row, col, null, x.name);
+              col = this.FillValue(worksheet, row, col, null, x);
             break;
             case "key": 
               col = this.FillKey(worksheet, row, col, i);
@@ -358,9 +372,9 @@ class Excel{
             row = rtn._row;
             max = row > max ? row : max;
           }else{
-            switch(x.format){
+            switch(x.type){
               case "value": default: 
-                col = this.FillValue(worksheet, row, col, o, x.name);
+                col = this.FillValue(worksheet, row, col, o, x);
               break;
               case "key": 
                 col = this.FillKey(worksheet, row, col, i);
@@ -381,8 +395,11 @@ class Excel{
     }
   }
 
-  static FillValue(worksheet, row, col, doc, name){
+  static FillValue(worksheet, row, col, doc, xschema){
+    let name = xschema.name;
     let value = _.isEmpty(name)? doc : Accessor.Get(doc, name);
+
+    value = this.toType(value, xschema.format, xschema.dateFormat);
     worksheet.getCell(row, col).value = value;
     return col + 1;
   }
@@ -390,6 +407,44 @@ class Excel{
   static FillKey(worksheet, row, col, key){
     worksheet.getCell(row, col).value = key;
     return col + 1;
+  }
+
+  static toType(value, format = "string", dateFormat){
+    if(Time.IsMoment(value)){
+      switch(format){
+        case 'string': return value;
+        case 'number': return Number(value);
+        case 'boolean': return (value.toLowerCase() === 'true');
+        case "date": return value.format(dateFormat || "YYYY/MM/DD");
+        case "datetime": return value.format(dateFormat || "YYYY/MM/DD HH:mm:ss");
+        default: return value;
+      }
+    }else if(typeof value === 'string'){
+      switch(format){
+        case 'string': return value;
+        case 'number': return Number(value);
+        case 'boolean': return (value.toLowerCase() === 'true');
+        case "date": return Time.Parse(value, dateFormat || "YYYY/MM/DD"); 
+        case "datetime": return Time.Parse(value, dateFormat || "YYYY/MM/DD HH:mm:ss"); 
+        default: return value;
+      }
+    }else if(typeof value === 'boolean'){
+      switch(format){
+        case 'string': return value.toString();
+        case 'number': return value ? 1: 0;
+        case 'boolean': return value;
+        default: return value;
+      }
+    }else if(typeof value === 'number'){
+      switch(format){
+        case 'string': return value.toString();
+        case 'number': return value;
+        case 'boolean': return value!==0;
+        default: return value;
+      }
+    }else{
+      return value;
+    }
   }
 }
 

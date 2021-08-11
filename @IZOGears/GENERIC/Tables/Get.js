@@ -1,4 +1,4 @@
-const _base = require('../../../@IZOGears/__ZBase');
+const _base = require('../../__ZBase');
 const _remote = require('../../../remoteConfig');
 
 const path = require('path');
@@ -7,20 +7,24 @@ const actName = path.basename(__filename, path.extname(__filename));
 
 const {Chalk, Response} = _base.Utils;
 
-/* IMPORTANT: Generic Scripts Automation depends on FOLDER name */
-
 module.exports = async (_opt, _param) => {
 
   let db = await _remote.BaseDB();
   let dbname = await _remote.GetDBName(_param.subcat);
-  let rtn = await db.Insert(dbname, _opt.data);
 
-  console.log(Chalk.CLog("[-]", _opt.data, [_param.subcat, _param.action]));
+  let {data} = _opt;
 
-  if(rtn.Success){
-    return Response.Send(true, rtn.payload, "");
-  }else{
-    return Response.SendError(9001, rtn.payload);
+  let {docID} = data;
+
+  let res = await db.getDocQ(dbname, docID);
+  if(!res.Success){
+    let msg = res.payload.Message;
+    console.log(Chalk.CLog("[!]", msg, [_param.subcat, _param.action]));
+    return Response.SendError(9001, res.payload);
   }
+
+  return Response.Send(true, res.payload, "");
+
+  
 
 }

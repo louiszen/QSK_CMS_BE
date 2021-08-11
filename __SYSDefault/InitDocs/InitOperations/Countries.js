@@ -39,14 +39,14 @@ module.exports = async () => {
       res = await db.Insert(dbName, o);
     }));
 
-    dbName = ConfigDocs.DBNAME.Severity;
+    dbName = ConfigDocs.DBNAME.SevGroup;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.Countries.Severity, async (o, i) => {
+    await Promise.all(_.map(DBDocs.Countries.SevGroup, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 

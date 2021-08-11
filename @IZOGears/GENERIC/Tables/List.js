@@ -1,4 +1,4 @@
-const _base = require('../../../@IZOGears/__ZBase');
+const _base = require('../../__ZBase');
 const _remote = require('../../../remoteConfig');
 
 const path = require('path');
@@ -18,14 +18,6 @@ module.exports = async (_opt, _param) => {
   let dbname = await _remote.GetDBName(_param.subcat);
 
   let {data} = _opt;
-
-  if(!data.fields) data.fields = [];
-  if(!data.sort && _.isEmpty(data.selector)) {
-    data.sort = [{inTime : 'desc'}];
-    data.selector = {
-      inTime: {$gte: 0}
-    };
-  }
 
   if(!_.isEmpty(data.selector) && data.limit){
     data.limit = data.limit + 1;

@@ -4,7 +4,7 @@ const doc = {
   Config: 'config',
   Location: 'location',
   Grouping: 'grouping',
-  Severity: 'severity',
+  SevGroup: 'sevgroup',
   Question: 'question',
   QUAReq: 'quareq',
   APProc: 'approc',
