@@ -84,6 +84,7 @@ class ${1} extends Component {
           url: datalink.Request.Import,
           success: "${2} Imported Successfully.",
           fail: "${2} Import Failed: ",
+          schema: schema.ImportFormat
         },
         Export: {
           url: datalink.Request.Export,
@@ -107,8 +108,8 @@ class ${1} extends Component {
           left: [{ icon: "add", func: "Add", caption: "Add ${2}", reqFunc: "Add" }],
           right: [
             { icon: "deletebulk", func: "DeleteBulk", caption: (n) => "Delete (" + n + ")", reqFunc: "Delete", theme: "caution" },
-            { icon: "export", func: "Export", caption: (n) => "Export (" + (n === 0 ? "All" : n) + ")", reqFunc: "Export" },
-            { icon: "import", func: "Import", caption: "Import", reqFunc: "Import" },
+            //{ icon: "export", func: "Export", caption: (n) => "Export (" + (n === 0 ? "All" : n) + ")", reqFunc: "Export" },
+            //{ icon: "import", func: "Import", caption: "Import", reqFunc: "Import" },
           ],
         },
       }
