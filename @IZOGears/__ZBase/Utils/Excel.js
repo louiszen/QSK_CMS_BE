@@ -424,8 +424,8 @@ class Excel{
         case 'string': return value;
         case 'number': return Number(value);
         case 'boolean': return (value.toLowerCase() === 'true');
-        case "date": return Time.Parse(value, dateFormat || "YYYY/MM/DD"); 
-        case "datetime": return Time.Parse(value, dateFormat || "YYYY/MM/DD HH:mm:ss"); 
+        case "date": return Time.Parse(value).format(dateFormat || "YYYY/MM/DD"); 
+        case "datetime": return Time.Parse(value).format(dateFormat || "YYYY/MM/DD HH:mm:ss"); 
         default: return value;
       }
     }else if(typeof value === 'boolean'){
