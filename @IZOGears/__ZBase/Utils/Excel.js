@@ -410,13 +410,14 @@ class Excel{
   }
 
   static toType(value, format = "string", dateFormat){
-    if(Time.IsMoment(value)){
+    console.log(value, format, dateFormat, Time.IsMoment(value), typeof(value));
+    if(value && Time.IsMoment(value)){
       switch(format){
         case 'string': return value;
         case 'number': return Number(value);
         case 'boolean': return (value.toLowerCase() === 'true');
-        case "date": return value.format(dateFormat || "YYYY/MM/DD");
-        case "datetime": return value.format(dateFormat || "YYYY/MM/DD HH:mm:ss");
+        case "date": return value.local().format(dateFormat || "YYYY/MM/DD");
+        case "datetime": return value.local().format(dateFormat || "YYYY/MM/DD HH:mm:ss");
         default: return value;
       }
     }else if(typeof value === 'string'){
@@ -424,8 +425,8 @@ class Excel{
         case 'string': return value;
         case 'number': return Number(value);
         case 'boolean': return (value.toLowerCase() === 'true');
-        case "date": return Time.Parse(value).format(dateFormat || "YYYY/MM/DD"); 
-        case "datetime": return Time.Parse(value).format(dateFormat || "YYYY/MM/DD HH:mm:ss"); 
+        case "date": return Time.Parse(value, (dateFormat || "YYYY/MM/DD")).local().format(dateFormat || "YYYY/MM/DD"); 
+        case "datetime": return Time.Parse(value, (dateFormat || "YYYY/MM/DD")).local().format(dateFormat || "YYYY/MM/DD HH:mm:ss"); 
         default: return value;
       }
     }else if(typeof value === 'boolean'){
@@ -440,6 +441,12 @@ class Excel{
         case 'string': return value.toString();
         case 'number': return value;
         case 'boolean': return value!==0;
+        default: return value;
+      }
+    }else if(typeof value === 'object' && (format === 'date' || format === 'datetime')){
+      switch(format){
+        case "date": return Time.Parse(value).local().format(dateFormat || "YYYY/MM/DD"); 
+        case "datetime": return Time.Parse(value).local().format(dateFormat || "YYYY/MM/DD HH:mm:ss"); 
         default: return value;
       }
     }else{
