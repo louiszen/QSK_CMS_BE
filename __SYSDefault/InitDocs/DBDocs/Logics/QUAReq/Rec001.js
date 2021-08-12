@@ -5,6 +5,7 @@ const doc = {
   _id: v1(),
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   order: 1,
+  description: "compulsory quarantine",
   params: [
     {
       _id: 1,
@@ -21,7 +22,6 @@ const doc = {
       ]
     }
   ],
-  template: "withicon",
   component: {
     icon: "Images/QReq1.png",
     title: {
