@@ -10,18 +10,22 @@ const doc = {
   variant: "yesno",
   description: "Via Return2HK Scheme (For HKR who have not been to places outside Mainland Chaina and Macao only)",
   conditions: {
-    $and: [
+    $or: [
       {
-        ref: "Cond1",
-        $eq: 99
-      },
-      {
-        ref: "Cond2",
-        $eq: true
-      },
-      {
-        ref: "Verdict1",
-        $eq: true
+        $and: [
+          {
+            ref: "Cond1",
+            $eq: 99
+          },
+          {
+            ref: "Cond2",
+            $eq: true
+          },
+          {
+            ref: "Verdict1",
+            $eq: true
+          }
+        ]
       }
     ]
   },

@@ -427,6 +427,7 @@ class Excel{
         case 'boolean': return (value.toLowerCase() === 'true');
         case "date": return Time.Parse(value, (dateFormat || "YYYY/MM/DD")).local().format(dateFormat || "YYYY/MM/DD"); 
         case "datetime": return Time.Parse(value, (dateFormat || "YYYY/MM/DD")).local().format(dateFormat || "YYYY/MM/DD HH:mm:ss"); 
+        case "json": try { return JSON.parse(value); } catch { throw new Error("Invalid JSON format: " + value); }
         default: return value;
       }
     }else if(typeof value === 'boolean'){

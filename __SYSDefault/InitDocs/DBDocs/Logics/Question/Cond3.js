@@ -10,14 +10,18 @@ const doc = {
   variant: "yesno",
   description: "Stayed at the relevant location for more than 2 hours (For severity 1 location(s) only)",
   conditions: {
-    $and: [
+    $or: [
       {
-        ref: "Cond1",
-        $eq: 1
-      },
-      {
-        ref: "Cond2",
-        $eq: true
+        $and: [
+          {
+            ref: "Cond1",
+            $eq: 1
+          },
+          {
+            ref: "Cond2",
+            $eq: true
+          }
+        ]
       }
     ]
   },

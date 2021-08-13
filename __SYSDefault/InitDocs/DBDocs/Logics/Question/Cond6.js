@@ -9,7 +9,7 @@ const doc = {
   type: "question",
   variant: "yesno",
   description: "Possesses positive antibody test result (For fully vaccinated pax only)",
-  conditons: {
+  conditions: {
     $or: [
       {
         $and: [

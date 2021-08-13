@@ -4,14 +4,12 @@ const { v1 } = require('uuid');
 const doc = {
   _id: v1(),
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
-  order: 1,
+  refID: "APProc001",
   description: "Follow the signage and proceed to the specimen collection centre",
-  component: {
-    content: {
-      EN: "Follow the signage and proceed to the specimen collection centre",
-      TC: "",
-      SC: "",
-    }
+  content: {
+    EN: "Follow the signage and proceed to the specimen collection centre",
+    TC: "",
+    SC: "",
   }
 };
 

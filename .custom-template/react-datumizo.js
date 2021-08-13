@@ -37,6 +37,7 @@ class ${1} extends Component {
         density: "standard",
         defaultPageSize: 25,
         showSelector: true,
+        noDefaultTable: false,
 
         Connect: {
           DBInfo: datalink.Request.DBInfo,
