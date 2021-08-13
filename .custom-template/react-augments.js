@@ -1,0 +1,3 @@
+/**
+ * @augments {Component<Props, State>}
+ */

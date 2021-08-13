@@ -9,6 +9,9 @@ import Datumizo from '@IZOArc/LabIZO/Datumizo/Datumizo';
 import { VStack } from '@IZOArc/LabIZO/Stackizo';
 import { Accessor, ColorX, Authority } from '@IZOArc/STATIC';
 
+/**
+ * @augments {Component<Props, State>}
+ */
 class ${1} extends Component {
 
   static propTypes = {
@@ -38,6 +41,7 @@ class ${1} extends Component {
         defaultPageSize: 25,
         showSelector: true,
         noDefaultTable: false,
+        noDefaultButtons: false,
 
         Connect: {
           DBInfo: datalink.Request.DBInfo,
@@ -85,7 +89,8 @@ class ${1} extends Component {
           url: datalink.Request.Import,
           success: "${2} Imported Successfully.",
           fail: "${2} Import Failed: ",
-          schema: schema.ImportFormat
+          schema: schema.ImportFormat,
+          replace: false
         },
         Export: {
           url: datalink.Request.Export,
@@ -113,7 +118,8 @@ class ${1} extends Component {
             //{ icon: "import", func: "Import", caption: "Import", reqFunc: "Import" },
           ],
         },
-      }
+      },
+      addOns: {}
     };
   }
 
@@ -145,7 +151,7 @@ class ${1} extends Component {
   }
 
   render(){
-    let {base, serverSidePagination, title} = this.state;
+    let {base, serverSidePagination, title, addOns} = this.state;
     return (
       <VStack>
         <Box padding={1} width="100%">
@@ -159,7 +165,7 @@ class ${1} extends Component {
           </Typography>
         </Box>
         <Datumizo
-          base={base} serverSidePagination={serverSidePagination} onMounted={this.onMountDatumizo}
+          base={base} serverSidePagination={serverSidePagination} onMounted={this.onMountDatumizo} addOns={addOns}
           />
       </VStack>
     );

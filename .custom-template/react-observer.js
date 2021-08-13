@@ -3,6 +3,9 @@ import { observer } from 'mobx-react';
 import { Accessor } from '@IZOArc/STATIC';
 import PropsType from 'prop-types';
 
+/**
+ * @augments {Component<Props, State>}
+ */
 class ${1} extends Component {
 
   static propTypes = {
