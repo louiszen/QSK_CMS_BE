@@ -51,7 +51,8 @@ const doc = {
       TC: "",
       SC: ""
     }
-  }
+  },
+  possibleAns: [true, false]
 }
 
 module.exports = doc;

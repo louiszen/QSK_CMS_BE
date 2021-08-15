@@ -77,7 +77,8 @@ const doc = {
         ]
       }
     ]
-  }
+  },
+  possibleAns: [true, false]
 }
 
 module.exports = doc;

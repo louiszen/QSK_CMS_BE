@@ -36,7 +36,8 @@ const doc = {
     },
     applyInduction: true,
     induction: "min",
-  }
+  },
+  possibleAns: [1, 2, 3, 4, 5, 99]
 }
 
 module.exports = doc;
