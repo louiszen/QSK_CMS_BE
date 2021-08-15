@@ -3,7 +3,7 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "S001",
+  refID: "S002",
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   condition: [
     {
@@ -27,25 +27,33 @@ const doc = {
     {
       ref: "QUAReq001",
       $eq: true,
-      param: [21, 1]
+      param: 21
     },
     {
       ref: "QUAReq002",
       $eq: true,
-      param: [7]
+      param: 7
     },
     {
       ref: "QUAReq003",
       $eq: true,
-      param: [true]
+      param: true
     },
     {
       ref: "QUAReq004",
       $eq: true,
-      param: [4]
+      param: 4
     },
     {
       ref: "QUAReq005",
+      $eq: false
+    },
+    {
+      ref: "QUAReq006",
+      $eq: false
+    },
+    {
+      ref: "QUAReq007",
       $eq: false
     },
   ],
