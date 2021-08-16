@@ -220,8 +220,8 @@ class Excel{
               }
             }
           }
-         
-          if(!_.isUndefined(ivalue) && !_.isNull(ivalue)){
+        
+          if(!_.isUndefined(ivalue) && !_.isNull(ivalue) && !(_.isString(ivalue) && _.isEmpty(ivalue))){
             Accessor.Set(doc, iname, typeof(ivalue) == "string"? ivalue.trim() : ivalue);
           }
 
