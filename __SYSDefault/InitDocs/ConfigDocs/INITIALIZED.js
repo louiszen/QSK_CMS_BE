@@ -1,4 +1,4 @@
-const _base = require("../../../@IZOGears/__ZBase");
+const _base = require("../../../IZOGears/__ZBase");
 const { Time } = _base.Utils;
 
 const doc = {

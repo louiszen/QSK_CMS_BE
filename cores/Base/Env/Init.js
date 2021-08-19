@@ -1,4 +1,4 @@
-const _base = require('../../../@IZOGears/__ZBase');
+const _base = require('../../../IZOGears/__ZBase');
 const _config = require('../../../_config');
 const _remote = require('../../../remoteConfig');
 const _init = require('../../../__SYSDefault/InitDocs');
@@ -8,7 +8,7 @@ const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
 const _ = require("lodash");
-const Authorize = require('../../../@IZOGears/User/Authorize');
+const Authorize = require('../../../IZOGears/User/Authorize');
 
 const {Chalk, Response} = _base.Utils;
 const DDGen = _base.Modules.DesignDoc.Gen;

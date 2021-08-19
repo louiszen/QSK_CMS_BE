@@ -1,4 +1,4 @@
-const _base = require('../../@IZOGears/__ZBase');
+const _base = require('../../IZOGears/__ZBase');
 const _config = require('../../_config');
 const _remote = require('../../remoteConfig');
 

@@ -1,8 +1,8 @@
-const _base = require('../../../@IZOGears/__ZBase');
+const _base = require('../../../IZOGears/__ZBase');
 const _remote = require('../../../remoteConfig');
 
 const path = require('path');
-const { Fs } = require('../../../@IZOGears/__ZBase/Utils');
+const { Fs } = require('../../../IZOGears/__ZBase/Utils');
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 

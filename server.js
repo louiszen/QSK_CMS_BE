@@ -5,7 +5,7 @@ if(!process.env.NODE_PROJECT || !process.env.NODE_ENV){
   process.exit();
 }
 
-const _base = require('./@IZOGears/__ZBase');
+const _base = require('./IZOGears/__ZBase');
 const _config = require('./_config');
 
 const Version = require('./Version');
