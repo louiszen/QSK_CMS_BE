@@ -1,0 +1,3 @@
+[submodule "IZOGears"]
+	path = IZOGears
+	url = https://louiszen@bitbucket.org/louiszen/izogears.git
