@@ -1,9 +1,10 @@
 ## Author
+
 Ben, Louiszen, Gavin @ Mobinology
 
 # Version 1.3.0
 
-### ELAIN Freeze Version 
+### ELAIN Freeze Version
 
 1. Remote configs available
 2. Initial Scripts
@@ -13,3 +14,9 @@ Ben, Louiszen, Gavin @ Mobinology
 6. Simulator: batch available
 
 ---
+
+## Submodules
+
+```bash
+git submodule update --init --recursive
+```
