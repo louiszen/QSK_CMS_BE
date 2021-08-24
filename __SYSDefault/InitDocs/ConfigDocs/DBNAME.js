@@ -10,7 +10,7 @@ const doc = {
   APProc: 'approc',
   BNEReq: 'bnereq',
   Scenario: 'scenario',
-  Answer: 'answer',
+  ArrivalAns: 'arrivalans',
   UserRec: 'xuserrecord'
 };
 

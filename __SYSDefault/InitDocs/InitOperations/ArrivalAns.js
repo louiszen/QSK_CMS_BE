@@ -17,14 +17,14 @@ module.exports = async () => {
   let res;
   
   try{
-    dbName = ConfigDocs.DBNAME.Answer;
+    dbName = ConfigDocs.DBNAME.ArrivalAns;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.Answers, async (o, i) => {
+    await Promise.all(_.map(DBDocs.ArrivalAns, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 

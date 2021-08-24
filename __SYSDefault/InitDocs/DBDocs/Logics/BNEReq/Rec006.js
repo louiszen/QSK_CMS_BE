@@ -3,8 +3,8 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "BNEReq001",
-  description: "Recognised Vaccination record",
+  refID: "BNEReq006",
+  description: "Green QR code obtained in HKSAR electronic health declaration system",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   effective: {
@@ -14,9 +14,9 @@ const doc = {
   display: {
     type: "orderedlist",
     content: {
-      EN: "Recognised Vaccination record",
-      TC: "認可的疫苗接種記錄",
-      SC: "认可的疫苗接种记录"
+      EN: "Green QR code obtained in HKSAR electronic health declaration system",
+      TC: "香港特區電子健康申報系統獲得綠色二維碼",
+      SC: "香港特区电子健康申报系统获得绿色二维码"
     }
   },
   parameters: []

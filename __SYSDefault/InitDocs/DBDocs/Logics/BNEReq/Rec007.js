@@ -3,8 +3,8 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "BNEReq001",
-  description: "Recognised Vaccination record",
+  refID: "BNEReq007",
+  description: "Designated quarantine hotel room reservation confirmation",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   effective: {
@@ -14,9 +14,9 @@ const doc = {
   display: {
     type: "orderedlist",
     content: {
-      EN: "Recognised Vaccination record",
-      TC: "認可的疫苗接種記錄",
-      SC: "认可的疫苗接种记录"
+      EN: "Designated quarantine hotel room reservation confirmation",
+      TC: "指定檢疫酒店房間預訂確認",
+      SC: "指定检疫酒店房间预订确认"
     }
   },
   parameters: []

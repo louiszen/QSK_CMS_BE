@@ -1,9 +1,9 @@
 const Countries = require('./Countries');
 const Logics = require('./Logics');
-const Answers = require('./Answers');
+const ArrivalAns = require('./ArrivalAns');
 
 module.exports = {
   Countries,
   Logics,
-  Answers
+  ArrivalAns
 };

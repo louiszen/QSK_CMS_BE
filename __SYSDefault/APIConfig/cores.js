@@ -2,7 +2,7 @@ let internal = '__Internal';
 let cores = {};
 
 cores = {
-  Base: require('../../cores/Base'),
+  Base: require('../../IZOGears/Base'),
   Config: require('../../cores/Config'),
   Tables: require('../../cores/Tables'),
   Data: require('../../cores/Data'),

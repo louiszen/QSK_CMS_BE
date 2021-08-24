@@ -1,6 +1,7 @@
 const config = {
   Console: true,
   AutoInit: true,
+  CleanDBInit: true, 
   name: "HKAA COVID19 (Backend)",
   jwtTokenSecret: "QSK_BE",
   jwtExpire: 1000 * 60 * 60 * 24 * 7,
