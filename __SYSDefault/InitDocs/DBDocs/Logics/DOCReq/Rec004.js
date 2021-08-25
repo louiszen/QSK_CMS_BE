@@ -3,8 +3,8 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "BNEReq005",
-  description: "Documentary proof for recognized testing institution (Wechat Mini Program screenshot for Return2HK Scheme)",
+  refID: "DOCReq004",
+  description: "Negative result proof of a nucleic acid test (Original paper format for Return2HK Scheme)",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   effective: {
@@ -14,9 +14,9 @@ const doc = {
   display: {
     type: "orderedlist",
     content: {
-      EN: "Documentary proof for recognized testing institution",
-      TC: "認可檢測機構的證明文件",
-      SC: "认可检测机构的证明文件"
+      EN: "Negative result proof of a nucleic acid test",
+      TC: "核酸檢測陰性結果證明",
+      SC: "核酸检测阴性结果证明"
     }
   },
   parameters: []

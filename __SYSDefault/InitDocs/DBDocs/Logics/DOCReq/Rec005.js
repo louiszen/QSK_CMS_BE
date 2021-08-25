@@ -3,8 +3,8 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "BNEReq007",
-  description: "Designated quarantine hotel room reservation confirmation",
+  refID: "DOCReq005",
+  description: "Documentary proof for recognized testing institution (Wechat Mini Program screenshot for Return2HK Scheme)",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   effective: {
@@ -14,9 +14,9 @@ const doc = {
   display: {
     type: "orderedlist",
     content: {
-      EN: "Designated quarantine hotel room reservation confirmation",
-      TC: "指定檢疫酒店房間預訂確認",
-      SC: "指定检疫酒店房间预订确认"
+      EN: "Documentary proof for recognized testing institution",
+      TC: "認可檢測機構的證明文件",
+      SC: "认可检测机构的证明文件"
     }
   },
   parameters: []

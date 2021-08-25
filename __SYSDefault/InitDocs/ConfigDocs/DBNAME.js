@@ -8,7 +8,8 @@ const doc = {
   Question: 'question',
   QUAReq: 'quareq',
   APProc: 'approc',
-  BNEReq: 'bnereq',
+  DOCReq: 'docreq',
+  ENTReq: 'entreq',
   Scenario: 'scenario',
   ArrivalAns: 'arrivalans',
   UserRec: 'xuserrecord'

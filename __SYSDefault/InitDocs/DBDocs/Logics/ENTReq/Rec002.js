@@ -3,8 +3,8 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "BNEReq001",
-  description: "Recognised Vaccination record",
+  refID: "ENTReq002",
+  description: "StayHomeSafe mobile app",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   effective: {
@@ -14,9 +14,9 @@ const doc = {
   display: {
     type: "orderedlist",
     content: {
-      EN: "Recognised Vaccination record",
-      TC: "認可的疫苗接種記錄",
-      SC: "认可的疫苗接种记录"
+      EN: "StayHomeSafe mobile app",
+      TC: "StayHomeSafe 移動應用程序",
+      SC: "StayHomeSafe 移动应用程序"
     }
   },
   parameters: []

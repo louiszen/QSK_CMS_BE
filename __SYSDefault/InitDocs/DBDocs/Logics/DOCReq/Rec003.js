@@ -3,8 +3,8 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "BNEReq006",
-  description: "Green QR code obtained in HKSAR electronic health declaration system",
+  refID: "DOCReq003",
+  description: "Positive result proof of a serology antibody test",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   effective: {
@@ -14,9 +14,9 @@ const doc = {
   display: {
     type: "orderedlist",
     content: {
-      EN: "Green QR code obtained in HKSAR electronic health declaration system",
-      TC: "香港特區電子健康申報系統獲得綠色二維碼",
-      SC: "香港特区电子健康申报系统获得绿色二维码"
+      EN: "Positive result proof of a serology antibody test",
+      TC: "血清抗體測試的陽性結果證明",
+      SC: "血清抗体测试的阳性结果证明"
     }
   },
   parameters: []

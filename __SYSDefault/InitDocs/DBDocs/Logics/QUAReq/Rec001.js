@@ -39,8 +39,8 @@ const doc = {
       description: "Compulsory quarantine location",
       format: "select",
       options: [
-        {EN: "Designated quarantine hotel", TC: "", SC: ""},
-        {EN: "Home, hotel or other accomodation", TC: "", SC: ""}
+        {EN: "Designated quarantine hotel", TC: "指定檢疫酒店", SC: "指定检疫酒店"},
+        {EN: "Home, hotel or other accomodation", TC: "家、酒店或其他住宿", SC: "家、酒店或其他住宿"}
       ]
     }
   ]

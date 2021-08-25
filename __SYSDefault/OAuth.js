@@ -15,7 +15,8 @@ const DEVUSER = {
       Answer: {
         ArrivalAns: {
           QUAReq: ["*"],
-          BNEReq: ["*"],
+          DOCReq: ["*"],
+          ENTReq: ["*"],
           APProc: ["*"]
         },
         DepartAns: ["*"],

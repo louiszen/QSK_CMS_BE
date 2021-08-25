@@ -1,12 +1,14 @@
 const QUAReq = require('./QUAReq');
-const BNEReq = require('./BNEReq');
+const DOCReq = require('./DOCReq');
+const ENTReq = require('./ENTReq');
 const APProc = require('./APProc');
 const Question = require('./Question');
 const Scenario = require('./Scenario');
 
 module.exports = {
   QUAReq,
-  BNEReq,
+  DOCReq,
+  ENTReq,
   APProc,
   Question,
   Scenario

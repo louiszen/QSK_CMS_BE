@@ -39,14 +39,25 @@ module.exports = async () => {
       res = await db.Insert(dbName, o);
     }));
 
-    dbName = ConfigDocs.DBNAME.BNEReq;
+    dbName = ConfigDocs.DBNAME.DOCReq;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.Logics.BNEReq, async (o, i) => {
+    await Promise.all(_.map(DBDocs.Logics.DOCReq, async (o, i) => {
+      res = await db.Insert(dbName, o);
+    }));
+
+    dbName = ConfigDocs.DBNAME.ENTReq;
+    res = await db.DestroyDatabase(dbName);
+    res = await db.CreateDatabase(dbName);
+    if(!res.Success){
+      throw new Error(res.payload.Error)
+    }
+
+    await Promise.all(_.map(DBDocs.Logics.ENTReq, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 

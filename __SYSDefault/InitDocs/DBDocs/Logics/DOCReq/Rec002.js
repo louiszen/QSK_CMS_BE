@@ -3,8 +3,8 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "BNEReq004",
-  description: "Negative result proof of a nucleic acid test (Original paper format for Return2HK Scheme)",
+  refID: "DOCReq002",
+  description: "Vaccination record",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   effective: {
@@ -14,9 +14,9 @@ const doc = {
   display: {
     type: "orderedlist",
     content: {
-      EN: "Negative result proof of a nucleic acid test",
-      TC: "核酸檢測陰性結果證明",
-      SC: "核酸检测阴性结果证明"
+      EN: "Vaccination record",
+      TC: "疫苗接種記錄",
+      SC: "疫苗接种记录"
     }
   },
   parameters: []
