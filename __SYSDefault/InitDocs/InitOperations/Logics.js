@@ -72,14 +72,14 @@ module.exports = async () => {
       res = await db.Insert(dbName, o);
     }));
 
-    dbName = ConfigDocs.DBNAME.Scenario;
+    dbName = ConfigDocs.DBNAME.QFlow;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.Logics.Scenario, async (o, i) => {
+    await Promise.all(_.map(DBDocs.Logics.QFlow, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 

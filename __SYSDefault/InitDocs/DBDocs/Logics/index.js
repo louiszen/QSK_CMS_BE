@@ -3,7 +3,7 @@ const DOCReq = require('./DOCReq');
 const ENTReq = require('./ENTReq');
 const APProc = require('./APProc');
 const Question = require('./Question');
-const Scenario = require('./Scenario');
+const QFlow = require('./QFlow');
 
 module.exports = {
   QUAReq,
@@ -11,5 +11,5 @@ module.exports = {
   ENTReq,
   APProc,
   Question,
-  Scenario
+  QFlow
 };

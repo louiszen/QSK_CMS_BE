@@ -1,17 +1,17 @@
-const Cond1 = require('./Cond1');
-const Cond2 = require('./Cond2');
-const Cond3 = require('./Cond3');
-const Verdict1 = require('./Verdict1');
-const Cond4 = require('./Cond4');
-const Cond5 = require('./Cond5');
-const Cond6 = require('./Cond6');
+const _QDate = require('./_QDate');
+const _QHKR = require('./_QHKR');
+const _QLoc = require('./_QLoc');
+const QAdd1 = require('./QAdd1');
+const QAdd2 = require('./QAdd2');
+const QAdd3 = require('./QAdd3');
+const QAdd4 = require('./QAdd4');
 
 module.exports = {
-  Cond1,
-  Cond2,
-  Cond3,
-  Verdict1,
-  Cond4,
-  Cond5,
-  Cond6
+  _QDate,
+  _QHKR,
+  _QLoc,
+  QAdd1,
+  QAdd2,
+  QAdd3,
+  QAdd4
 };
