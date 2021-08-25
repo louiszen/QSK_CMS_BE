@@ -14,6 +14,7 @@ const DEVUSER = {
       },
       Answer: {
         ArrivalAns: {
+          ArrivalAns: ["*"],
           QUAReq: ["*"],
           DOCReq: ["*"],
           ENTReq: ["*"],
@@ -24,7 +25,8 @@ const DEVUSER = {
       },
       Questionnaire: {
         Question: ["*"],
-        Scenario: ["*"]
+        Scenario: ["*"],
+        QFlow: ["*"]
       },
       System: {
         General: ["*"]

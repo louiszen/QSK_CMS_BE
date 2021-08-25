@@ -13,6 +13,7 @@ const doc = {
     End: null
   },
   type: "yesno",
+  order: 4,
   question: {
     EN: "Have you stayed at @loc for more than 2 hours?",
     TC: "你在 @loc 待多過2個多小時嗎？",

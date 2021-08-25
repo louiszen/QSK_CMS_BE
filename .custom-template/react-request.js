@@ -1,5 +1,5 @@
 let url = DOMAIN + ${1};
-let payload = {
+let payloadOut = {
   JWT: store.user.JWT,
   data: {
 
@@ -9,15 +9,16 @@ let payload = {
 
 try {
 
-  console.log(${1}, payload);
+  console.log(${1}, payloadOut);
 
   store.isLoading(true);
-  let res = await axios.post(url, payload);
+  let res = await axios.post(url, payloadOut);
   store.isLoading(false);
 
   console.log(${1}, res.data);
 
-  if (res.data.Success === true) {
+  let {Success, payload} = res.data;
+  if (Success === true) {
     this.setState((state, props) => ({
       /*Success*/
     }));

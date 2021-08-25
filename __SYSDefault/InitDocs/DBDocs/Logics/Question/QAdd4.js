@@ -13,6 +13,7 @@ const doc = {
     End: null
   },
   type: "yesno",
+  order: 7,
   question: {
     EN: "Do you possess positive antibody test result?",
     TC: "您的抗體檢測結果呈陽性嗎？",

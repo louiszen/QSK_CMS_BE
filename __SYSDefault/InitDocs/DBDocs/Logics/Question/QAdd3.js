@@ -13,6 +13,7 @@ const doc = {
     End: null
   },
   type: "yesno",
+  order: 6,
   question: {
     EN: "Have you fully vaccinated?",
     TC: "您是否已全面接種疫苗？",

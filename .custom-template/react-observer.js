@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
-import { Accessor } from '@IZOArc/STATIC';
+import { Accessor } from 'IZOArc/STATIC';
 import PropsType from 'prop-types';
 
 /**

@@ -9,6 +9,7 @@ const Get = _Generic.Get;
 const Import = _Generic.Import;
 const Info = _Generic.Info;
 const List = _Generic.List;
+const AllLocations = require('./AllLocations');
 
 module.exports = {
   Add,
@@ -19,5 +20,6 @@ module.exports = {
   Get,
   Import,
   Info,
-  List
+  List,
+  AllLocations
 }

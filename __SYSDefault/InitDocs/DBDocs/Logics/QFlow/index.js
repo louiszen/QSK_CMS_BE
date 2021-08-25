@@ -1,5 +1,5 @@
-const S001 = require('./S001');
+const Flow001 = require('./Flow001');
 
 module.exports = {
-  S001,
+  Flow001,
 };

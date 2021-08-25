@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Accessor } from '@IZOArc/STATIC';
+import { Accessor } from 'IZOArc/STATIC';
 import PropsType from 'prop-types';
 
 /**

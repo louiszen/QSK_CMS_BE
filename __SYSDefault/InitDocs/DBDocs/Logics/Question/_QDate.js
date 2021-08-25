@@ -13,6 +13,7 @@ const doc = {
     End: null
   },
   type: "datetime",
+  order: 1,
   question: {
     EN: "When will you arrive Hong Kong?",
     TC: "你什麼時候到香港？",
