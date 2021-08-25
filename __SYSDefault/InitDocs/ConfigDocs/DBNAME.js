@@ -10,7 +10,7 @@ const doc = {
   APProc: 'approc',
   DOCReq: 'docreq',
   ENTReq: 'entreq',
-  Scenario: 'scenario',
+  QFlow: 'qflow',
   ArrivalAns: 'arrivalans',
   UserRec: 'xuserrecord'
 };
