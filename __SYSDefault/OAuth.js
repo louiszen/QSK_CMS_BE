@@ -26,7 +26,8 @@ const DEVUSER = {
       Questionnaire: {
         Question: ["*"],
         Scenario: ["*"],
-        QFlow: ["*"]
+        QFlow: ["*"],
+        QOrder: ["*"]
       },
       System: {
         General: ["*"]

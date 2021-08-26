@@ -4,6 +4,7 @@ const ENTReq = require('./ENTReq');
 const APProc = require('./APProc');
 const Question = require('./Question');
 const QFlow = require('./QFlow');
+const QOrder = require('./QOrder');
 
 module.exports = {
   QUAReq,
@@ -11,5 +12,6 @@ module.exports = {
   ENTReq,
   APProc,
   Question,
-  QFlow
+  QFlow,
+  QOrder
 };

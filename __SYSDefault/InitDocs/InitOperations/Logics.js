@@ -83,6 +83,17 @@ module.exports = async () => {
       res = await db.Insert(dbName, o);
     }));
 
+    dbName = ConfigDocs.DBNAME.QOrder;
+    res = await db.DestroyDatabase(dbName);
+    res = await db.CreateDatabase(dbName);
+    if(!res.Success){
+      throw new Error(res.payload.Error)
+    }
+
+    await Promise.all(_.map(DBDocs.Logics.QOrder, async (o, i) => {
+      res = await db.Insert(dbName, o);
+    }));
+
     return Response.Send(true);
 
   }catch(e){

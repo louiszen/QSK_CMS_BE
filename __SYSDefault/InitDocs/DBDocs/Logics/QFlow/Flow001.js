@@ -83,8 +83,17 @@ const doc = {
     {
       node: "S2",
       type: "severity",
+      next: "S2_QHKR",
       severity: 2,
       pos: [0, 0]
+    },
+    {
+      node: "S2_QHKR",
+      type: "question",
+      ref: "_QHKR",
+      parent: "S2",
+      pos: [1, 0],
+      severity: 2,
     },
     {
       node: "S3",

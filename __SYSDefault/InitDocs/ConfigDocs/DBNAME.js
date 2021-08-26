@@ -11,6 +11,7 @@ const doc = {
   DOCReq: 'docreq',
   ENTReq: 'entreq',
   QFlow: 'qflow',
+  QOrder: 'qorder',
   ArrivalAns: 'arrivalans',
   UserRec: 'xuserrecord'
 };

@@ -12,75 +12,43 @@ const doc = {
     End: null
   },
   canEntry: true,
-  QUAReq: [
-    {
-      ref: "QUAReq001",
-      parameters: [21, 0]
+  QUAReq: {
+    QUAReq001: {
+      show: true,
+      parameters: [14, "designated places (home, hotel or other accommodation)"]
     },
-    {
-      ref: "QUAReq002",
-      parameters: [7]
+    QUAReq002: {
+      show: false,
     },
-    {
-      ref: "QUAReq003"
+    QUAReq003: {
+      show: false,
     },
-    {
-      ref: "QUAReq004",
-      parameters: [6, [], [26]]
+    QUAReq004: {
+      show: true,
+      parameters: [null, [1, 3, 7, 12, 16, 19], null]
     }
-  ],
-  DOCReq: [
-    {
-      ref: "DOCReq001"
-    },
-    {
-      ref: "DOCReq004"
-    },
-    {
-      ref: "DOCReq005"
-    },
-    {
-      ref: "DOCReq006"
-    },
-    {
-      ref: "DOCReq007"
-    }
-  ],
-  ENTReq: [
-    {
-      ref: "ENTReq001"
-    },
-    {
-      ref: "ENTReq002"
-    }
-  ],
-  APProc: [
-    {
-      ref: "APProc001"
-    },
-    {
-      ref: "APProc002"
-    },
-    {
-      ref: "APProc003"
-    },
-    {
-      ref: "APProc004"
-    },
-    {
-      ref: "APProc005"
-    },
-    {
-      ref: "APProc006"
-    },
-    {
-      ref: "APProc007"
-    },
-    {
-      ref: "APProc008"
-    }
-  ]
-
+  },
+  DOCReq: {
+    DOCReq001: true,
+    DOCReq004: true,
+    DOCReq005: true,
+    DOCReq006: true,
+    DOCReq007: true,
+  },
+  ENTReq: {
+    ENTReq001: true,
+    ENTReq002: true,
+  },
+  APProc: {
+    APProc001: true,
+    APProc002: true,
+    APProc003: true,
+    APProc004: true,
+    APProc005: true,
+    APProc006: true,
+    APProc007: true,
+    APProc008: true,
+  }
 };
 
 module.exports = doc;
