@@ -5,7 +5,8 @@ const Request = {
   Delete: "/${1}/${2}/Delete",
   Edit: "/${1}/${2}/Edit",
   Export: "/${1}/${2}/Export",
-  Import: "/${1}/${2}/Import"
+  Import: "/${1}/${2}/Import",
+  DeleteBulk: "/${1}/${2}/DeleteBulk",
 };
 
 let exports = {

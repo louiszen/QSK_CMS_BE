@@ -11,6 +11,7 @@ const doc = {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
   },
+  type: "virustest",
   display: {
     type: "withicon",
     icon: "/QUAReq004.png",

@@ -10,6 +10,7 @@ const Scenario = require('./Scenario');
 const ArrivalAns = require('./ArrivalAns');
 const QFlow = require('./QFlow');
 const QOrder = require('./QOrder');
+const Tips = require('./Tips');
 
 module.exports = {
   SevGroup,
@@ -23,5 +24,6 @@ module.exports = {
   Scenario,
   ArrivalAns,
   QFlow,
-  QOrder
+  QOrder,
+  Tips
 }

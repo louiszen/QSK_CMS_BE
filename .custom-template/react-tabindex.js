@@ -8,6 +8,20 @@ import tabs from './tabs';
 import { Accessor, Authority } from 'IZOArc/STATIC';
 import { VStack } from 'IZOArc/LabIZO/Stackizo';
 
+/** 
+tabs = [
+  {
+    label: String,
+    icon: String | JSX,
+    reqAuth: String,
+    render: JSX
+  }
+];
+*/
+
+/**
+ * @augments {Component<Props, State>}
+ */
 class ${1} extends Component {
 
   static propTypes = {

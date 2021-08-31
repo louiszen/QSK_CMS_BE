@@ -19,7 +19,8 @@ const DEVUSER = {
             QUAReq: ["*"],
             DOCReq: ["*"],
             ENTReq: ["*"],
-            APProc: ["*"]
+            APProc: ["*"],
+            Tips: ["*"]
           }
         },
         DepartAns: ["*"],
