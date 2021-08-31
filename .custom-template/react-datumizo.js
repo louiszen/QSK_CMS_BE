@@ -44,6 +44,10 @@ class ${1} extends Component {
         noDefaultTable: false,
         noDefaultButtons: false,
 
+        formizo: {
+
+        },
+
         Connect: {
           DBInfo: datalink.Request.DBInfo,
           List: datalink.Request.List,

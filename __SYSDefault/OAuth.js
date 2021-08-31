@@ -3,7 +3,7 @@ const DEVUSER = {
     username: "Sys@Dev",
     password: "SysP@ssw0rd",
     UserDisplayName: "Sys@Dev",
-    Version: 6,
+    Version: 7,
     Level: 0,
     authority: {
       Dashboard: ["*"],
@@ -14,11 +14,13 @@ const DEVUSER = {
       },
       Answer: {
         ArrivalAns: {
-          ArrivalAns: ["*"],
-          QUAReq: ["*"],
-          DOCReq: ["*"],
-          ENTReq: ["*"],
-          APProc: ["*"]
+          Template: ["*"],
+          Components: {
+            QUAReq: ["*"],
+            DOCReq: ["*"],
+            ENTReq: ["*"],
+            APProc: ["*"]
+          }
         },
         DepartAns: ["*"],
         TransitAns: ["*"]
