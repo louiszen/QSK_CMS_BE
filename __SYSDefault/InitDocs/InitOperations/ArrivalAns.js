@@ -50,6 +50,17 @@ module.exports = async () => {
       res = await db.Insert(dbName, o);
     }));
 
+    dbName = ConfigDocs.DBNAME.IconDocs;
+    res = await db.DestroyDatabase(dbName);
+    res = await db.CreateDatabase(dbName);
+    if(!res.Success){
+      throw new Error(res.payload.Error)
+    }
+
+    await Promise.all(_.map(DBDocs.IconDocs, async (o, i) => {
+      res = await db.Insert(dbName, o);
+    }));
+
     return Response.Send(true);
 
   }catch(e){

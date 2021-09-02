@@ -13,12 +13,13 @@ const doc = {
   ENTReq: 'entreq',
   Footnote: 'footnote',
   Tips: 'tip',
+  IconDocs: 'icondocs',
   QFlow: 'qflow',
   QOrder: 'qorder',
   ArrivalAns: 'arrivalans',
   DepartAns: 'departans',
   TransitAns: 'transitans',
-  UserRec: 'xuserrecord'
+  UserRec: 'xuserrecord',
 };
 
 module.exports = doc;

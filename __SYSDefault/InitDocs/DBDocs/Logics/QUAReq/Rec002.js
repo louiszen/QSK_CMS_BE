@@ -11,7 +11,6 @@ const doc = {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
   },
-  type: "selfmonitor",
   display: {
     type: "withicon",
     icon: "/QUAReq002.png",
@@ -29,7 +28,8 @@ const doc = {
       EN: "<url href=\"http://www.google.com\">Points to note </url> regarding self-monitory period",
       TC: "關於自我監控期的<url href=\"http://www.google.com\">注意事項</url>",
       SC: "关于自我监控期的<url href=\"http://www.google.com\">注意事项</url>",
-    }
+    },
+    footnote: false
   },
   parameters: [
     {

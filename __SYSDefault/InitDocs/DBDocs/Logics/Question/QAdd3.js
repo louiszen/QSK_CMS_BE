@@ -18,7 +18,9 @@ const doc = {
     EN: "Have you fully vaccinated?",
     TC: "您是否已全面接種疫苗？",
     SC: "您是否已全面接种疫苗？",
-  }
+  },
+  showInfo: true,
+  infoPage: "Mis006",
 }
 
 module.exports = doc;

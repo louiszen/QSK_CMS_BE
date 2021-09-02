@@ -11,7 +11,6 @@ const doc = {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
   },
-  type: "virustest",
   display: {
     type: "withicon",
     icon: "/QUAReq004.png",
@@ -26,13 +25,11 @@ const doc = {
       SC: "在酒店进行测试$1次<br/>抵达后第$2天<br/>抵达后第$3天",
     },
     remark: {
-      EN: "<point char=\"*\">Follow the instructions of the port health staff at the airport to complete the test.</point><br/>\
-      <point char=\"*\">You must undergo the test by attending one of the <url=\"http://www.google.com\">Community Testing Centres</url></point>",
-      TC: "<point char=\"*\">按照機場口岸衛生人員的指示完成檢測。</point><br/>\
-      <point char=\"*\">您必須通過參加其中一個<url=\"http://www.google.com\">社區測試中心</url>來接受測試</point>",
-      SC: "<point char=\"*\">按照機場口岸衛生人員的指示完成檢測。</point><br/>\
-      <point char=\"*\">您必須參加其中一個<url=\"http://www.google.com\">社區測試中心</url>來接受測試</point>",
-    }
+      EN: "",
+      TC: "",
+      SC: "",
+    },
+    footnote: true,
   },
   parameters: [
     {

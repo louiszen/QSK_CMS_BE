@@ -18,7 +18,9 @@ const doc = {
     EN: "Are you entering Hong Kong under the \"Return2HK\" Scheme?",
     TC: "您是通過“Return2HK”計劃進入香港嗎？",
     SC: "您是通过“Return2HK”计划进入香港吗？",
-  }
+  },
+  showInfo: false,
+  infoPage: "",
 }
 
 module.exports = doc;

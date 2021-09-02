@@ -11,6 +11,8 @@ const ArrivalAns = require('./ArrivalAns');
 const QFlow = require('./QFlow');
 const QOrder = require('./QOrder');
 const Tips = require('./Tips');
+const Footnote = require('./Footnote');
+const IconDocs = require('./IconDocs');
 
 module.exports = {
   SevGroup,
@@ -25,5 +27,7 @@ module.exports = {
   ArrivalAns,
   QFlow,
   QOrder,
-  Tips
+  Tips,
+  Footnote,
+  IconDocs
 }

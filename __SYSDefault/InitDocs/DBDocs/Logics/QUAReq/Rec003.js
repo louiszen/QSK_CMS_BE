@@ -11,7 +11,6 @@ const doc = {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
   },
-  type: "compulsorytest",
   display: {
     type: "withicon",
     icon: "/QUAReq003.png",
@@ -29,7 +28,8 @@ const doc = {
       EN: "",
       TC: "",
       SC: "",
-    }
+    },
+    footnote: false
   },
   parameters: []
 };

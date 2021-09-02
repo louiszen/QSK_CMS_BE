@@ -18,7 +18,9 @@ const doc = {
     EN: "Do you possess positive antibody test result?",
     TC: "您的抗體檢測結果呈陽性嗎？",
     SC: "您的抗体检测结果呈阳性吗？",
-  }
+  },
+  showInfo: false,
+  infoPage: "",
 }
 
 module.exports = doc;
