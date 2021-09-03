@@ -20,14 +20,14 @@ const doc = {
       SC: "强制隔离"
     },
     content: {
-      EN: "$1 days",
-      TC: "$1 日",
-      SC: "$1 日",
+      EN: "#1 days",
+      TC: "#1 日",
+      SC: "#1 日",
     },
     remark: {
-      EN: "At <url href=\"http://www.google.com\">$2</url>",
-      TC: "在 <url href=\"http://www.google.com\">$2</url>",
-      SC: "在 <url href=\"http://www.google.com\">$2</url>"
+      EN: "At <url href=\"http://www.google.com\">#2</url>",
+      TC: "在 <url href=\"http://www.google.com\">#2</url>",
+      SC: "在 <url href=\"http://www.google.com\">#2</url>"
     }
   },
   parameters: [

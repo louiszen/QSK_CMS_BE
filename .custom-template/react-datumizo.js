@@ -34,15 +34,18 @@ class ${1} extends Component {
         schema: schema,
         reqAuth: "${5}",
 
-        columnsToolbar: true,
-        filterToolbar: true,
-        densityToolbar: true,
-        exportToolbar: false,
-        density: "standard",
-        defaultPageSize: 25,
-        showSelector: true,
         noDefaultTable: false,
         noDefaultButtons: false,
+
+        tablizo: {
+          columnsToolbar: true,
+          filterToolbar: true,
+          densityToolbar: true,
+          exportToolbar: false,
+          density: "standard",
+          defaultPageSize: 25,
+          showSelector: true,
+        },
 
         formizo: {
 

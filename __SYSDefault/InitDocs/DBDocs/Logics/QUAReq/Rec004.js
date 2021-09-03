@@ -20,9 +20,9 @@ const doc = {
       SC: "病毒检测"
     },
     content: {
-      EN: "$1 tests at hotel<br/>$2 day of arrival<br/>$3 day of arrival",
-      TC: "在酒店進行測試$1次<br/>入境後第$2天<br/>入境後第$3天",
-      SC: "在酒店进行测试$1次<br/>抵达后第$2天<br/>抵达后第$3天",
+      EN: "#1 tests at hotel<br/>#2 day of arrival<br/>#3 day of arrival",
+      TC: "在酒店進行測試#1次<br/>入境後第#2天<br/>入境後第#3天",
+      SC: "在酒店进行测试#1次<br/>抵达后第#2天<br/>抵达后第#3天",
     },
     remark: {
       EN: "",
