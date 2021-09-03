@@ -43,8 +43,8 @@ class ${1} extends Component {
           filterToolbar: true,
           densityToolbar: true,
           exportToolbar: false,
-          density: "standard",
-          defaultPageSize: 25,
+          density: "compact", //compact, standard, comfortable
+          defaultPageSize: 50,
           showSelector: true,
         },
 
