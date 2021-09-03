@@ -28,27 +28,27 @@ const doc = {
       parameters: [null, [1, 3, 7, 12, 16, 19], null]
     }
   },
-  DOCReq: {
-    DOCReq001: true,
-    DOCReq004: true,
-    DOCReq005: true,
-    DOCReq006: true,
-    DOCReq007: true,
-  },
-  ENTReq: {
-    ENTReq001: true,
-    ENTReq002: true,
-  },
-  APProc: {
-    APProc001: true,
-    APProc002: true,
-    APProc003: true,
-    APProc004: true,
-    APProc005: true,
-    APProc006: true,
-    APProc007: true,
-    APProc008: true,
-  }
+  DOCReq: [
+    "DOCReq001",
+    "DOCReq004",
+    "DOCReq005",
+    "DOCReq006",
+    "DOCReq007",
+  ],
+  ENTReq: [
+    "ENTReq001",
+    "ENTReq002",
+  ],
+  APProc: [
+    "APProc001",
+    "APProc002",
+    "APProc003",
+    "APProc004",
+    "APProc005",
+    "APProc006",
+    "APProc007",
+    "APProc008",
+  ]
 };
 
 module.exports = doc;

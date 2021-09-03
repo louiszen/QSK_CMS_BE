@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import _ from 'lodash';
-import { Paper, Tab, Tabs, Typography } from '@material-ui/core';
+import { Box, Paper, Tab, Tabs, Typography } from '@material-ui/core';
 
 import tabs from './tabs';
 
@@ -73,12 +73,12 @@ class ${1} extends Component {
   }
 
   renderTabPanels(){
-    let {selectedTab} = this.state;
+    let {selectedTab, addOns} = this.state;
     return _.map(tabs, (o, i) => {
       return (
-        <div key={i} hidden={selectedTab !== i} style={{width: "100%", height: "100%"}}>
-          {o.render}
-        </div>
+        <Box key={i} hidden={selectedTab !== i} style={{width: "100%", height: "100%"}}>
+          {_.isFunction(o.render)? o.render(addOns) : o.render}
+        </Box>
       );
     });
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropsType from 'prop-types';
 
 import { Box, Typography } from '@material-ui/core';
 
@@ -16,11 +17,11 @@ import { IZOTheme } from '__Base/config';
 class ${1} extends Component {
 
   static propTypes = {
-
+    addOns: PropsType.object
   }
 
   static defaultProps = {
-
+    addOns: {}
   }
 
   constructor(){
@@ -126,8 +127,7 @@ class ${1} extends Component {
             //{ icon: "import", func: "Import", caption: "Import", reqFunc: "Import" },
           ],
         },
-      },
-      addOns: {}
+      }
     };
   }
 
@@ -159,7 +159,8 @@ class ${1} extends Component {
   }
 
   render(){
-    let {base, serverSidePagination, title, addOns} = this.state;
+    let {addOns} = this.props;
+    let {base, serverSidePagination, title} = this.state;
     return (
       <VStack>
         <Box padding={1} width="100%">
