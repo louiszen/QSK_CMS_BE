@@ -12,22 +12,16 @@ const doc = {
     End: null
   },
   canEntry: true,
-  QUAReq: {
-    QUAReq001: {
-      show: true,
-      parameters: [14, "designated places (home, hotel or other accommodation)"]
+  QUAReq: [
+    {
+      refID: "QUAReq001",
+      parameters: ["14 days", "home, hotel or other accommodation"]
     },
-    QUAReq002: {
-      show: false,
-    },
-    QUAReq003: {
-      show: false,
-    },
-    QUAReq004: {
-      show: true,
-      parameters: [null, [1, 3, 7, 12, 16, 19], null]
+    {
+      refID: "QUAReq006",
+      parameters: ["3rd, 7th, 12th, 16th, 19th day"]
     }
-  },
+  ],
   DOCReq: [
     "DOCReq001",
     "DOCReq004",

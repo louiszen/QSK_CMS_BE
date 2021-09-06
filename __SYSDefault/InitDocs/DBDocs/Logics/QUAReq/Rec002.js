@@ -33,7 +33,11 @@ const doc = {
   parameters: [
     {
       description: "No. of self-monitoring days after compulsory quarantine",
-      format: "number",
+      format: "Highlighted Number",
+      options: [
+        {EN: "7 days", TC: "7日", SC: "7日"},
+        {EN: "14 days", TC: "14日", SC: "14日"}
+      ]
     }
   ]
 };

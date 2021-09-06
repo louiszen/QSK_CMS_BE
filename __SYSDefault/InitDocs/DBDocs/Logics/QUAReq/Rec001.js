@@ -32,14 +32,19 @@ const doc = {
   parameters: [
     {
       description: "No. of compulsory quarantine days",
-      format: "number",
+      format: "Highlighted Number",
+      options: [
+        {EN: "7 days", TC: "7日", SC: "7日"},
+        {EN: "14 days", TC: "14日", SC: "14日"},
+        {EN: "21 days", TC: "21日", SC: "21日"}
+      ]
     },
     {
       description: "Compulsory quarantine location",
-      format: "select",
+      format: "Simple Text",
       options: [
-        {EN: "Designated quarantine hotel", TC: "指定檢疫酒店", SC: "指定检疫酒店"},
-        {EN: "Home, hotel or other accomodation", TC: "家、酒店或其他住宿", SC: "家、酒店或其他住宿"}
+        {EN: "designated quarantine hotel", TC: "指定檢疫酒店", SC: "指定检疫酒店"},
+        {EN: "home, hotel or other accommodation", TC: "家、酒店或其他住宿", SC: "家、酒店或其他住宿"}
       ]
     }
   ]
