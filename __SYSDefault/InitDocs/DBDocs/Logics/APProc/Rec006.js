@@ -12,7 +12,6 @@ const doc = {
     End: null
   },
   display: {
-    type: "circled",
     content: {
       EN: "Wait for the test result at the holding area",
       TC: "在等候區等待檢測結果",

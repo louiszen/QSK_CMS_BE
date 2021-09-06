@@ -12,7 +12,6 @@ const doc = {
     End: null
   },
   display: {
-    type: "circled",
     content: {
       EN: "Provide samples for COVID-19 testing",
       TC: "為 COVID-19 測試提供樣本",

@@ -12,7 +12,6 @@ const doc = {
     End: null
   },
   display: {
-    type: "orderedlist",
     content: {
       EN: "Negative result proof of a nucleic acid test",
       TC: "核酸檢測陰性結果證明",

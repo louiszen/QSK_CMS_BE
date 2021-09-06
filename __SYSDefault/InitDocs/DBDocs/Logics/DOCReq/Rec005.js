@@ -12,7 +12,6 @@ const doc = {
     End: null
   },
   display: {
-    type: "orderedlist",
     content: {
       EN: "Documentary proof for recognized testing institution",
       TC: "認可檢測機構的證明文件",

@@ -12,8 +12,7 @@ const doc = {
     End: null
   },
   display: {
-    type: "withicon",
-    icon: "/QUAReq001.png",
+    icon: "Ico001",
     title: {
       EN: "Compulsory Quarantine",
       TC: "強制隔離",

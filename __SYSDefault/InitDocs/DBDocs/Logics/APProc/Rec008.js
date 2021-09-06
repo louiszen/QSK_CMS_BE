@@ -12,7 +12,6 @@ const doc = {
     End: null
   },
   display: {
-    type: "circled",
     content: {
       EN: "Proceed to the Arrival Hall and board the designated transport to hotel",
       TC: "前往到達大廳，搭乘指定交通工具前往酒店",

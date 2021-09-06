@@ -12,7 +12,6 @@ const doc = {
     End: null
   },
   display: {
-    type: "circled",
     content: {
       EN: "Present your health declaration QR code",
       TC: "出示您的健康聲明二維碼",

@@ -12,7 +12,6 @@ const doc = {
     End: null
   },
   display: {
-    type: "circled",
     content: {
       EN: "Put on electronic wristband and activate the StayHomeSafe mobile app",
       TC: "戴上電子腕帶並激活 StayHomeSafe 移動應用程序",

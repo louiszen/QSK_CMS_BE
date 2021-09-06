@@ -12,7 +12,6 @@ const doc = {
     End: null
   },
   display: {
-    type: "circled",
     content: {
       EN: "Provide your contact phone number",
       TC: "提供您的聯繫電話",

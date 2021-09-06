@@ -12,7 +12,6 @@ const doc = {
     End: null
   },
   display: {
-    type: "orderedlist",
     content: {
       EN: "Positive result proof of a serology antibody test",
       TC: "血清抗體測試的陽性結果證明",

@@ -12,8 +12,7 @@ const doc = {
     End: null
   },
   display: {
-    type: "withicon",
-    icon: "/QUAReq002.png",
+    icon: "Ico002",
     title: {
       EN: "Self-monitoring after compulsory quarantine",
       TC: "強制隔離後的自我監測",

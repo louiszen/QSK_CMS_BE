@@ -12,8 +12,7 @@ const doc = {
     End: null
   },
   display: {
-    type: "withicon",
-    icon: "/QUAReq004.png",
+    icon: "Ico004",
     title: {
       EN: "Virus testing",
       TC: "病毒檢測",

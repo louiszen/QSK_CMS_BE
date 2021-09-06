@@ -12,7 +12,6 @@ const doc = {
     End: null
   },
   display: {
-    type: "circled",
     content: {
       EN: "Proceed to immigration check and reclaim baggage",
       TC: "繼續進行移民檢查並領取行李",

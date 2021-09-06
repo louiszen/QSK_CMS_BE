@@ -12,7 +12,6 @@ const doc = {
     End: null
   },
   display: {
-    type: "orderedlist",
     content: {
       EN: "Vaccination record",
       TC: "疫苗接種記錄",

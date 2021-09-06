@@ -12,7 +12,6 @@ const doc = {
     End: null
   },
   display: {
-    type: "orderedlist",
     content: {
       EN: "Designated quarantine hotel room reservation confirmation",
       TC: "指定檢疫酒店房間預訂確認",

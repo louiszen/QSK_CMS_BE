@@ -12,7 +12,6 @@ const doc = {
     End: null
   },
   display: {
-    type: "orderedlist",
     content: {
       EN: "StayHomeSafe mobile app",
       TC: "StayHomeSafe 移動應用程序",

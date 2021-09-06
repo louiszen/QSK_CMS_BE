@@ -12,8 +12,7 @@ const doc = {
     End: null
   },
   display: {
-    type: "withicon",
-    icon: "/QUAReq003.png",
+    icon: "Ico003",
     title: {
       EN: "Compulsory test at HKIA upon arrival",
       TC: "抵達香港國際機場後進行強制性測試",

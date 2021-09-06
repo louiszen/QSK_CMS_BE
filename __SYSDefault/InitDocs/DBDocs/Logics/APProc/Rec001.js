@@ -12,7 +12,6 @@ const doc = {
     End: null
   },
   display: {
-    type: "circled",
     content: {
       EN: "Follow the signage and proceed to the specimen collection centre",
       TC: "按照指示牌前往標本採集中心",

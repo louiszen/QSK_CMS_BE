@@ -12,7 +12,6 @@ const doc = {
     End: null
   },
   display: {
-    type: "orderedlist",
     content: {
       EN: "Green QR code obtained in HKSAR electronic health declaration system",
       TC: "香港特區電子健康申報系統獲得綠色二維碼",
