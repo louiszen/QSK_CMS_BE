@@ -32,7 +32,7 @@ class ${1} extends Component {
 
   componentWillUnmount() {
     this.setState = (state, callback) => {
-        return;
+      return;
     };
   }
 
