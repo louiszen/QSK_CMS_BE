@@ -56,7 +56,7 @@ render(){
 ---
 <br/>
 
-The following is the necessary props that must be passed into `Formizo` in order to let it works. 
+The following is the necessary props that must be passed into `${1}` in order to let it works. 
 
 | Props  | Type   | Description | Link |
 | :---   | :---- | :---       | :--- |
