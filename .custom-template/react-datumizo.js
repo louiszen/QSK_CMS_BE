@@ -58,60 +58,62 @@ class ${1} extends Component {
           schema: schema.Table
         },
 
-        Add: {
-          title: "Add ${2}",
-          url: datalink.Request.Add,
-          success: "${2} Added Successfully",
-          fail: "${2} Add Failed: ",
-          schema: schema.Add,
-          buttons: ["Clear", "Submit"],
-          onSubmit: "Add"
-        },
-        Delete: {
-          title: "Delete this ${2}?",
-          content: "Caution: This is irrevertable.",
-          url: datalink.Request.Delete,
-          success: "${2} Deleted Successfully.",
-          fail: "${2} Delete Failed: ",
-          onSubmit: "Delete"
-        },
-        Edit: {
-          title: "Edit ${2} ",
-          url: datalink.Request.Edit,
-          success: "${2} Edited Successfully",
-          fail: "${2} Edit Failed: ",
-          schema: schema.Edit,
-          buttons: ["Revert", "Submit"],
-          onSubmit: "Edit"
-        },
-        Info: {
-          title: "${3} ",
-          url: datalink.Request.Info,
-          success: "${3} Load Successfully",
-          fail: "${3} Load Failed: ",
-          schema: schema.Info,
-          readOnly: true
-        },
-        Import: {
-          title: "${2} Import",
-          content: "",
-          url: datalink.Request.Import,
-          success: "${2} Imported Successfully.",
-          fail: "${2} Import Failed: ",
-          schema: schema.ImportFormat,
-          replace: false
-        },
-        Export: {
-          url: datalink.Request.Export,
-          schema: schema.Export,
-        },
-        DeleteBulk: {
-          title: (n) => "Delete these " + n + " ${2}?",
-          content: "Caution: This is irrevertable.",
-          url: datalink.Request.DeleteBulk,
-          success: "${2} Deleted Successfully.",
-          fail: "${2} Delete Failed: ",
-          onSubmit: "DeleteBulk",
+        operations: {
+          Add: {
+            title: "Add ${2}",
+            url: datalink.Request.Add,
+            success: "${2} Added Successfully",
+            fail: "${2} Add Failed: ",
+            schema: schema.Add,
+            buttons: ["Clear", "Submit"],
+            onSubmit: "Add"
+          },
+          Delete: {
+            title: "Delete this ${2}?",
+            content: "Caution: This is irrevertable.",
+            url: datalink.Request.Delete,
+            success: "${2} Deleted Successfully.",
+            fail: "${2} Delete Failed: ",
+            onSubmit: "Delete"
+          },
+          Edit: {
+            title: "Edit ${2} ",
+            url: datalink.Request.Edit,
+            success: "${2} Edited Successfully",
+            fail: "${2} Edit Failed: ",
+            schema: schema.Edit,
+            buttons: ["Revert", "Submit"],
+            onSubmit: "Edit"
+          },
+          Info: {
+            title: "${3} ",
+            url: datalink.Request.Info,
+            success: "${3} Load Successfully",
+            fail: "${3} Load Failed: ",
+            schema: schema.Info,
+            readOnly: true
+          },
+          Import: {
+            title: "${2} Import",
+            content: "",
+            url: datalink.Request.Import,
+            success: "${2} Imported Successfully.",
+            fail: "${2} Import Failed: ",
+            schema: schema.ImportFormat,
+            replace: false
+          },
+          Export: {
+            url: datalink.Request.Export,
+            schema: schema.Export,
+          },
+          DeleteBulk: {
+            title: (n) => "Delete these " + n + " ${2}?",
+            content: "Caution: This is irrevertable.",
+            url: datalink.Request.DeleteBulk,
+            success: "${2} Deleted Successfully.",
+            fail: "${2} Delete Failed: ",
+            onSubmit: "DeleteBulk",
+          },
         },
 
         buttons: {
