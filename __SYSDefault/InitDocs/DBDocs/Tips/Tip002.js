@@ -24,10 +24,10 @@ const doc = {
       TC: "",
       SC: "",
     },
-    remark: {
-      EN: "",
-      TC: "",
-      SC: "",
+    collapse: {
+      EN: false,
+      TC: false,
+      SC: false,
     }
   },
 };
