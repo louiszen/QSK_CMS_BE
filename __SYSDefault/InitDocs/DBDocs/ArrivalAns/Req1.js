@@ -23,25 +23,55 @@ const doc = {
     }
   ],
   DOCReq: [
-    "DOCReq001",
-    "DOCReq004",
-    "DOCReq005",
-    "DOCReq006",
-    "DOCReq007",
+    {
+      refID: "DOCReq001",
+    },
+    {
+      refID: "DOCReq004",
+    },
+    {
+      refID: "DOCReq005",
+    },
+    {
+      refID: "DOCReq006",
+    },
+    {
+      refID: "DOCReq007",
+    },
   ],
   ENTReq: [
-    "ENTReq001",
-    "ENTReq002",
+    {
+      refID: "ENTReq001",
+    },
+    {
+      refID: "ENTReq002",
+    },
   ],
   APProc: [
-    "APProc001",
-    "APProc002",
-    "APProc003",
-    "APProc004",
-    "APProc005",
-    "APProc006",
-    "APProc007",
-    "APProc008",
+    {
+      refID: "APProc001",
+    },
+    {
+      refID: "APProc002",
+    },
+    {
+      refID: "APProc003",
+    },
+    {
+      refID: "APProc004",
+    },
+    {
+      refID: "APProc005",
+    },
+    {
+      refID: "APProc006",
+    },
+    {
+      refID: "APProc007",
+    },
+    {
+      refID: "APProc008",
+    },
   ]
 };
 
