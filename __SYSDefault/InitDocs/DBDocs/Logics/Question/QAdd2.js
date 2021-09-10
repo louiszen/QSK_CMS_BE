@@ -13,7 +13,6 @@ const doc = {
     End: null
   },
   type: "yesno",
-  order: 5,
   question: {
     EN: "Are you entering Hong Kong under the \"Return2HK\" Scheme?",
     TC: "您是通過“Return2HK”計劃進入香港嗎？",

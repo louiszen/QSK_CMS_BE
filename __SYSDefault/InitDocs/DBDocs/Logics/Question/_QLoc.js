@@ -13,7 +13,6 @@ const doc = {
     End: null
   },
   type: "severity",
-  order: 3,
   question: {
     EN: "Where have you been?",
     TC: "你去過哪個地方？",

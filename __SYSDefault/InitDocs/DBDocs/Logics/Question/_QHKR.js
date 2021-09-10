@@ -13,7 +13,6 @@ const doc = {
     End: null
   },
   type: "yesno",
-  order: 2,
   question: {
     EN: "Are you a Hong Kong resident?",
     TC: "你是香港居民嗎？",
