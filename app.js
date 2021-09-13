@@ -29,6 +29,7 @@ app.use(express.urlencoded({
   limit: '10mb'
 }));
 app.use(cors());
+app.use("/Images", express.static("Images"));
 
 Start();
 

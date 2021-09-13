@@ -11,6 +11,7 @@ _log
 _uploads
 _downloads
 ΩRUNTIME/*
+Images/*
 .vscode
 
 # Runtime data

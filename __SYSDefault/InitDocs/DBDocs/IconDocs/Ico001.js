@@ -11,7 +11,7 @@ const doc = {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
   },
-  link: "/Images/Ico001.png"
+  link: "Images/Icons/Ico001.png"
 };
 
 module.exports = doc;

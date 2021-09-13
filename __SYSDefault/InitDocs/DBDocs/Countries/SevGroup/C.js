@@ -6,7 +6,7 @@ const doc = {
   refID: "C",
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   display: "C",
-  severity: 4,
+  severity: 3,
   period: 14,
   effective: {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),

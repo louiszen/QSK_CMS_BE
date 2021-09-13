@@ -1,9 +1,9 @@
 const _Generic = require('../_Generic');
 
-const Add = _Generic.Add;
-const Delete = _Generic.Delete;
-const DeleteBulk = _Generic.DeleteBulk;
-const Edit = _Generic.Edit;
+const Add = require('./Add');
+const Delete = require('./Delete');
+const DeleteBulk = require('./DeleteBulk');
+const Edit = require('./Edit');
 const Export = _Generic.Export;
 const Get = _Generic.Get;
 const Import = _Generic.Import;

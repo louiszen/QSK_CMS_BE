@@ -6,7 +6,7 @@ const doc = {
   refID: "Taiwan",
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   display: "Taiwan",
-  severity: 3,
+  severity: 2,
   period: 14,
   effective: {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
