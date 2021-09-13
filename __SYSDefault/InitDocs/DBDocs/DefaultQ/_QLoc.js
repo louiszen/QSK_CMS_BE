@@ -12,7 +12,6 @@ const doc = {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
   },
-  type: "severity",
   question: {
     EN: "Where have you been?",
     TC: "你去過哪個地方？",

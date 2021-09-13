@@ -5,6 +5,7 @@ const Footnote = require('./Footnote');
 const Tips = require('./Tips');
 const Miscellaneous = require('./Miscellaneous');
 const IconDocs = require('./IconDocs');
+const DefaultQ = require('./DefaultQ');
 
 module.exports = {
   Countries,
@@ -13,5 +14,6 @@ module.exports = {
   Footnote,
   Tips,
   Miscellaneous,
-  IconDocs
+  IconDocs,
+  DefaultQ
 }

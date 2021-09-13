@@ -13,6 +13,7 @@ const QOrder = require('./QOrder');
 const Tips = require('./Tips');
 const Footnote = require('./Footnote');
 const IconDocs = require('./IconDocs');
+const DefaultQ = require('./DefaultQ');
 
 module.exports = {
   SevGroup,
@@ -29,5 +30,6 @@ module.exports = {
   QOrder,
   Tips,
   Footnote,
-  IconDocs
+  IconDocs,
+  DefaultQ
 }

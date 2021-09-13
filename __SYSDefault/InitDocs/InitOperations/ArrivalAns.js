@@ -39,6 +39,17 @@ module.exports = async () => {
       res = await db.Insert(dbName, o);
     }));
 
+    dbName = ConfigDocs.DBNAME.DefaultQ;
+    res = await db.DestroyDatabase(dbName);
+    res = await db.CreateDatabase(dbName);
+    if(!res.Success){
+      throw new Error(res.payload.Error)
+    }
+
+    await Promise.all(_.map(DBDocs.DefaultQ, async (o, i) => {
+      res = await db.Insert(dbName, o);
+    }));
+
     dbName = ConfigDocs.DBNAME.Tips;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);

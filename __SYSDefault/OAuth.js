@@ -20,11 +20,12 @@ const DEVUSER = {
             DOCReq: ["*"],
             ENTReq: ["*"],
             APProc: ["*"],
+            Tips: ["*"],
           },
           Miscellaneous: {
-            Tips: ["*"],
             Footnote: ["*"],
-            IconDocs: ["*"]
+            IconDocs: ["*"],
+            DefaultQ: ["*"]
           }
         },
         DepartAns: ["*"],

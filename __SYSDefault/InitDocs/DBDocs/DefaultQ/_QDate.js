@@ -12,7 +12,6 @@ const doc = {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
   },
-  type: "datetime",
   question: {
     EN: "When will you arrive Hong Kong?",
     TC: "你什麼時候到香港？",

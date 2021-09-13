@@ -17,6 +17,7 @@ const doc = {
   QFlow: 'qflow',
   QOrder: 'qorder',
   ArrivalAns: 'arrivalans',
+  DefaultQ: 'defaultq',
   DepartAns: 'departans',
   TransitAns: 'transitans',
   UserRec: 'xuserrecord',
