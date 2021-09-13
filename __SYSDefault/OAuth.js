@@ -24,8 +24,7 @@ const DEVUSER = {
           },
           Miscellaneous: {
             Footnote: ["*"],
-            IconDocs: ["*"],
-            DefaultQ: ["*"]
+            IconDocs: ["*"]
           }
         },
         DepartAns: ["*"],
@@ -35,7 +34,8 @@ const DEVUSER = {
         Question: ["*"],
         Scenario: ["*"],
         QFlow: ["*"],
-        QOrder: ["*"]
+        QOrder: ["*"],
+        DefaultQ: ["*"]
       },
       System: {
         General: ["*"]
