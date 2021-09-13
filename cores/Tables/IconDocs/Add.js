@@ -6,7 +6,7 @@ const { v1 } = require('uuid');
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
-const {Chalk, Response, Fs} = _base.Utils;
+const {Chalk, Response, Fs, Time} = _base.Utils;
 
 /* IMPORTANT: Generic Scripts Automation depends on FOLDER name */
 
@@ -24,6 +24,7 @@ module.exports = async (_opt, _param, _file) => {
   await Fs.writeFile(path, _file.buffer);
 
   data.link = path;
+  data.lastUpdate = Time.Now().toISOString();
 
   let rtn = await db.Insert(dbname, data);
 
