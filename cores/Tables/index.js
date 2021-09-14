@@ -16,6 +16,11 @@ const IconDocs = require('./IconDocs');
 const DefaultQ = require('./DefaultQ');
 const TransitAnsComp = require('./TransitAnsComp');
 const TransitAnsTemp = require('./TransitAnsTemp');
+const DepartAnsComp = require('./DepartAnsComp');
+const DepartAnsTemp = require('./DepartAnsTemp');
+const DepartAnsLoc = require('./DepartAnsLoc');
+const DepartAnsLink = require('./DepartAnsLink');
+const DepartAnsTest = require('./DepartAnsTest');
 
 module.exports = {
   SevGroup,
@@ -35,5 +40,10 @@ module.exports = {
   IconDocs,
   DefaultQ,
   TransitAnsComp,
-  TransitAnsTemp
+  TransitAnsTemp,
+  DepartAnsComp,
+  DepartAnsTemp,
+  DepartAnsLoc,
+  DepartAnsLink,
+  DepartAnsTest
 }

@@ -18,9 +18,13 @@ const doc = {
   QOrder: 'qorder',
   ArrivalAns: 'arrivalans',
   DefaultQ: 'defaultq',
-  DepartAns: 'departans',
   TransitAnsComp: 'transitanscomp',
   TransitAnsTemp: 'transitanstemp',
+  DepartAnsTemp: 'departanstemp',
+  DepartAnsComp: 'departanscomp',
+  DepartAnsLoc: 'departansloc',
+  DepartAnsTest: 'departanstest',
+  DepartAnsLink: 'departanslink',
   UserRec: 'xuserrecord',
 };
 

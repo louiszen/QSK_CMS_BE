@@ -27,7 +27,15 @@ const DEVUSER = {
             IconDocs: ["*"]
           }
         },
-        DepartAns: ["*"],
+        DepartAns: {
+          Template: ["*"],
+          Components: ["*"],
+          Miscellaneous: {
+            Loc: ["*"],
+            Link: ["*"],
+            VirusTest: ["*"]
+          }
+        },
         TransitAns: {
           Template: ["*"],
           Components: ["*"]
