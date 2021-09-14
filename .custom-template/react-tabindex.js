@@ -7,6 +7,7 @@ import tabs from './tabs';
 
 import { Accessor, Authority } from 'IZOArc/STATIC';
 import { VStack, HStack, Spacer } from 'IZOArc/LabIZO/Stackizo';
+import { Denied } from 'IZOArc/Fallback';
 
 /** 
 tabs = [
@@ -18,7 +19,9 @@ tabs = [
     iconPos: "top" | "left" | "right" | "bottom",
     noTransform: Boolean | false,
     spacing: Number | 5,
-    alignment: "center" | "left" | "right"
+    alignment: "center" | "left" | "right",
+    width: Number | 200,
+    height: Number | 20
   }
 ];
 */
@@ -112,7 +115,7 @@ class ${1} extends Component {
             icon = null; break;
         }
         return (
-          <Tab key={i} label={label} icon={icon} disabled={o.disabled} style={{minHeight: 20, minWidth: 200}}/>
+          <Tab key={i} label={label} icon={icon} disabled={o.disabled} style={{minHeight: o.height || 20, minWidth: o.width || 200}}/>
         );
       }
     });
