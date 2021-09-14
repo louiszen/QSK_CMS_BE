@@ -18,36 +18,14 @@ module.exports = async () => {
   let dbName;
   
   try{
-    dbName = ConfigDocs.DBNAME.Location;
+    dbName = ConfigDocs.DBNAME.Miscellaneous;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.Countries.Location, async (o, i) => {
-      res = await db.Insert(dbName, o);
-    }));
-
-    dbName = ConfigDocs.DBNAME.Grouping;
-    res = await db.DestroyDatabase(dbName);
-    res = await db.CreateDatabase(dbName);
-    if(!res.Success){
-      throw new Error(res.payload.Error)
-    }
-
-    await Promise.all(_.map(DBDocs.Countries.Grouping, async (o, i) => {
-      res = await db.Insert(dbName, o);
-    }));
-
-    dbName = ConfigDocs.DBNAME.SevGroup;
-    res = await db.DestroyDatabase(dbName);
-    res = await db.CreateDatabase(dbName);
-    if(!res.Success){
-      throw new Error(res.payload.Error)
-    }
-
-    await Promise.all(_.map(DBDocs.Countries.SevGroup, async (o, i) => {
+    await Promise.all(_.map(DBDocs.Miscellaneous, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 

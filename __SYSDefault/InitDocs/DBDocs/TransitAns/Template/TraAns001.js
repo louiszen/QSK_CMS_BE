@@ -3,23 +3,22 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "Mainland China",
+  refID: "TraAns001",
+  description: "Transition answer",
+  version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
-  display: {
-    EN: "Mainland China",
-    TC: "",
-    SC: ""
-  },
-  inChina: true,
-  priority: {
-    EN: 1,
-    TC: 1,
-    SC: 1
-  },
   effective: {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
-  }
-}
+  },
+  Components: [
+    {
+      refID: "Tra001",
+    },
+    {
+      refID: "Tra002",
+    }
+  ],
+};
 
 module.exports = doc;

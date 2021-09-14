@@ -28,7 +28,10 @@ const DEVUSER = {
           }
         },
         DepartAns: ["*"],
-        TransitAns: ["*"]
+        TransitAns: {
+          Template: ["*"],
+          Components: ["*"]
+        }
       },
       Questionnaire: {
         Question: ["*"],

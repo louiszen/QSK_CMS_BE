@@ -1,9 +1,13 @@
 const Countries = require('./Countries');
-const Logics = require('./Logics');
+const Questionnaire = require('./Questionnaire');
 const ArrivalAns = require('./ArrivalAns');
+const Miscellaneous = require('./Miscellaneous');
+const TransitAns = require('./TransitAns');
 
 module.exports = {
   Countries,
-  Logics,
-  ArrivalAns
+  Questionnaire,
+  ArrivalAns,
+  Miscellaneous,
+  TransitAns
 };

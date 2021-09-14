@@ -18,36 +18,53 @@ module.exports = async () => {
   let dbName;
   
   try{
-    dbName = ConfigDocs.DBNAME.Location;
+    dbName = ConfigDocs.DBNAME.Question;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.Countries.Location, async (o, i) => {
+    await Promise.all(_.map(DBDocs.Questionnaire.Question, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 
-    dbName = ConfigDocs.DBNAME.Grouping;
+    ///
+
+    dbName = ConfigDocs.DBNAME.DefaultQ;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.Countries.Grouping, async (o, i) => {
+    await Promise.all(_.map(DBDocs.Questionnaire.DefaultQ, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 
-    dbName = ConfigDocs.DBNAME.SevGroup;
+    ///
+
+    dbName = ConfigDocs.DBNAME.QFlow;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.Countries.SevGroup, async (o, i) => {
+    await Promise.all(_.map(DBDocs.Questionnaire.QFlow, async (o, i) => {
+      res = await db.Insert(dbName, o);
+    }));
+
+    ///
+
+    dbName = ConfigDocs.DBNAME.QOrder;
+    res = await db.DestroyDatabase(dbName);
+    res = await db.CreateDatabase(dbName);
+    if(!res.Success){
+      throw new Error(res.payload.Error)
+    }
+
+    await Promise.all(_.map(DBDocs.Questionnaire.QOrder, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 

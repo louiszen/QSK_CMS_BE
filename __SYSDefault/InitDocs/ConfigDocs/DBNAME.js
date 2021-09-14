@@ -19,7 +19,8 @@ const doc = {
   ArrivalAns: 'arrivalans',
   DefaultQ: 'defaultq',
   DepartAns: 'departans',
-  TransitAns: 'transitans',
+  TransitAnsComp: 'transitanscomp',
+  TransitAnsTemp: 'transitanstemp',
   UserRec: 'xuserrecord',
 };
 

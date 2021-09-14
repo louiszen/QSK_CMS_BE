@@ -14,6 +14,8 @@ const Tips = require('./Tips');
 const Footnote = require('./Footnote');
 const IconDocs = require('./IconDocs');
 const DefaultQ = require('./DefaultQ');
+const TransitAnsComp = require('./TransitAnsComp');
+const TransitAnsTemp = require('./TransitAnsTemp');
 
 module.exports = {
   SevGroup,
@@ -31,5 +33,7 @@ module.exports = {
   Tips,
   Footnote,
   IconDocs,
-  DefaultQ
+  DefaultQ,
+  TransitAnsComp,
+  TransitAnsTemp
 }
