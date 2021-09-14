@@ -10,6 +10,7 @@ import Datumizo from 'IZOArc/LabIZO/Datumizo/Datumizo';
 import { VStack } from 'IZOArc/LabIZO/Stackizo';
 import { Accessor, ColorX, Authority } from 'IZOArc/STATIC';
 import { IZOTheme } from '__Base/config';
+import { Denied } from 'IZOArc/Fallback';
 
 /**
  * @augments {Component<Props, State>}
@@ -134,7 +135,6 @@ class ${1} extends Component {
   }
 
   componentDidMount(){
-    Authority.Require("${5}");
     this._setAllStates();
   }
 
@@ -144,7 +144,7 @@ class ${1} extends Component {
     }
   }
 
-  componentWillUnmount() {
+  componentWillUnmount(){
     this.setState = (state, callback) => {
       return;
     };
@@ -163,6 +163,7 @@ class ${1} extends Component {
   render(){
     let {addOns} = this.props;
     let {base, serverSidePagination, title} = this.state;
+    if(!Authority.IsAccessibleQ("${5}")) return <Denied/>;
     return (
       <VStack>
         <Box padding={1} width="100%">

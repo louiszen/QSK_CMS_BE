@@ -44,7 +44,6 @@ class ${1} extends Component {
   }
 
   componentDidMount(){
-    Authority.Require("${2}");
     this._setAllStates();
   }
 
@@ -121,7 +120,7 @@ class ${1} extends Component {
 
   render(){
     let {selectedTab} = this.state;
-
+    if(!Authority.IsAccessibleQ("${2}")) return <Denied/>;
     return (
       <VStack width="100%" height="100%">
         <Paper position="static" style={{width: "100%"}}>
