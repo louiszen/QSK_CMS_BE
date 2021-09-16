@@ -21,10 +21,11 @@ const doc = {
   TransitAnsComp: 'transitanscomp',
   TransitAnsTemp: 'transitanstemp',
   DepartAnsTemp: 'departanstemp',
-  DepartAnsComp: 'departanscomp',
   DepartAnsLoc: 'departansloc',
   DepartAnsTest: 'departanstest',
   DepartAnsLink: 'departanslink',
+  DepartAnsTA: 'departansta',
+  DepartAnsCT: 'departansct',
   UserRec: 'xuserrecord',
 };
 

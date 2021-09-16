@@ -27,7 +27,7 @@ const doc = {
   },
   links: [
     {
-      lang: "all",
+      lang: "All",
       url: "https://www.hongkongairport.com/en/COVID19.page"
     }
   ]

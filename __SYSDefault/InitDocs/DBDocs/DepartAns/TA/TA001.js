@@ -3,7 +3,7 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "DC001",
+  refID: "TA001",
   description: "Travel Advisories by Destination",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
@@ -12,6 +12,7 @@ const doc = {
     End: null
   },
   display: {
+    showDestinationOptions: true,
     title: {
       EN: "Travel Advisories by Destination",
       TC: "目的地旅遊諮詢",
@@ -27,7 +28,30 @@ const doc = {
       TC: "為乘客提供有關全球各個機場採取的健康措施的信息。",
       SC: "为乘客提供有关全球各个机场采取的健康措施的信息。"
     }
-  }
+  },
+  applink: {
+    content: {
+      EN: "Available on the [apple] and [google]",
+      TC: "在 [apple] 和 [google] 上可用",
+      SC: "在 [apple] 和 [google] 上可用"
+    },
+    google: {
+      caption: {
+        EN: "Google Play Store",
+        TC: "Google Play Store",
+        SC: "Google Play Store"
+      },
+      url: "api:google",
+    },
+    apple: {
+      caption: {
+        EN: "Apple App Store",
+        TC: "Apple App Store",
+        SC: "Apple App Store"
+      },
+      url: "api:apple",
+    },
+  },
   
 };
 

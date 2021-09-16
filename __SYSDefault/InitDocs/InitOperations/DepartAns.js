@@ -18,14 +18,27 @@ module.exports = async () => {
   let dbName;
   
   try{
-    dbName = ConfigDocs.DBNAME.DepartAnsComp;
+    dbName = ConfigDocs.DBNAME.DepartAnsCT;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.DepartAns.Components, async (o, i) => {
+    await Promise.all(_.map(DBDocs.DepartAns.CT, async (o, i) => {
+      res = await db.Insert(dbName, o);
+    }));
+
+    ///
+
+    dbName = ConfigDocs.DBNAME.DepartAnsTA;
+    res = await db.DestroyDatabase(dbName);
+    res = await db.CreateDatabase(dbName);
+    if(!res.Success){
+      throw new Error(res.payload.Error)
+    }
+
+    await Promise.all(_.map(DBDocs.DepartAns.TA, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 

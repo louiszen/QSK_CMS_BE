@@ -16,7 +16,27 @@ const doc = {
     TC: "入境限制因目的地而異，航空公司可能有額外的登機要求。 建議您訪問以下旅行建議中建議的政府網站，並諮詢航空公司代表了解詳情。",
     SC: "入境限制因目的地而异，航空公司可能有额外的登机要求。 建议您访问以下旅行建议中建议的政府网站，并咨询航空公司代表了解详情。"
   },
-  
+  showTA: true,
+  showCT: true,
+  showOTH: true,
+  others: {
+    title: {
+      EN: "Others",
+      TC: "其他",
+      SC: "其他"
+    },
+    links: [
+      {
+        refID: "Link001"
+      },
+      {
+        refID: "Link002"
+      },
+      {
+        refID: "Link003"
+      }
+    ]
+  }
 };
 
 module.exports = doc;

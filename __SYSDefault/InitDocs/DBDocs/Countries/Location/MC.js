@@ -7,8 +7,8 @@ const doc = {
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   display: {
     EN: "Mainland China",
-    TC: "",
-    SC: ""
+    TC: "中國大陸",
+    SC: "中国大陆"
   },
   inChina: true,
   priority: {

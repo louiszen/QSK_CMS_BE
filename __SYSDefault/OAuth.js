@@ -29,7 +29,10 @@ const DEVUSER = {
         },
         DepartAns: {
           Template: ["*"],
-          Components: ["*"],
+          Components: {
+            CT: ["*"],
+            TA: ["*"]
+          },
           Miscellaneous: {
             Loc: ["*"],
             Link: ["*"],

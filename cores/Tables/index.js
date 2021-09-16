@@ -16,7 +16,8 @@ const IconDocs = require('./IconDocs');
 const DefaultQ = require('./DefaultQ');
 const TransitAnsComp = require('./TransitAnsComp');
 const TransitAnsTemp = require('./TransitAnsTemp');
-const DepartAnsComp = require('./DepartAnsComp');
+const DepartAnsCT = require('./DepartAnsCT');
+const DepartAnsTA = require('./DepartAnsTA');
 const DepartAnsTemp = require('./DepartAnsTemp');
 const DepartAnsLoc = require('./DepartAnsLoc');
 const DepartAnsLink = require('./DepartAnsLink');
@@ -41,7 +42,8 @@ module.exports = {
   DefaultQ,
   TransitAnsComp,
   TransitAnsTemp,
-  DepartAnsComp,
+  DepartAnsCT,
+  DepartAnsTA,
   DepartAnsTemp,
   DepartAnsLoc,
   DepartAnsLink,
