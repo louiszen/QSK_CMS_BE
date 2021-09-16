@@ -52,7 +52,8 @@ const DEVUSER = {
         DefaultQ: ["*"]
       },
       System: {
-        General: ["*"]
+        General: ["*"],
+        User: ["*"]
       }
     }
   }

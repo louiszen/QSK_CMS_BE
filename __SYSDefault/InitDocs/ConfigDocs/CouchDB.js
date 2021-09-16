@@ -2,10 +2,7 @@ const doc = {
   _id: "CouchDB",
   type: "CouchDB",
   Config: {
-    include: [
-      "user",
-      "config"
-    ],
+    include: [],
     envs: {
       local: {
         BASE: "http://",

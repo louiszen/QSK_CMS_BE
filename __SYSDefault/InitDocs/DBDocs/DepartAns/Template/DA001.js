@@ -19,24 +19,17 @@ const doc = {
   showTA: true,
   showCT: true,
   showOTH: true,
-  others: {
-    title: {
-      EN: "Others",
-      TC: "其他",
-      SC: "其他"
+  links: [
+    {
+      refID: "Link001"
     },
-    links: [
-      {
-        refID: "Link001"
-      },
-      {
-        refID: "Link002"
-      },
-      {
-        refID: "Link003"
-      }
-    ]
-  }
+    {
+      refID: "Link002"
+    },
+    {
+      refID: "Link003"
+    }
+  ]
 };
 
 module.exports = doc;

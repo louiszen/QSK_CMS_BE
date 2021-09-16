@@ -26,7 +26,7 @@ const doc = {
   DepartAnsLink: 'departanslink',
   DepartAnsTA: 'departansta',
   DepartAnsCT: 'departansct',
-  UserRec: 'xuserrecord',
+  $UserRec: 'xuserrecord',
 };
 
 module.exports = doc;
