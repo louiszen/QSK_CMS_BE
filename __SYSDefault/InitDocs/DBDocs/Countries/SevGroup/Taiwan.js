@@ -3,7 +3,7 @@ const { v1 } = require("uuid");
 
 const doc = {
   _id: v1(),
-  refID: "Taiwan",
+  refID: "TW",
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   display: "Taiwan",
   severity: 2,
