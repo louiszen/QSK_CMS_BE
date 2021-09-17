@@ -3,8 +3,8 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "MC",
-  externalID: "MC",
+  refID: "CN",
+  externalID: "CN",
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   display: {
     EN: "Mainland China",

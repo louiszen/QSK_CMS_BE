@@ -24,7 +24,10 @@ module.exports = async (_opt, _param) => {
   }
 
   let rtn = _.map(res.payload.rows, (o, i) => {
-    return o.doc.refID;
+    return {
+      refID: o.doc.refID,
+      display: o.doc.display.EN
+    }
   });
 
   rtn = _.uniq(rtn);
