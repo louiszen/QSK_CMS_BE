@@ -26,7 +26,7 @@ module.exports = async (_opt, _param) => {
   let rtn = _.map(res.payload.rows, (o, i) => {
     return {
       refID: o.doc.refID,
-      display: o.doc.display
+      display: o.doc.display || "<No Display Text>"
     }
   });
 

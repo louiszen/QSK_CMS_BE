@@ -26,11 +26,11 @@ module.exports = async (_opt, _param) => {
   let rtn = _.map(res.payload.rows, (o, i) => {
     return {
       refID: o.doc.refID,
-      display: o.doc.display.EN
+      display: o.doc.display && o.doc.display.EN || "<No Display Text>"
     }
   });
 
-  rtn = _.uniq(rtn);
+  rtn = _.uniqBy(rtn, o => o.refID);
 
   return Response.Send(true, rtn, "");
 
