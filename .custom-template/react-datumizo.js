@@ -87,19 +87,26 @@ class ${1} extends Component {
             onSubmit: "Edit"
           },
           Info: {
-            title: "${3} ",
+            title: "${2} ",
             url: datalink.Request.Info,
-            success: "${3} Load Successfully",
-            fail: "${3} Load Failed: ",
+            success: "${2} Load Successfully",
+            fail: "${2} Load Failed: ",
             schema: schema.Info,
             readOnly: true
           },
+          Duplicate: {
+            title: "Duplicate this ${2}?",
+            url: datalink.Request.Duplicate,
+            success: "${2} Duplicated Successfully.",
+            fail: "${2} Duplicated Failed: ",
+            onSubmit: "Duplicate"
+          },
           Import: {
-            title: "${2} Import",
+            title: "${3} Import",
             content: "",
             url: datalink.Request.Import,
-            success: "${2} Imported Successfully.",
-            fail: "${2} Import Failed: ",
+            success: "${3} Imported Successfully.",
+            fail: "${3} Import Failed: ",
             schema: schema.ImportFormat,
             replace: false
           },
@@ -108,11 +115,11 @@ class ${1} extends Component {
             schema: schema.Export,
           },
           DeleteBulk: {
-            title: (n) => "Delete these " + n + " ${2}?",
+            title: (n) => "Delete these " + n + " ${3}?",
             content: "Caution: This is irrevertable.",
             url: datalink.Request.DeleteBulk,
-            success: "${2} Deleted Successfully.",
-            fail: "${2} Delete Failed: ",
+            success: "${3} Deleted Successfully.",
+            fail: "${3} Delete Failed: ",
             onSubmit: "DeleteBulk",
           },
         },
@@ -121,6 +128,7 @@ class ${1} extends Component {
           inline: [
             { icon: "edit", func: "Edit", caption: "Edit", reqFunc: "Edit" },
             { icon: "info", func: "Info", caption: "Details" },
+            //{ icon: "duplicate", func: "Duplicate", caption: "Duplicate", reqFunc: "Duplicate" },
             { icon: "delete", func: "Delete", caption: "Delete", reqFunc: "Delete" },
           ],
           left: [{ icon: "add", func: "Add", caption: "Add ${2}", reqFunc: "Add" }],
