@@ -17,7 +17,25 @@ const doc = {
     EN: "Are you a Hong Kong resident?",
     TC: "你是香港居民嗎？",
     SC: "你是香港居民吗？",
-  }
+  },
+  verdict: {
+    yes: {
+      EN: "A Hong Kong resident",
+      TC: "香港居民",
+      SC: "香港居民"
+    },
+    no: {
+      EN: "Not a Hong Kong resident",
+      TC: "不是香港居民",
+      SC: "不是香港居民"
+    }
+  },
+  showInfo: false,
+  infoContent: {
+    EN: "",
+    TC: "",
+    SC: ""
+  }, 
 }
 
 module.exports = doc;

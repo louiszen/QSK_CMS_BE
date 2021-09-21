@@ -22,6 +22,17 @@ const doc = {
     TC: "從下面選擇您的登機地點和您在抵達香港之前<bold>過去 21 天</bold> 的所有經過的地點：",
     SC: "从下面选择您的哈尔滨地点和您在葡萄牙香港之前<bold> 21 天</bold> 的所有经过的地点：",
   },
+  verdict: {
+    EN: "Only stayed in @loc the day of boarding for/arrival at Hong Kong or during the 14days before that day",
+    TC: "僅在登機/抵達香港當天或當天之前的 14 天內在 @loc 逗留",
+    SC: "仅在登机/抵达香港当天或当天之前的 14 天内在 @loc 逗留"
+  },
+  showInfo: false,
+  infoContent: {
+    EN: "",
+    TC: "",
+    SC: ""
+  }, 
 }
 
 module.exports = doc;

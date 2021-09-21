@@ -18,8 +18,24 @@ const doc = {
     TC: "您是否已全面接種疫苗？",
     SC: "您是否已全面接种疫苗？",
   },
+  verdict: {
+    yes: {
+      EN: "Fully vaccinated",
+      TC: "已全面接種疫苗",
+      SC: "已全面接种疫苗"
+    },
+    no: {
+      EN: "Not a Hong Kong resident",
+      TC: "未全面接種疫苗",
+      SC: "未全面接种疫苗"
+    }
+  },
   showInfo: true,
-  infoPage: "Mis006",
+  infoContent: {
+    EN: "Fully vaccinated means the suggested dosage has been administered in accordance with the relevant guidelines of a COVID-19 vaccination course at least 14 days prior to arrival at Hong Kong",
+    TC: "全面接種是指在抵達香港前至少 14 天已按照 COVID-19 疫苗接種課程的相關指南接種了建議劑量",
+    SC: "全面接种是指在抵达香港前至少 14 天已按照 COVID-19 疫苗接种课程的相关指南接种了建议剂量"
+  }, 
 }
 
 module.exports = doc;

@@ -18,8 +18,24 @@ const doc = {
     TC: "你在 @loc 待多過2個多小時嗎？",
     SC: "你在 @loc 待多过2个多小时吗？",
   },
+  verdict: {
+    yes: {
+      EN: "Stayed at @loc for more than 2 hours",
+      TC: "在@loc 待了多過兩個小時",
+      SC: "在@loc 待了多过两个小时"
+    },
+    no: {
+      EN: "Stayed at @loc for less than 2 hours",
+      TC: "在@loc 待了少過兩個小時",
+      SC: "在@loc 待了少过两个小时"
+    }
+  },
   showInfo: false,
-  infoPage: "", 
+  infoContent: {
+    EN: "",
+    TC: "",
+    SC: ""
+  }, 
 }
 
 module.exports = doc;

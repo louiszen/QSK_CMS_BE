@@ -18,8 +18,24 @@ const doc = {
     TC: "您的抗體檢測結果呈陽性嗎？",
     SC: "您的抗体检测结果呈阳性吗？",
   },
+  verdict: {
+    yes: {
+      EN: "Possess positive antibody test result",
+      TC: "您的抗體檢測結果呈陽性",
+      SC: "您的抗体检测结果呈阳性"
+    },
+    no: {
+      EN: "Possess negative antibody test result",
+      TC: "您的抗體檢測結果呈陰性",
+      SC: "您的抗体检测结果呈阴性"
+    }
+  },
   showInfo: false,
-  infoPage: ""
+  infoContent: {
+    EN: "",
+    TC: "",
+    SC: ""
+  },
 }
 
 module.exports = doc;

@@ -18,8 +18,24 @@ const doc = {
     TC: "您是通過“Return2HK”計劃進入香港嗎？",
     SC: "您是通过“Return2HK”计划进入香港吗？",
   },
+  verdict: {
+    yes: {
+      EN: "Arriving Hong Kong under the \"Return2HK\" Scheme",
+      TC: "根據“Return2HK”計劃抵達香港",
+      SC: "根据“Return2HK”计划抵达香港"
+    },
+    no: {
+      EN: "Not arriving Hong Kong under the \"Return2HK\" Scheme",
+      TC: "不是根據“Return2HK”計劃抵達香港",
+      SC: "不是根据“Return2HK”计划抵达香港"
+    }
+  },
   showInfo: false,
-  infoPage: "",
+  infoContent: {
+    EN: "",
+    TC: "",
+    SC: ""
+  }, 
 }
 
 module.exports = doc;
