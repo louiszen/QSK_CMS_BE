@@ -40,9 +40,10 @@ const doc = {
       description: "No. of Tests at hotel",
       format: "Highlighted Number",
       options: [
-        {EN: "2 days", TC: "2日", SC: "2日"},
-        {EN: "4 days", TC: "4日", SC: "4日"},
-        {EN: "6 days", TC: "6日", SC: "6日"}
+        {EN: "2", TC: "2", SC: "2"},
+        {EN: "3", TC: "3", SC: "3"},
+        {EN: "4", TC: "4", SC: "4"},
+        {EN: "6", TC: "6", SC: "6"}
       ]
     }
   ]

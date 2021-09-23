@@ -4,7 +4,7 @@ const { v1 } = require("uuid");
 
 const doc = {
   _id: v1(),
-  refID: "QAdd2",
+  refID: "QReturn2HK",
   description: "Via Return2HK Scheme (For HKR who have not been to places outside Mainland Chaina and Macao only)",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),

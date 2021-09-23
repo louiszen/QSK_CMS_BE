@@ -24,9 +24,9 @@ const doc = {
       SC: "病毒检测"
     },
     content: {
-      EN: "#1 day of arrival",
-      TC: "入境後第#1天",
-      SC: "抵达后第#1天",
+      EN: "#1 of arrival",
+      TC: "入境後#1",
+      SC: "抵达后#1",
     },
     remark: {
       EN: "",
@@ -40,7 +40,13 @@ const doc = {
       description: "Self-serviced compulsory test after quarantine / CTC",
       format: "Highlighted Ordered Number",
       options: [
-        {EN: "3rd, 7th, 12th, 16th, 19th day", TC: "第3, 7, 12, 16, 19日", SC: "第3, 7, 12, 16, 19日"}
+        {EN: "26th^ day", TC: "第26^日", SC: "第26^日"},
+        {EN: "9th#, 12th#, 16th#, 19th# day", TC: "第9#, 12#, 16#, 19#日", SC: "第9#, 12#, 16#, 19#日"},
+        {EN: "16th#, 19th# day", TC: "第16#, 19#日", SC: "第16#, 19#日"},
+        {EN: "3rd#, 5th#, 9th#, 12th#, 16th#, 19th# day", TC: "第3#, 5#, 9#, 12#, 16#, 19#日", SC: "第3#, 5#, 9#, 12#, 16#, 19#日"},
+        {EN: "3rd#, 7th#, 12th#, 16th#, 19th# day", TC: "第3#, 7#, 12#, 16#, 19#日", SC: "第3#, 7#, 12#, 16#, 19#日"},
+        {EN: "16th#, 19th^ day", TC: "第16#, 19^日", SC: "第16#, 19^日"},
+        {EN: "9th#, 12th#, 16th#, 19th^ day", TC: "第9#, 12#, 16#, 19^日", SC: "第9#, 12#, 16#, 19^日"}
       ]
     }
   ]

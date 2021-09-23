@@ -94,7 +94,7 @@ class ${1} extends Component {
             schema: schema.Info,
             readOnly: true
           },
-          Duplicate: {
+          Duplicate: { //direct duplicate, for to Add, plz use func: "DuplicateAdd"
             title: "Duplicate this ${2}?",
             url: datalink.Request.Duplicate,
             success: "${2} Duplicated Successfully.",
@@ -129,6 +129,7 @@ class ${1} extends Component {
             { icon: "edit", func: "Edit", caption: "Edit", reqFunc: "Edit" },
             { icon: "info", func: "Info", caption: "Details" },
             //{ icon: "duplicate", func: "Duplicate", caption: "Duplicate", reqFunc: "Duplicate" },
+            //{ icon: "duplicate", func: "DuplicateAdd", caption: "Duplicate", reqFunc: "Duplicate" },
             { icon: "delete", func: "Delete", caption: "Delete", reqFunc: "Delete" },
           ],
           left: [{ icon: "add", func: "Add", caption: "Add ${2}", reqFunc: "Add" }],

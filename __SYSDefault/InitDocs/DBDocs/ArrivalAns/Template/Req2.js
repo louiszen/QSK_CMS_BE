@@ -3,8 +3,8 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "Req1",
-  description: "Template 1",
+  refID: "Req2",
+  description: "Template 2",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   effective: {
@@ -15,7 +15,7 @@ const doc = {
   QUAReq: [
     {
       refID: "QUAReq001",
-      parameters: ["21 days", "designated quarantine hotel"]
+      parameters: ["14 days", "designated quarantine hotel"]
     },
     {
       refID: "QUAReq002",
@@ -27,12 +27,12 @@ const doc = {
     },
     {
       refID: "QUAReq004",
-      parameters: ["6", "26th^ day"]
+      parameters: ["4", "16th#, 19th^ day"]
     }
   ],
   DOCReq: [
     {
-      refID: "DOCReq001",
+      refID: "DOCReq002",
       parameters: []
     },
     {

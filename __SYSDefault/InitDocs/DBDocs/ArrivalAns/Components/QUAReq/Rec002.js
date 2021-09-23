@@ -24,9 +24,9 @@ const doc = {
       SC: "强制隔离后的自我监测"
     },
     content: {
-      EN: "#1 days",
-      TC: "#1 日",
-      SC: "#1 日",
+      EN: "#1",
+      TC: "#1",
+      SC: "#1",
     },
     remark: {
       EN: "<url href=\"http://www.google.com\">Points to note </url> regarding self-monitory period",

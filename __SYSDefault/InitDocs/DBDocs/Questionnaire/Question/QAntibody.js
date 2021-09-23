@@ -4,7 +4,7 @@ const { v1 } = require("uuid");
 
 const doc = {
   _id: v1(),
-  refID: "QAdd4",
+  refID: "QAntibody",
   description: "Possesses positive antibody test result (For fully vaccinated pax only)",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),

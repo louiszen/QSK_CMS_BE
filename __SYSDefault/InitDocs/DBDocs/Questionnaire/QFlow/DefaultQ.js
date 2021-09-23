@@ -44,28 +44,12 @@ const doc = {
       position: { x: 500, y: 100}
     },
     {
-      id: s4,
-      type: "Tube_Src",
-      data: {
-        inner: "Severity 4"
-      },
-      position: { x: 700, y: 100}
-    },
-    {
-      id: s5,
-      type: "Tube_Src",
-      data: {
-        inner: "Severity 5"
-      },
-      position: { x: 900, y: 100}
-    },
-    {
       id: s99,
       type: "Tube_Src",
       data: {
         inner: "Severity 99"
       },
-      position: { x: 1100, y: 100}
+      position: { x: 700, y: 100}
     }
   ]
 };

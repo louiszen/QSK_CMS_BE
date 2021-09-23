@@ -1,13 +1,13 @@
 const _QHKR = require('./_QHKR');
-const QAdd1 = require('./QAdd1');
-const QAdd2 = require('./QAdd2');
-const QAdd3 = require('./QAdd3');
-const QAdd4 = require('./QAdd4');
+const Q2Hours = require('./Q2Hours');
+const QReturn2HK = require('./QReturn2HK');
+const QVaccinated = require('./QVaccinated');
+const QAntibody = require('./QAntibody');
 
 module.exports = {
   _QHKR,
-  QAdd1,
-  QAdd2,
-  QAdd3,
-  QAdd4
+  Q2Hours,
+  QReturn2HK,
+  QVaccinated,
+  QAntibody
 };

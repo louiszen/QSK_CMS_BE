@@ -1,5 +1,6 @@
 const AllAuth = {
   Dashboard: [],
+  Landing: ["Edit"],
   Severity: {
     Location: ["Add", "Edit", "Delete"],
     Grouping: ["Add", "Edit", "Delete"],
@@ -45,7 +46,7 @@ const AllAuth = {
     DefaultQ: ["Add", "Edit", "Delete"],
   },
   System: {
-    General: ["Add", "Edit", "Delete"],
+    BnR: ["Add", "Edit", "Delete"],
     User: ["Add", "Edit", "Delete"],
   }
 };

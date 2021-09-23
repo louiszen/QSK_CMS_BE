@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Accessor } from 'IZOArc/STATIC';
+import { Accessor, Authority } from 'IZOArc/STATIC';
 import PropsType from 'prop-types';
+
+import { Denied } from 'IZOArc/Fallback';
 
 /**
  * @augments {Component<Props, State>}
@@ -43,6 +45,7 @@ class ${1} extends Component {
   }
 
   render(){
+    if(!Authority.IsAccessibleQ("${2}")) return <Denied/>;
     return (
       <div>
 

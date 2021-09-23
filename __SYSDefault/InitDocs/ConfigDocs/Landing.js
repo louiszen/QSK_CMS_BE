@@ -2,6 +2,24 @@ const doc = {
   _id: "Landing",
   type: "Landing",
   Config: {
+    underMaintenance: false,
+    Maintenance: {
+      title: {
+        EN: "Site Under Maintenance",
+        TC: "網站維護中",
+        SC: "网站维护中"
+      },
+      content: {
+        EN: "<p>We are refreshing the content of our website, please try again later. During the period, please visit the Government COVID-19 Thematic Website for the latest inbound travel information.</p><p>We apologize for the inconvenience.</p>",
+        TC: "<p>我們正在刷新我們網站的內容，請稍後再試。 在此期間，請訪問政府 COVID-19 主題網站以獲取最新的入境旅遊信息。</p><p>對於給您帶來的不便，我們深表歉意。</p>",
+        SC: "<p>我们正在刷新我们网站的内容，请稍后再试。 在此期间，请访问政府 COVID-19 主题网站以获取最新的入境旅游信息。</p><p>对于给您带来的不便，我们深表歉意。</p>"
+      },
+      image: {
+        EN: "",
+        TC: "",
+        SC: ""
+      }
+    },
     Arrival: {
       title: {
         EN: "Arriving in Hong Kong",

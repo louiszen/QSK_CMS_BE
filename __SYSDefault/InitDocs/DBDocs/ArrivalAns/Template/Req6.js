@@ -3,8 +3,8 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "Req1",
-  description: "Template 1",
+  refID: "Req6",
+  description: "Template 6",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   effective: {
@@ -14,27 +14,19 @@ const doc = {
   canEntry: true,
   QUAReq: [
     {
-      refID: "QUAReq001",
-      parameters: ["21 days", "designated quarantine hotel"]
-    },
-    {
       refID: "QUAReq002",
-      parameters: ["7 days"]
+      parameters: ["14 days"]
     },
     {
       refID: "QUAReq003",
       parameters: []
     },
     {
-      refID: "QUAReq004",
-      parameters: ["6", "26th^ day"]
+      refID: "QUAReq006",
+      parameters: ["3rd#, 5th#, 9th#, 12th#, 16th#, 19th# day"]
     }
   ],
   DOCReq: [
-    {
-      refID: "DOCReq001",
-      parameters: []
-    },
     {
       refID: "DOCReq004",
       parameters: []
@@ -47,21 +39,8 @@ const doc = {
       refID: "DOCReq006",
       parameters: []
     },
-    {
-      refID: "DOCReq007",
-      parameters: []
-    },
   ],
-  ENTReq: [
-    {
-      refID: "ENTReq001",
-      parameters: []
-    },
-    {
-      refID: "ENTReq002",
-      parameters: []
-    },
-  ],
+  ENTReq: [],
   APProc: [
     {
       refID: "APProc001",
@@ -76,23 +55,11 @@ const doc = {
       parameters: []
     },
     {
-      refID: "APProc004",
-      parameters: []
-    },
-    {
-      refID: "APProc005",
-      parameters: []
-    },
-    {
       refID: "APProc006",
       parameters: []
     },
     {
       refID: "APProc007",
-      parameters: []
-    },
-    {
-      refID: "APProc008",
       parameters: []
     },
   ]

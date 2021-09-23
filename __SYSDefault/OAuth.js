@@ -7,6 +7,7 @@ const DEVUSER = {
     Level: 0,
     authority: {
       Dashboard: ["*"],
+      Landing: ["*"],
       Severity: {
         Location: ["*"],
         Grouping: ["*"],
@@ -52,7 +53,7 @@ const DEVUSER = {
         DefaultQ: ["*"]
       },
       System: {
-        General: ["*"],
+        BnR: ["*"],
         User: ["*"]
       }
     }
