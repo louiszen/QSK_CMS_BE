@@ -3,7 +3,7 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "Order001",
+  refID: "Order",
   description: "3 Jun 2021",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
@@ -17,10 +17,10 @@ const doc = {
     "_QLoc"
   ],
   post: [
-    "QAdd1",
-    "QAdd2",
-    "QAdd3",
-    "QAdd4"
+    "Q2Hours",
+    "QVaccinated",
+    "QReturn2HK",
+    "QAntibody"
   ]
 };
 

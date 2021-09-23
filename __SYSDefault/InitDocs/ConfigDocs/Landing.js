@@ -89,6 +89,18 @@ const doc = {
         TC: "本工具提供的信息僅適用於年滿 12 周歲的普通旅客。 僅供參考，不具有法律約束力。 最終入境檢疫要求由口岸衛生人員根據現行法律規定，並結合旅客入境時提供的資料及相關證件確定。 <br/> 有關最新的入境旅遊信息，請參閱政府 COVID-19 專題網站。 本網站所載信息與政府發布的信息不一致的，以政府發布的信息為準。",
         SC: "本工具提供的信息仅适用于年满 12 周岁的普通旅客。 仅供参考，不具有法律约束力。 最终入境检疫要求由口岸卫生人员根据现行法律规定，并结合旅客入境时提供的资料及相关证件确定。 <br/> 有关最新的入境旅游信息，请参阅政府 COVID-19 专题网站。 本网站所载信息与政府发布的信息不一致的，以政府发布的信息为准。"
       }
+    },
+    SharingText: {
+      title: {
+        EN: "My HKG - You Fly We Care",
+        TC: "My HKG - You Fly We Care",
+        SC: "My HKG - You Fly We Care",
+      },
+      content: {
+        EN: "I would like to share with you the Hong Kong entry and quarantine requirements under COVID-19.<br/>Click here for details: [Link to share]",
+        TC: "我想與您分享 COVID-19 下的香港入境和檢疫要求。<br/>詳情請點擊：[鏈接分享]",
+        SC: "我想与您分享 COVID-19 下的香港入境和检疫要求。<br/>详情请点击：[链接分享]"
+      }
     }
   }
 };

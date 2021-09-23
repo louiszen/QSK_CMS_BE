@@ -3,7 +3,7 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "Flow001",
+  refID: "Flow",
   description: "3 Jun 2021",
   version: 3,
   lastUpdate: moment("2021/06/03", "YYYY/MM/DD"),
