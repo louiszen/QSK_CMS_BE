@@ -85,7 +85,7 @@ const doc = {
         SC: "免责声明"
       },
       content: {
-        EN: "The infomration provided by this tool is only applicable to general travellers 12 years of age or older. It is for reference only and is not legally binding. The final entry quarantine requirements will be determined by the port health personnel in accordance with the current laws, together with the information and relevant certificates provided by the passengers at the time of entry. <br/> For the most up-to-date inbound travel information, please refer to the Government COVID-19 Thematic Website. If the information in this website is inconsistent with that released by the Government, the latter shall prevail.",
+        EN: "The information provided by this tool is only applicable to general travellers 12 years of age or older. It is for reference only and is not legally binding. The final entry quarantine requirements will be determined by the port health personnel in accordance with the current laws, together with the information and relevant certificates provided by the passengers at the time of entry. <br/> For the most up-to-date inbound travel information, please refer to the Government COVID-19 Thematic Website. If the information in this website is inconsistent with that released by the Government, the latter shall prevail.",
         TC: "本工具提供的信息僅適用於年滿 12 周歲的普通旅客。 僅供參考，不具有法律約束力。 最終入境檢疫要求由口岸衛生人員根據現行法律規定，並結合旅客入境時提供的資料及相關證件確定。 <br/> 有關最新的入境旅遊信息，請參閱政府 COVID-19 專題網站。 本網站所載信息與政府發布的信息不一致的，以政府發布的信息為準。",
         SC: "本工具提供的信息仅适用于年满 12 周岁的普通旅客。 仅供参考，不具有法律约束力。 最终入境检疫要求由口岸卫生人员根据现行法律规定，并结合旅客入境时提供的资料及相关证件确定。 <br/> 有关最新的入境旅游信息，请参阅政府 COVID-19 专题网站。 本网站所载信息与政府发布的信息不一致的，以政府发布的信息为准。"
       }
