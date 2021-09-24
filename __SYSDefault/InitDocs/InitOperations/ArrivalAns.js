@@ -4,12 +4,13 @@ const DBDocs = require('../DBDocs');
 const ConfigDocs = require('../ConfigDocs');
 
 const _ = require('lodash');
+const moment = require('moment');
 
 const path = require('path');
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
-const {Chalk, Response} = _base.Utils;
+const {Chalk, Response, Fs} = _base.Utils;
 
 module.exports = async () => {
   
@@ -116,7 +117,24 @@ module.exports = async () => {
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.ArrivalAns.Miscellaneous.IconDocs, async (o, i) => {
+    let filenames = await Fs.readdir("Images/Icons");
+    let docs = _.map(filenames, (o, i) => {
+      let iconName = "Ico" + i.toString().padStart(4, "0");
+      return {
+        _id: iconName,
+        refID: iconName,
+        description: iconName + ": " + o,
+        version: 3,
+        lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
+        effective: {
+          Start: moment('2021/06/03', 'YYYY/MM/DD'),
+          End: null
+        },
+        link: "Images/Icons/" + o
+      };
+    })
+
+    await Promise.all(_.map(docs, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 

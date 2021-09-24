@@ -4,7 +4,7 @@ const { v1 } = require('uuid');
 const doc = {
   _id: v1(),
   refID: "QUAReq003",
-  description: "compulsory test at HKIA upon arrival",
+  description: "Virus Testing",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
   displayLastUpdate: {
@@ -17,16 +17,16 @@ const doc = {
     End: null
   },
   display: {
-    icon: "Ico003",
+    icon: "Ico0027",
     title: {
-      EN: "Compulsory test at HKIA upon arrival",
-      TC: "抵達香港國際機場後進行強制性測試",
-      SC: "抵达香港国际机场后进行强制性测试"
+      EN: "Virus testing",
+      TC: "病毒檢測",
+      SC: "病毒检测"
     },
     content: {
-      EN: "",
-      TC: "",
-      SC: "",
+      EN: "#1 tests at hotel<br/>#2 of arrival",
+      TC: "在酒店進行測試#1次<br/>入境後#2",
+      SC: "在酒店进行测试#1次<br/>抵达后#2",
     },
     remark: {
       EN: "",
@@ -34,7 +34,32 @@ const doc = {
       SC: "",
     },
   },
-  parameters: []
+  parameters: [
+    {
+      description: "No. of Tests at hotel",
+      format: "Highlighted Number",
+      options: [
+        {EN: "2", TC: "2", SC: "2"},
+        {EN: "3", TC: "3", SC: "3"},
+        {EN: "4", TC: "4", SC: "4"},
+        {EN: "6", TC: "6", SC: "6"}
+      ]
+    },
+    {
+      description: "Self-serviced compulsory test after quarantine / CTC",
+      format: "Highlighted Ordered Number",
+      incFootnote: true,
+      options: [
+        {EN: "1st*, 26th^ day", TC: "第1*, 26^日", SC: "第1*, 26^日"},
+        {EN: "1st*, 9th#, 12th#, 16th#, 19th# day", TC: "第1*, 9#, 12#, 16#, 19#日", SC: "第1*, 9#, 12#, 16#, 19#日"},
+        {EN: "1st*, 16th#, 19th# day", TC: "第1*, 16#, 19#日", SC: "第1*, 16#, 19#日"},
+        {EN: "1st*, 3rd#, 5th#, 9th#, 12th#, 16th#, 19th# day", TC: "第1*, 3#, 5#, 9#, 12#, 16#, 19#日", SC: "第1*, 3#, 5#, 9#, 12#, 16#, 19#日"},
+        {EN: "1st*, 3rd#, 7th#, 12th#, 16th#, 19th# day", TC: "第1*, 3#, 7#, 12#, 16#, 19#日", SC: "第1*, 3#, 7#, 12#, 16#, 19#日"},
+        {EN: "1st*, 16th#, 19th^ day", TC: "第1*, 16#, 19^日", SC: "第1*, 16#, 19^日"},
+        {EN: "1st*, 9th#, 12th#, 16th#, 19th^ day", TC: "第1*, 9#, 12#, 16#, 19^日", SC: "第1*, 9#, 12#, 16#, 19^日"}
+      ]
+    }
+  ]
 };
 
 module.exports = doc;

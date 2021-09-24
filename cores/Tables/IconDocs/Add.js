@@ -7,6 +7,7 @@ const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
 const {Chalk, Response, Fs, Time} = _base.Utils;
+const fpath = require('./path');
 
 /* IMPORTANT: Generic Scripts Automation depends on FOLDER name */
 
@@ -18,9 +19,9 @@ module.exports = async (_opt, _param, _file) => {
   let data = JSON.parse(_opt.data);
   let uuid = v1();
 
-  let path = "Images/Icons/" + uuid + ".png";
+  let path = fpath.Icons + "/" + uuid + ".png";
   //add _file
-  await Fs.mkdir("Images/Icons");
+  await Fs.mkdir(fpath.Icons);
   await Fs.writeFile(path, _file.buffer);
 
   data.link = path;

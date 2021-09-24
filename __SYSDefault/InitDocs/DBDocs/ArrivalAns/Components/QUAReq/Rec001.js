@@ -17,7 +17,7 @@ const doc = {
     End: null
   },
   display: {
-    icon: "Ico001",
+    icon: "Ico0008",
     title: {
       EN: "Compulsory Quarantine",
       TC: "強制隔離",

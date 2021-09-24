@@ -18,7 +18,7 @@ const doc = {
   },
   display: {
     type: "withicon",
-    icon: "/Tip003.png",
+    icon: "Ico00012",
     title: {
       EN: "Free bottled water (hot water upon request) and light snacks will be provided at the specimen collection centre.",
       TC: "標本採集中心將提供免費瓶裝水（應要求提供熱水）和小吃。",

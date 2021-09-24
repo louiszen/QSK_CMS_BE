@@ -19,7 +19,7 @@ module.exports = async (_opt, _param, _file) => {
   if(_file){
     let path = data.link;
     //add _file
-    await Fs.mkdir("Images/Icons");
+    await Fs.mkdir(fpath.Icons);
     await Fs.writeFile(path, _file.buffer);
   }
 

@@ -9,13 +9,16 @@ const path = require('path');
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
-const {Chalk, Response} = _base.Utils;
+const {Chalk, Response, Fs, Excel} = _base.Utils;
+const schema = require('./schema');
 
 module.exports = async () => {
   
   let db = await _remote.BaseDB();
   let res;
   let dbName;
+  let xlsxData;
+  let docs;
   
   try{
     dbName = ConfigDocs.DBNAME.Location;
@@ -25,7 +28,10 @@ module.exports = async () => {
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.Countries.Location, async (o, i) => {
+    xlsxData = await Fs.readFile("__SYSDefault/__DATA/locations.xlsx");
+    docs = await Excel.Excel2Docs(xlsxData, schema.Location);
+
+    await Promise.all(_.map(docs, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 
@@ -36,7 +42,10 @@ module.exports = async () => {
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.Countries.Grouping, async (o, i) => {
+    xlsxData = await Fs.readFile("__SYSDefault/__DATA/location_severity.xlsx");
+    docs = await Excel.Excel2Docs(xlsxData, schema.Grouping);
+
+    await Promise.all(_.map(docs, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 

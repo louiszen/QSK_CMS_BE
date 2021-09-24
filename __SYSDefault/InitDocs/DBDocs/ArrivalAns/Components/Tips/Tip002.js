@@ -18,7 +18,7 @@ const doc = {
   },
   display: {
     type: "withicon",
-    icon: "/Tip002.png",
+    icon: "Ico0016",
     title: {
       EN: "You can't access your luggage during the wait.",
       TC: "在等待期間，您無法取放行李。",

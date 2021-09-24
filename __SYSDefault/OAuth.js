@@ -8,6 +8,7 @@ const DEVUSER = {
     authority: {
       Dashboard: ["*"],
       Landing: ["*"],
+      IconDocs: ["*"],
       Severity: {
         Location: ["*"],
         Grouping: ["*"],
@@ -24,8 +25,7 @@ const DEVUSER = {
             Tips: ["*"],
           },
           Miscellaneous: {
-            Footnote: ["*"],
-            IconDocs: ["*"]
+            Footnote: ["*"]
           }
         },
         DepartAns: {
