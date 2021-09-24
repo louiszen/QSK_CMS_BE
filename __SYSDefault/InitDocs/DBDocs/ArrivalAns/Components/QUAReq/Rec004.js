@@ -33,7 +33,6 @@ const doc = {
       TC: "",
       SC: "",
     },
-    footnote: true,
   },
   parameters: [
     {
@@ -49,6 +48,7 @@ const doc = {
     {
       description: "Self-serviced compulsory test after quarantine / CTC",
       format: "Highlighted Ordered Number",
+      incFootnote: true,
       options: [
         {EN: "26th^ day", TC: "第26^日", SC: "第26^日"},
         {EN: "9th#, 12th#, 16th#, 19th# day", TC: "第9#, 12#, 16#, 19#日", SC: "第9#, 12#, 16#, 19#日"},

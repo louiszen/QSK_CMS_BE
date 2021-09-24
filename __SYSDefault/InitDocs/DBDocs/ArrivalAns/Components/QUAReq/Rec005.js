@@ -33,7 +33,6 @@ const doc = {
       TC: "",
       SC: "",
     },
-    footnote: true,
   },
   parameters: [
     {

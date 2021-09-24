@@ -33,7 +33,6 @@ const doc = {
       TC: "關於自我監控期的<url href=\"http://www.google.com\">注意事項</url>",
       SC: "关于自我监控期的<url href=\"http://www.google.com\">注意事项</url>",
     },
-    footnote: false
   },
   parameters: [
     {
