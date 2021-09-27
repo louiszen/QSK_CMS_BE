@@ -134,6 +134,44 @@ const doc = {
         TC: "自您上次輸入以來，香港特區政府已更新旅行限制。 請重新填寫表格以查看香港最新入境檢疫要求。 謝謝你。",
         SC: "自您上次输入以来，香港特区政府已更新旅行限制。 请重新填写表格以查看香港最新入境检疫要求。 谢谢你。"
       }
+    },
+    Answer: {
+      QUAReq: {
+        caption: {
+          EN: "Quarantine Requirement",
+          TC: "檢疫要求",
+          SC: "检疫要求"
+        },
+        icon: "Ico0021",
+        icon_selected: "Ico0022"
+      },
+      DOCReq: {
+        caption: {
+          EN: "Before You Fly",
+          TC: "在你飛之前",
+          SC: "在你飞之前"
+        },
+        icon: "Ico0018",
+        icon_selected: "Ico0019"
+      },
+      APProc: {
+        caption: {
+          EN: "Upon Landing",
+          TC: "著陸後",
+          SC: "着陆后"
+        },
+        icon: "Ico0003",
+        icon_selected: "Ico0004"
+      },
+      Tips: {
+        caption: {
+          EN: "Tips",
+          TC: "提示",
+          SC: "提示"
+        },
+        icon: "Ico0028",
+        icon_selected: "Ico0029"
+      }
     }
   }
 };
