@@ -54,7 +54,7 @@ const doc = {
       }
     },
     Departure: {
-      icon: "Ico0009",
+      icon: "Ico0010",
       pageTitle: {
         EN: "Departing from Hong Kong",
         TC: "香港出發",
@@ -72,7 +72,7 @@ const doc = {
       }
     },
     Transit: {
-      icon: "Ico0026",
+      icon: "Ico0030",
       pageTitle: {
         EN: "Transiting through Hong Kong",
         TC: "過境香港",

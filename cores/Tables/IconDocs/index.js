@@ -1,4 +1,4 @@
-const _Generic = require('../_Generic');
+const _Generic = require('../_GenricOnlyLU');
 
 const Add = require('./Add');
 const Delete = require('./Delete');
