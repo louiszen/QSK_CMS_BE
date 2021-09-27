@@ -4,7 +4,8 @@ class ByPass {
 
   static bypass = [
     "Base/Authorize/*",
-    "Base/Name/*"
+    "Base/Name/*",
+    "Minisite/*/*"
   ];
 
   static Includes(cat, subcat, func){
