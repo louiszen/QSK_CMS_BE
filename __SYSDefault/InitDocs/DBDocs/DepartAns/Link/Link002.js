@@ -23,14 +23,15 @@ const doc = {
         TC: "部分機場商店和餐廳服務有限",
         SC: "部分机场商店和餐厅服务有限"
       }
+    ],
+    links: [
+      {
+        lang: "All",
+        url: "https://www.hongkongairport.com/en/COVID19.page"
+      }
     ]
   },
-  links: [
-    {
-      lang: "All",
-      url: "https://www.hongkongairport.com/en/COVID19.page"
-    }
-  ]
+  
 };
 
 module.exports = doc;

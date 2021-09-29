@@ -17,14 +17,15 @@ const doc = {
       TC: "航空公司信息和聯繫方式",
       SC: "航空公司信息和联系方式"
     },
-    bullets: []
+    bullets: [],
+    links: [
+      {
+        lang: "All",
+        url: "https://www.hongkongairport.com/en/flights/airlines-information/airlines.page"
+      }
+    ]
   },
-  links: [
-    {
-      lang: "All",
-      url: "https://www.hongkongairport.com/en/flights/airlines-information/airlines.page"
-    }
-  ]
+  
 };
 
 module.exports = doc;

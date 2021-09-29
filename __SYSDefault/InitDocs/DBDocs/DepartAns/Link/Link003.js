@@ -17,14 +17,15 @@ const doc = {
       TC: "有用的聯繫方式",
       SC: "有用的联系方式"
     },
-    bullets: []
+    bullets: [],
+    links: [
+      {
+        lang: "All",
+        url: "https://www.hongkongairport.com/en/contact-us/useful-contacts.page"
+      }
+    ]
   },
-  links: [
-    {
-      lang: "All",
-      url: "https://www.hongkongairport.com/en/contact-us/useful-contacts.page"
-    }
-  ]
+  
 };
 
 module.exports = doc;
