@@ -18,6 +18,11 @@ const doc = {
   },
   display: {
     showDestinationOptions: true,
+    btnCaption: {
+      EN: "Select your destination",
+      TC: "選擇您的目的地",
+      SC: "选择您的目的地"
+    },
     title: {
       EN: "Travel Advisories by Destination",
       TC: "目的地旅遊諮詢",

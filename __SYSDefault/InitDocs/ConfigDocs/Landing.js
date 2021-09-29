@@ -69,6 +69,11 @@ const doc = {
         EN: "Find out the latest entry requirements of your destination.",
         TC: "了解您目的地的最新入境要求。",
         SC: "了解您目的地的最新入境要求。",
+      },
+      selectLoc: {
+        EN: "Select your destination",
+        TC: "選擇您的目的地",
+        SC: "选择您的目的地"
       }
     },
     Transit: {
