@@ -36,9 +36,9 @@ const doc = {
   },
   applink: {
     content: {
-      EN: "Available on the [apple] and [google]",
-      TC: "在 [apple] 和 [google] 上可用",
-      SC: "在 [apple] 和 [google] 上可用"
+      EN: "Available on the [apple] and [google].",
+      TC: "在 [apple] 和 [google] 上可用。",
+      SC: "在 [apple] 和 [google] 上可用。"
     },
     google: {
       caption: {

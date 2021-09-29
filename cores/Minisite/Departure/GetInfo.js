@@ -42,6 +42,7 @@ module.exports = async (_opt, _param) => {
 
     if(depTADoc.display.showDestinationOptions){
 
+      /*
       let destLocs = [];      
       let resDL = await GetAllEffectiveUniqueDocs("DepartAnsLoc", now);
       if(!resDL.Success){
@@ -56,7 +57,7 @@ module.exports = async (_opt, _param) => {
       });
 
       rtn.TA.Locs = destLocs;
-
+      */
     }
 
   }
