@@ -21,7 +21,7 @@ const doc = {
   },
   links: [
     {
-      lang: "all",
+      lang: "All",
       url: "https://www.hongkongairport.com/en/flights/airlines-information/airlines.page"
     }
   ]

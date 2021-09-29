@@ -3,7 +3,7 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "TA001",
+  refID: "DepTA",
   description: "Travel Advisories by Destination",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),

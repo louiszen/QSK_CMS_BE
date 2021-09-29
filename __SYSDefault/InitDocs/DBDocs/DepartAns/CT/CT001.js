@@ -3,7 +3,7 @@ const { v1 } = require('uuid');
 
 const doc = {
   _id: v1(),
-  refID: "CT001",
+  refID: "DepCT",
   description: "COVID-19 Test for Passengers at HKIA",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
