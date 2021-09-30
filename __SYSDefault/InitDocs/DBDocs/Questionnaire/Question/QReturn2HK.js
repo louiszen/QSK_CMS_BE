@@ -12,7 +12,6 @@ const doc = {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
   },
-  type: "yesno",
   question: {
     EN: "Are you entering Hong Kong under the \"Return2HK\" Scheme?",
     TC: "您是通過“Return2HK”計劃進入香港嗎？",

@@ -12,6 +12,10 @@ const doc = {
     End: null
   },
   display: {
+    showMap: true,
+    showTime: true,
+    showTel: true,
+    showURL: true,
     title: {
       EN: "Prenetics",
       TC: "Prenetics",

@@ -12,7 +12,6 @@ const doc = {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
   },
-  type: "yesno",
   question: {
     EN: "Do you possess positive antibody test result?",
     TC: "您的抗體檢測結果呈陽性嗎？",

@@ -12,7 +12,6 @@ const doc = {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
   },
-  type: "yesno",
   question: {
     EN: "Are you a Hong Kong resident?",
     TC: "你是香港居民嗎？",

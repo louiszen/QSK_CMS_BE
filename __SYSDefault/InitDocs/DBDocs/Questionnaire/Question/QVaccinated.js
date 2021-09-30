@@ -12,7 +12,6 @@ const doc = {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
   },
-  type: "yesno",
   question: {
     EN: "Have you fully vaccinated?",
     TC: "您是否已全面接種疫苗？",
