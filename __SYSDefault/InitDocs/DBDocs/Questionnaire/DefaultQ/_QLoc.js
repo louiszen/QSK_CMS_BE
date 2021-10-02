@@ -18,9 +18,9 @@ const doc = {
     SC: "你去過哪个地方？",
   },
   subtitle: {
-    EN: "Select from below your boarding location and all places you have stayed in the <bold>past 21 days </bold> before your arrival in Hong Kong:",
-    TC: "從下面選擇您的登機地點和您在抵達香港之前<bold>過去 21 天</bold> 的所有經過的地點：",
-    SC: "从下面选择您的哈尔滨地点和您在葡萄牙香港之前<bold> 21 天</bold> 的所有经过的地点：",
+    EN: "Select from below your boarding location and all places you have stayed in the <span style=\"color: #13579A; font-weight: bold;\">past 21 days </span> before your arrival in Hong Kong:",
+    TC: "從下面選擇您的登機地點和您在抵達香港之前<span style=\"color: #13579A; font-weight: bold;\">過去 21 天</span> 的所有經過的地點：",
+    SC: "从下面选择您的哈尔滨地点和您在葡萄牙香港之前<span style=\"color: #13579A; font-weight: bold;\"> 21 天</span> 的所有经过的地点：",
   },
   verdict: {
     EN: "Only stayed in @loc the day of boarding for/arrival at Hong Kong or during the 14days before that day",
