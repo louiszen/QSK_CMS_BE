@@ -38,19 +38,19 @@ const doc = {
         SC: "回答几个问题，看看你是否可以进入香港，以及你需要满足的要求。(适用于12岁或以上的普通乘客)",
       },
       disclaimerLine: {
-        EN: "If the information below is inconsistent with that released by the Government, the latter shall prevail.",
-        TC: "以下信息與政府發布的信息不一致的，以政府發布的信息為準。",
-        SC: "以下信息与政府发布的信息不一致的，以政府发布的信息为准。"
+        EN: "If the information below is inconsistent with that released by the <a href=\"https://www.coronavirus.gov.hk/eng/inbound-travel.html\">Government</a>, the latter shall prevail.",
+        TC: "以下信息與政府發布的信息不一致的，以<a href=\"https://www.coronavirus.gov.hk/chi/inbound-travel.html\">政府</a>發布的信息為準。",
+        SC: "以下信息与政府发布的信息不一致的，以<a href=\"https://www.coronavirus.gov.hk/chi/inbound-travel.html\">政府</a>发布的信息为准。"
       },
       disclaimerTitle: {
-        EN: "Disclaimer:",
+        EN: "Disclaimer",
         TC: "免責聲明",
         SC: "免责声明"
       },
       disclaimerContent: {
-        EN: "The information provided by this tool is only applicable to general travellers 12 years of age or older. It is for reference only and is not legally binding. The final entry quarantine requirements will be determined by the port health personnel in accordance with the current laws, together with the information and relevant certificates provided by the passengers at the time of entry. <br/> For the most up-to-date inbound travel information, please refer to the Government COVID-19 Thematic Website. If the information in this website is inconsistent with that released by the Government, the latter shall prevail.",
-        TC: "本工具提供的信息僅適用於年滿 12 周歲的普通旅客。 僅供參考，不具有法律約束力。 最終入境檢疫要求由口岸衛生人員根據現行法律規定，並結合旅客入境時提供的資料及相關證件確定。 <br/> 有關最新的入境旅遊信息，請參閱政府 COVID-19 專題網站。 本網站所載信息與政府發布的信息不一致的，以政府發布的信息為準。",
-        SC: "本工具提供的信息仅适用于年满 12 周岁的普通旅客。 仅供参考，不具有法律约束力。 最终入境检疫要求由口岸卫生人员根据现行法律规定，并结合旅客入境时提供的资料及相关证件确定。 <br/> 有关最新的入境旅游信息，请参阅政府 COVID-19 专题网站。 本网站所载信息与政府发布的信息不一致的，以政府发布的信息为准。"
+        EN: "<p>The information provided by this tool is only applicable to general travellers 12 years of age or older. It is for reference only and is not legally binding. The final entry quarantine requirements will be determined by the port health personnel in accordance with the current laws, together with the information and relevant certificates provided by the passengers at the time of entry.</p><p>For the most up-to-date inbound travel information, please refer to the <a href=\"https://www.coronavirus.gov.hk/eng/inbound-travel.html\">Government COVID-19 Thematic Website</a>.</p><p>If the information in this website is inconsistent with that released by the Government, the latter shall prevail.</p>",
+        TC: "<p>此工具所提供的信息只適用於 12 歲或以上的一般旅客，僅供參考而不具有法律約束力。</p><p>最終入境檢疫要求將由口岸衛生人員根據現行法律和旅客入境時提供的資料和相關證明而決定。</p><p>有關本港入境的最新信息，請參閱<a href=\"https://www.coronavirus.gov.hk/chi/inbound-travel.html\">政府 COVID-19 專題網站</a>。</p><p>如本網站資料與政府公布的資料有任何不相符之處，應以政府公布為準。</p>",
+        SC: "<p>此所提供的信息仅适用于 12 岁或以上的一般消费，可以看出参考不具有法律约束力。</p><p> 最终数据采集工具要求呼叫口岸卫生人员编法律和生活 </p><p>有关本港的最新信息，请参阅<a href=\"https://www.coronavirus.gov.hk/chi/inbound-travel.html\">政府COVID-19专题网站</a>。</p><p>如本网站资料与政府发布的资料有任何相同之处，应以政府公布的为准。</p>"
       }
     },
     Departure: {
@@ -111,9 +111,9 @@ const doc = {
         SC: "注意:"
       },
       content: {
-        EN: "The information regarding the COVID-19 related travel restrictions and measures on this website is collected from the official websites of the HKSAR Government or other place, it is for reference only and is not legally binding. Due to the constant changes in the epidemic situation, before travelling, you must consult the HKSAR or the destination government's infomration issuing channel to obtain the latest entry and quarantine requirements.",
-        TC: "本網站有關 COVID-19 相關旅行限制和措施的信息收集自香港特別行政區政府或其他地方的官方網站，僅供參考，不具有法律約束力。 由於疫情不斷變化，出行前請務必諮詢香港特別行政區或目的地政府信息發布渠道，了解最新入境檢疫要求。",
-        SC: "本网站有关 COVID-19 相关旅行限制和措施的信息收集自香港特别行政区政府或其他地方的官方网站，仅供参考，不具有法律约束力。 由于疫情不断变化，出行前请务必咨询香港特别行政区或目的地政府信息发布渠道，了解最新入境检疫要求。"
+        EN: "The information regarding the COVID-19 related travel restrictions and measures on this website is collected from the official websites of the <a href=\"https://www.coronavirus.gov.hk/eng/inbound-travel.html\">HKSAR Government</a> or other place, It is for reference only and is not legally binding. Due to the constant changes in the epidemic situation, before traveling, you must consult the HKSAR or the destination government’s information issuing channel to obtain the latest entry and quarantine requirements.",
+        TC: "本網站與2019冠狀病毒疫情相關的旅遊限制和措施的信息，均收集自<a href=\"https://www.coronavirus.gov.hk/chi/inbound-travel.html\">香港特別行政區政府</a>或其他地方之官方網站，僅供參考，不具有法律約束力。由於疫情不斷變化，出行前請務必諮詢香港特別行政區或目的地政府之信息發方渠道以獲取最新的入境及檢疫要求。",
+        SC: "本网站与2019冠状病毒疫情相关的旅游限制和措施的信息，均收集自<a href=\”https://www.coronavirus.gov.hk/chi/inbound-travel.html\">香港特别行政区政府</a>或其他地方之官方网站，翻译参考，不具有法律约束力。因疫情不断变化，出行前请通知香港特别行政区或目的地政府之信息发方以获取最新消息的入境及检疫要求。"
       }
     },
     SharingText: {
