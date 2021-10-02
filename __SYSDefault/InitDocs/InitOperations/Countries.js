@@ -9,7 +9,7 @@ const path = require('path');
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
-const {Chalk, Response, Fs, Excel} = _base.Utils;
+const {Chalk, Response, Fs, Excel, Time} = _base.Utils;
 const schema = require('./schema');
 
 module.exports = async () => {
@@ -32,6 +32,9 @@ module.exports = async () => {
     docs = await Excel.Excel2Docs(xlsxData, schema.Location);
 
     await Promise.all(_.map(docs, async (o, i) => {
+      if(!o.effective.End){
+        o.effective.End = null;
+      }
       res = await db.Insert(dbName, o);
     }));
 

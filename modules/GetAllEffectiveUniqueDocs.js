@@ -43,6 +43,16 @@ module.exports = async (dbKey, date) => {
             $eq: null
           }
         }
+      },
+      {
+        effective: {
+          Start: {
+            $lt: date,
+          },
+          End: {
+            $exists: false
+          }
+        }
       }
     ]
   });

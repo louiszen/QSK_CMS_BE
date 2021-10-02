@@ -3,6 +3,7 @@ const _remote = require('../../../remoteConfig');
 
 const path = require('path');
 const GetEffectiveDoc = require('../../../modules/GetEffectiveDoc');
+const GetAllEffectiveUniqueDocs = require('../../../modules/GetAllEffectiveUniqueDocs');
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
@@ -48,6 +49,26 @@ module.exports = async (_opt, _param) => {
     delete QDoc.effective;
     delete QDoc.lastUpdate;
     delete QDoc.verdict;
+
+    if(o === "_QLoc"){
+      res = await GetAllEffectiveUniqueDocs("Location", date);
+      if(!res.Success){
+        let msg = res.message;
+        console.log(Chalk.CLog("[!]", msg, [catName, actName]));
+        throw Error(msg);
+      }
+      let allLocations = res.payload;
+      let locs = [];
+      _.map(allLocations, (o, i) => {
+        locs.push({
+          refID: o.refID,
+          display: o.display,
+          priority: o.priority
+        });
+      });
+      QDoc.Locs = locs;
+    }
+
     rtn.push(QDoc);
   }
 

@@ -7,7 +7,6 @@ const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
 const _ = require("lodash");
-const GetAllEffectiveUniqueDocs = require("../../../modules/GetAllEffectiveUniqueDocs");
 
 const { Chalk, Response, Time } = _base.Utils;
 
