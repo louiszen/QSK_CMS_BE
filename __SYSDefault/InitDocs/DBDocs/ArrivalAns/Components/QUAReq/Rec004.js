@@ -17,7 +17,7 @@ const doc = {
     End: null
   },
   display: {
-    icon: "Ico0027",
+    icon: "Ico0028",
     title: {
       EN: "Virus testing",
       TC: "病毒檢測",

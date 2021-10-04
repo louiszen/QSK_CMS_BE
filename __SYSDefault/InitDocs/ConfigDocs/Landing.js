@@ -147,8 +147,8 @@ const doc = {
           TC: "檢疫要求",
           SC: "检疫要求"
         },
-        icon: "Ico0021",
-        icon_selected: "Ico0022"
+        icon: "Ico0022",
+        icon_selected: "Ico0023"
       },
       DOCReq: {
         caption: {
@@ -174,8 +174,8 @@ const doc = {
           TC: "提示",
           SC: "提示"
         },
-        icon: "Ico0028",
-        icon_selected: "Ico0029"
+        icon: "Ico0029",
+        icon_selected: "Ico0030"
       }
     }
   }
