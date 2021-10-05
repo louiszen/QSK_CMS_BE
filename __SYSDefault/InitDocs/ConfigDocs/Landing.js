@@ -77,7 +77,7 @@ const doc = {
       }
     },
     Transit: {
-      icon: "Ico0030",
+      icon: "Ico0031",
       pageTitle: {
         EN: "Transiting through Hong Kong",
         TC: "過境香港",

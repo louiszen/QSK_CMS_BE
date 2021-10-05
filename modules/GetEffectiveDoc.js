@@ -49,6 +49,19 @@ module.exports = async (dbKey, refID, date) => {
             $eq: null
           }
         }
+      },
+      {
+        refID: {
+          $eq: refID
+        },
+        effective: {
+          Start: {
+            $lt: date,
+          },
+          End: {
+            $exists: false
+          }
+        }
       }
     ]
   });
