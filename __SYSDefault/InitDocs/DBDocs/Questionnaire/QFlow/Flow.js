@@ -17,6 +17,7 @@ const doc = {
       type: "Tube_Src",
       data: {
         inner: "Severity 1",
+        severity: 1
       },
       position: {
         x: -30,
@@ -28,6 +29,7 @@ const doc = {
       type: "Tube_Src",
       data: {
         inner: "Severity 2",
+        severity: 2
       },
       position: {
         x: 747,
@@ -39,6 +41,7 @@ const doc = {
       type: "Tube_Src",
       data: {
         inner: "Severity 3",
+        severity: 3
       },
       position: {
         x: -215,
@@ -50,6 +53,7 @@ const doc = {
       type: "Tube_Src",
       data: {
         inner: "Severity 99",
+        severity: 99
       },
       position: {
         x: 638,

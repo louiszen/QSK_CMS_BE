@@ -2,12 +2,11 @@ const _base = require('../../../IZOGears/__ZBase');
 const _remote = require('../../../remoteConfig');
 
 const path = require('path');
-const GetEffectiveDoc = require('../../../modules/GetEffectiveDoc');
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
 const _ = require('lodash');
-const GetAllEffectiveUniqueDocs = require('../../../modules/GetAllEffectiveUniqueDocs');
+const EffectiveDocsX = require('../../../modules/EffectiveDocsX');
 
 const {Chalk, Response, Time} = _base.Utils;
 
@@ -16,7 +15,7 @@ module.exports = async (_opt, _param) => {
   let rtn = {};
   let now = Time.Now();
 
-  let res = await GetEffectiveDoc("DepartAnsTemp", "DepartAns", now);
+  let res = await EffectiveDocsX.GetByRefID("DepartAnsTemp", "DepartAns", now);
   if(!res.Success){
     let msg = res.message;
     console.log(Chalk.CLog("[!]", msg, [catName, actName]));
@@ -26,7 +25,7 @@ module.exports = async (_opt, _param) => {
   rtn.prewordings = depAnsTemp.prewordings;
 
   if(depAnsTemp.showTA){
-    res = await GetEffectiveDoc("DepartAnsTA", "DepTA", now);
+    res = await EffectiveDocsX.GetByRefID("DepartAnsTA", "DepTA", now);
     if(!res.Success){
       let msg = res.message;
       console.log(Chalk.CLog("[!]", msg, [catName, actName]));
@@ -40,30 +39,10 @@ module.exports = async (_opt, _param) => {
     rtn.TA.display = depTADoc.display;
     rtn.TA.applink = depTADoc.applink;
 
-    if(depTADoc.display.showDestinationOptions){
-
-      /*
-      let destLocs = [];      
-      let resDL = await GetAllEffectiveUniqueDocs("DepartAnsLoc", now);
-      if(!resDL.Success){
-        let msg = resDL.message;
-        console.log(Chalk.CLog("[!]", msg, [catName, actName]));
-        return Response.SendError(9001, msg);
-      }
-
-      let destLocsDocs = resDL.payload;
-      _.map(destLocsDocs, (o, i) => {
-        destLocs.push(o.display);
-      });
-
-      rtn.TA.Locs = destLocs;
-      */
-    }
-
   }
 
   if(depAnsTemp.showCT){
-    res = await GetEffectiveDoc("DepartAnsCT", "DepCT", now);
+    res = await EffectiveDocsX.GetByRefID("DepartAnsCT", "DepCT", now);
     if(!res.Success){
       let msg = res.message;
       console.log(Chalk.CLog("[!]", msg, [catName, actName]));
@@ -76,7 +55,7 @@ module.exports = async (_opt, _param) => {
     rtn.CT.display = depCTDoc.display;
 
     let destTests = [];      
-    let resVT = await GetAllEffectiveUniqueDocs("DepartAnsTest", now);
+    let resVT = await EffectiveDocsX.GetAllUnique("DepartAnsTest", now);
     if(!resVT.Success){
       let msg = resVT.message;
       console.log(Chalk.CLog("[!]", msg, [catName, actName]));
@@ -94,7 +73,7 @@ module.exports = async (_opt, _param) => {
   if(depAnsTemp.showOTH){
     let links = [];
     await Promise.all(_.map(depAnsTemp.links, async (o, i) => {
-      res = await GetEffectiveDoc("DepartAnsLink", o.refID, now);
+      res = await EffectiveDocsX.GetByRefID("DepartAnsLink", o.refID, now);
       if(!res.Success){
         let msg = res.message;
         console.log(Chalk.CLog("[!]", msg, [catName, actName]));

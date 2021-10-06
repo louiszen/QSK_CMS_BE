@@ -2,13 +2,12 @@ const _base = require('../../../IZOGears/__ZBase');
 const _remote = require('../../../remoteConfig');
 
 const path = require('path');
-const GetEffectiveDoc = require('../../../modules/GetEffectiveDoc');
-const GetAllEffectiveUniqueDocs = require('../../../modules/GetAllEffectiveUniqueDocs');
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
 const {Chalk, Response, Time} = _base.Utils;
 const _ = require('lodash');
+const EffectiveDocsX = require('../../../modules/EffectiveDocsX');
 
 module.exports = async (_opt, _param) => {
 
@@ -16,7 +15,7 @@ module.exports = async (_opt, _param) => {
 
   let date = _opt.data && _opt.data.date? Time.Parse(date) : Time.Now();
   
-  let res = await GetEffectiveDoc("QOrder", "Order", date);
+  let res = await EffectiveDocsX.GetByRefID("QOrder", "Order", date);
   if(!res.Success){
     let msg = res.message;
     console.log(Chalk.CLog("[!]", msg, [catName, actName]));
@@ -31,9 +30,9 @@ module.exports = async (_opt, _param) => {
   for(let i=0; i<order.length; i++){
     let o = order[i];
     if(defQ.includes(o)){
-      res = await GetEffectiveDoc("DefaultQ", o, date);
+      res = await EffectiveDocsX.GetByRefID("DefaultQ", o, date);
     }else{
-      res = await GetEffectiveDoc("Question", o, date);
+      res = await EffectiveDocsX.GetByRefID("Question", o, date);
     }
 
     if(!res.Success){
@@ -51,7 +50,7 @@ module.exports = async (_opt, _param) => {
     delete QDoc.verdict;
 
     if(o === "_QLoc"){
-      res = await GetAllEffectiveUniqueDocs("Location", date);
+      res = await EffectiveDocsX.GetAllUnique("Location", date);
       if(!res.Success){
         let msg = res.message;
         console.log(Chalk.CLog("[!]", msg, [catName, actName]));

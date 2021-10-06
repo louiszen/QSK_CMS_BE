@@ -2,12 +2,12 @@ const _base = require('../../../IZOGears/__ZBase');
 const _remote = require('../../../remoteConfig');
 
 const path = require('path');
-const GetEffectiveDoc = require('../../../modules/GetEffectiveDoc');
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
 const _ = require('lodash');
-const GetAllEffectiveUniqueDocs = require('../../../modules/GetAllEffectiveUniqueDocs');
+const EffectiveDocsX = require('../../../modules/EffectiveDocsX');
+const QFlowX = require('../../../modules/QFlowX');
 
 const {Chalk, Response, Time} = _base.Utils;
 
@@ -20,7 +20,7 @@ module.exports = async (_opt, _param) => {
   let arrivalDate = Time.Parse(answer._QDate);
 
   //get Effective Post Order
-  let res = await GetEffectiveDoc("QOrder", "Order", arrivalDate);
+  let res = await EffectiveDocsX.GetByRefID("QOrder", "Order", arrivalDate);
   if(!res.Success){
     let msg = res.message;
     console.log(Chalk.CLog("[!]", msg, [catName, actName]));
@@ -35,7 +35,7 @@ module.exports = async (_opt, _param) => {
   console.log("21 Days Ago: " + _21daysago.format("LLL"));
 
   //sevGroups
-  res = await GetAllEffectiveUniqueDocs("SevGroup", arrivalDate);
+  res = await EffectiveDocsX.GetAllUnique("SevGroup", arrivalDate);
   if(!res.Success){
     let msg = res.message;
     console.log(Chalk.CLog("[!]", msg, [catName, actName]));
@@ -45,8 +45,9 @@ module.exports = async (_opt, _param) => {
 
   //analyse severity
   let allLocs = answer._QLoc;
+  let highestLoc = [];
   await Promise.all(_.map(allLocs, async (o, i) => {
-    let sevRes = await GetEffectiveDoc("Grouping", o.refID, arrivalDate);
+    let sevRes = await EffectiveDocsX.GetByRefID("Grouping", o.refID, arrivalDate);
     if(!sevRes.Success){
       let msg = sevRes.message;
       console.log(Chalk.CLog("[!]", msg, [catName, actName]));
@@ -79,6 +80,7 @@ module.exports = async (_opt, _param) => {
   _.map(allLocs, (o, i) => {
     if(o.relevant && o.severity == highestSeverity){
       o.highest = true;
+      highestLoc.push(o.refID);
     }else{
       o.highest = false;
     }
@@ -87,7 +89,7 @@ module.exports = async (_opt, _param) => {
   console.log("Highest Severity: " + highestSeverity)
 
   //Get Flow
-  res = await GetEffectiveDoc("QFlow", "Flow", arrivalDate);
+  res = await EffectiveDocsX.GetByRefID("QFlow", "Flow", arrivalDate);
   if(!res.Success){
     let msg = res.message;
     console.log(Chalk.CLog("[!]", msg, [catName, actName]));
@@ -95,11 +97,43 @@ module.exports = async (_opt, _param) => {
   }
 
   let flowDoc = res.payload.doc;
+  let flow = QFlowX.GetBySeverity(flowDoc.flow, highestSeverity);
+  let postQ = QFlowX.AllQuestions(flow);
+
+  //Get Qs
+  let rtnQs = [];
+  for(let i=0; i<order.length; i++){
+    
+    let o = order[i];
+    if(!postQ.includes(o)) continue;
+    res = await EffectiveDocsX.GetByRefID("Question", o, arrivalDate);
+
+    if(!res.Success){
+      let msg = res.message;
+      console.log(Chalk.CLog("[!]", msg, [catName, actName]));
+      throw Error(msg);
+    }
+
+    let QDoc = res.payload.doc;
+    delete QDoc._id;
+    delete QDoc._rev;
+    delete QDoc.version;
+    delete QDoc.effective;
+    delete QDoc.lastUpdate;
+    delete QDoc.verdict;
+    rtnQs.push(QDoc);
+
+  }
 
   console.log(Chalk.CLog("[-]", "GetPostQ", [catName, actName]));
 
+  rtn = {
+    flow: flow,
+    questions: rtnQs,
+    qorder: order,
+    highestSeverity: highestSeverity,
+    highestLoc: highestLoc
+  }
+
   return Response.Send(true, rtn, "");
-
-  
-
 }

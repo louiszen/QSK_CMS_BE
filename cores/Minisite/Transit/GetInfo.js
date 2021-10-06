@@ -2,11 +2,11 @@ const _base = require("../../../IZOGears/__ZBase");
 const _remote = require("../../../remoteConfig");
 
 const path = require("path");
-const GetEffectiveDoc = require("../../../modules/GetEffectiveDoc");
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
 const _ = require("lodash");
+const EffectiveDocsX = require("../../../modules/EffectiveDocsX");
 
 const { Chalk, Response, Time } = _base.Utils;
 
@@ -15,7 +15,7 @@ module.exports = async (_opt, _param) => {
   let now = Time.Now();
 
   //get valid transit master doc
-  let res = await GetEffectiveDoc("TransitAnsTemp", "TraAns", now);
+  let res = await EffectiveDocsX.GetByRefID("TransitAnsTemp", "TraAns", now);
   if (!res.Success) {
     let msg = res.message;
     console.log(Chalk.CLog("[!]", msg, [catName, actName]));
@@ -27,7 +27,7 @@ module.exports = async (_opt, _param) => {
   let trAnsCompAll = await Promise.all(
     _.map(trAnsTemp.Components, async (o) => {
       let { refID } = o;
-      res = await GetEffectiveDoc("TransitAnsComp", refID, now);
+      res = await EffectiveDocsX.GetByRefID("TransitAnsComp", refID, now);
       if (!res.Success) {
         let msg = res.message;
         console.log(Chalk.CLog("[!]", msg, [catName, actName]));
