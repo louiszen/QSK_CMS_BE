@@ -2,13 +2,26 @@ const _base = require('../IZOGears/__ZBase');
 const _remote = require('../remoteConfig');
 
 const _ = require('lodash');
+const EffectiveDocsX = require("./EffectiveDocsX");
 
 const {Chalk, Time} = _base.Utils;
 
 class QFlowX {
 
-  static GetBySeverity(flow, severity){
+  static async getAllFlow(arrivalDate){
+    let res = await EffectiveDocsX.GetByRefID("QFlow", "Flow", arrivalDate);
+    if(!res.Success){
+      let msg = res.message;
+      console.log(Chalk.CLog("[!]", msg, [this.name]));
+      throw new Error(msg);
+    }
 
+    return res.payload.doc.flow;
+  }
+
+  static async GetBySeverity(severity, arrivalDate){
+
+    let flow = await this.getAllFlow(arrivalDate);
     //Find start node
     let rtn = [];
 

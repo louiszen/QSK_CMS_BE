@@ -8,6 +8,7 @@ const actName = path.basename(__filename, path.extname(__filename));
 const _ = require('lodash');
 const EffectiveDocsX = require('../../../modules/EffectiveDocsX');
 const QFlowX = require('../../../modules/QFlowX');
+const { QSevX } = require('../../../modules');
 
 const {Chalk, Response, Time} = _base.Utils;
 
@@ -34,70 +35,11 @@ module.exports = async (_opt, _param) => {
   console.log("Arrival Date: " + arrivalDate.format("LLL"))
   console.log("21 Days Ago: " + _21daysago.format("LLL"));
 
-  //sevGroups
-  res = await EffectiveDocsX.GetAllUnique("SevGroup", arrivalDate);
-  if(!res.Success){
-    let msg = res.message;
-    console.log(Chalk.CLog("[!]", msg, [catName, actName]));
-    return Response.Send(false, "", msg);
-  }
-  let sevGroups = res.payload;
-
   //analyse severity
   let allLocs = answer._QLoc;
-  let highestLoc = [];
-  await Promise.all(_.map(allLocs, async (o, i) => {
-    let sevRes = await EffectiveDocsX.GetByRefID("Grouping", o.refID, arrivalDate);
-    if(!sevRes.Success){
-      let msg = sevRes.message;
-      console.log(Chalk.CLog("[!]", msg, [catName, actName]));
-      return Response.Send(false, "", msg);
-    }
-    
-    let sevDoc = sevRes.payload.doc;
-    let relevantGroupDoc = _.find(sevGroups, o => o.refID === sevDoc.group);
-    let severity = relevantGroupDoc.severity;
-    let period = relevantGroupDoc.period;
-    
+  let sev = await QSevX.Analyze(allLocs, arrivalDate);
 
-    let relevant = true;
-    if(o.date){
-      relevant = Time.Parse(o.date).isAfter(Time.Add(arrivalDate, -period, 'days'));
-    }
-    o.severity = severity;
-    o.relevant = relevant;
-
-    console.log("RefID: " + o.refID + " Severity: " + severity + " Relevant: " + relevant);
-  }));
-
-  let highestSeverity = 99;
-  _.map(allLocs, (o, i) => {
-    if(o.relevant && o.severity <= highestSeverity){
-      highestSeverity = o.severity;
-    }
-  });
-
-  _.map(allLocs, (o, i) => {
-    if(o.relevant && o.severity == highestSeverity){
-      o.highest = true;
-      highestLoc.push(o.refID);
-    }else{
-      o.highest = false;
-    }
-  });
-
-  console.log("Highest Severity: " + highestSeverity)
-
-  //Get Flow
-  res = await EffectiveDocsX.GetByRefID("QFlow", "Flow", arrivalDate);
-  if(!res.Success){
-    let msg = res.message;
-    console.log(Chalk.CLog("[!]", msg, [catName, actName]));
-    return Response.Send(false, "", msg);
-  }
-
-  let flowDoc = res.payload.doc;
-  let flow = QFlowX.GetBySeverity(flowDoc.flow, highestSeverity);
+  let flow = await QFlowX.GetBySeverity(sev.highestSeverity, arrivalDate);
   let postQ = QFlowX.AllQuestions(flow);
 
   //Get Qs
@@ -131,8 +73,8 @@ module.exports = async (_opt, _param) => {
     flow: flow,
     questions: rtnQs,
     qorder: order,
-    highestSeverity: highestSeverity,
-    highestLoc: highestLoc
+    highestSeverity: sev.highestSeverity,
+    highestLoc: sev.highestLoc
   }
 
   return Response.Send(true, rtn, "");

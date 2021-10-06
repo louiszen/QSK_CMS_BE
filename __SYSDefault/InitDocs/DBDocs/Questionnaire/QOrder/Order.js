@@ -18,8 +18,8 @@ const doc = {
   ],
   post: [
     "Q2Hours",
-    "QVaccinated",
     "QReturn2HK",
+    "QVaccinated",
     "QAntibody"
   ]
 };

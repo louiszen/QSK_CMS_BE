@@ -18,8 +18,10 @@ const inits = require('./__SYSDefault/APIConfig/inits');
 const ByPass = require('./__SYSDefault/APIConfig/bypass');
 const TempStore = require("./IZOGears/Storage/TempStore");
 const LRequest = require('./IZOGears/Log/LRequest');
+const LUserRecord = require('./modules/LUserRecords');
 const Authorize = require('./IZOGears/User/Authorize');
 const { Accessor } = require('./IZOGears/__ZBase/Utils');
+
 const {Chalk, Response} = _base.Utils;
 
 app.use(helmet()); //XSS protection 
@@ -42,6 +44,7 @@ async function Start(){
   }
   //init all
   await LRequest.OnLoad();
+  await LUserRecord.OnLoad();
   await TempStore.OnLoad();
   await Promise.all(_.map(inits, async (o, i) => {
     await o.OnLoad();

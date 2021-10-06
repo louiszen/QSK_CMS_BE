@@ -3,6 +3,8 @@ const doc = {
   type: "Landing",
   Config: {
     underMaintenance: false,
+    defaultSeverity: 2,
+    defaultRelevantPeriod: 14,
     Maintenance: {
       title: {
         EN: "Site Under Maintenance",
