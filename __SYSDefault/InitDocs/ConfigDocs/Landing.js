@@ -53,7 +53,22 @@ const doc = {
         EN: "<p>The information provided by this tool is only applicable to general travellers 12 years of age or older. It is for reference only and is not legally binding. The final entry quarantine requirements will be determined by the port health personnel in accordance with the current laws, together with the information and relevant certificates provided by the passengers at the time of entry.</p><p>For the most up-to-date inbound travel information, please refer to the <a href=\"https://www.coronavirus.gov.hk/eng/inbound-travel.html\">Government COVID-19 Thematic Website</a>.</p><p>If the information in this website is inconsistent with that released by the Government, the latter shall prevail.</p>",
         TC: "<p>此工具所提供的信息只適用於 12 歲或以上的一般旅客，僅供參考而不具有法律約束力。</p><p>最終入境檢疫要求將由口岸衛生人員根據現行法律和旅客入境時提供的資料和相關證明而決定。</p><p>有關本港入境的最新信息，請參閱<a href=\"https://www.coronavirus.gov.hk/chi/inbound-travel.html\">政府 COVID-19 專題網站</a>。</p><p>如本網站資料與政府公布的資料有任何不相符之處，應以政府公布為準。</p>",
         SC: "<p>此所提供的信息仅适用于 12 岁或以上的一般消费，可以看出参考不具有法律约束力。</p><p> 最终数据采集工具要求呼叫口岸卫生人员编法律和生活 </p><p>有关本港的最新信息，请参阅<a href=\"https://www.coronavirus.gov.hk/chi/inbound-travel.html\">政府COVID-19专题网站</a>。</p><p>如本网站资料与政府发布的资料有任何相同之处，应以政府公布的为准。</p>"
-      }
+      },
+      verdictYes: {
+        EN: "You are eligible to enter Hong Kong based on the information you provided.",
+        TC: "根據你提供的資料，你有資格進入香港。",
+        SC: "根据你提供的资料，你有资格进入香港。"
+      },
+      verdictNo: {
+        EN: "You are NOT eligible to enter Hong Kong based on the information you provided.",
+        TC: "根據你提供的資料，你將不獲准進入香港。",
+        SC: "根据你提供的资料，你将不获准进入香港。"
+      },
+      verdictNote: {
+        EN: "Arrivals holding a visa with insufficient validity period will be denied entry.",
+        TC: "持有有效期不足簽證的入境者將被拒絕入境。",
+        SC: "持有有效期不足签证的入境者将被拒绝入境。"
+      },
     },
     Departure: {
       icon: "Ico0010",
