@@ -11,7 +11,34 @@ const doc = {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
   },
-  canEntry: false
+  canEntry: false,
+  displayLastUpdate: {
+    QUAReq: {
+      EN: "",
+      TC: "",
+      SC: "",
+    },
+    DOCReq: {
+      EN: "",
+      TC: "",
+      SC: "",
+    },
+    APProc: {
+      EN: "",
+      TC: "",
+      SC: "",
+    },
+    Tips: {
+      EN: "",
+      TC: "",
+      SC: "",
+    },
+  },
+  QUAReq: [],
+  DOCReq: [],
+  ENTReq: [],
+  APProc: [],
+  Tips: []
 };
 
 module.exports = doc;

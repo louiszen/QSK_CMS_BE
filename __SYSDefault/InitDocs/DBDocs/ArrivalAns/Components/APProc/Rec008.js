@@ -7,11 +7,6 @@ const doc = {
   description: "Proceed to the Arrival Hall and board the designated transport to hotel",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
-  displayLastUpdate: {
-    EN: "3 Jun 2021",
-    TC: "2021年6月3日",
-    SC: "2021年6月3日",
-  },
   effective: {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
@@ -21,6 +16,16 @@ const doc = {
       EN: "Proceed to the Arrival Hall and board the designated transport to hotel",
       TC: "前往到達大廳，搭乘指定交通工具前往酒店",
       SC: "前往到达大厅，搭乘指定交通工具前往酒店"
+    },
+    showCollapse: {
+      EN: false,
+      TC: false,
+      SC: false
+    },
+    collapse: {
+      EN: "",
+      TC: "",
+      SC: "",
     }
   },
   parameters: []

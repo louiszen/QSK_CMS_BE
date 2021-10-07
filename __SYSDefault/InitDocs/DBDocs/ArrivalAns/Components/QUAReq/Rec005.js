@@ -7,11 +7,6 @@ const doc = {
   description: "Virus Testing (Only after QUA)",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
-  displayLastUpdate: {
-    EN: "3 Jun 2021",
-    TC: "2021年6月3日",
-    SC: "2021年6月3日",
-  },
   effective: {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
@@ -33,6 +28,16 @@ const doc = {
       TC: "",
       SC: "",
     },
+    showCollapse: {
+      EN: false,
+      TC: false,
+      SC: false
+    },
+    collapse: {
+      EN: "",
+      TC: "",
+      SC: "",
+    }
   },
   parameters: [
     {

@@ -7,11 +7,6 @@ const doc = {
   description: "Present your health declaration QR code",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
-  displayLastUpdate: {
-    EN: "3 Jun 2021",
-    TC: "2021年6月3日",
-    SC: "2021年6月3日",
-  },
   effective: {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
@@ -21,6 +16,16 @@ const doc = {
       EN: "Present your health declaration QR code",
       TC: "出示您的健康聲明二維碼",
       SC: "出示您的健康声明二维码"
+    },
+    showCollapse: {
+      EN: false,
+      TC: false,
+      SC: false
+    },
+    collapse: {
+      EN: "",
+      TC: "",
+      SC: "",
     }
   },
   parameters: []

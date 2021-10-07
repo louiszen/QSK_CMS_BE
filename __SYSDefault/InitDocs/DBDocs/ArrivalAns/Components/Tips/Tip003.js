@@ -7,18 +7,12 @@ const doc = {
   description: "Free bottled water",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
-  displayLastUpdate: {
-    EN: "3 Jun 2021",
-    TC: "2021年6月3日",
-    SC: "2021年6月3日",
-  },
   effective: {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
   },
   display: {
-    type: "withicon",
-    icon: "Ico00012",
+    icon: "Ico0012",
     title: {
       EN: "Free bottled water (hot water upon request) and light snacks will be provided at the specimen collection centre.",
       TC: "標本採集中心將提供免費瓶裝水（應要求提供熱水）和小吃。",
@@ -29,10 +23,15 @@ const doc = {
       TC: "",
       SC: "",
     },
-    collapse: {
+    showCollapse: {
       EN: false,
       TC: false,
-      SC: false,
+      SC: false
+    },
+    collapse: {
+      EN: "",
+      TC: "",
+      SC: "",
     }
   },
 };

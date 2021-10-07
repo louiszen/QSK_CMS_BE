@@ -7,17 +7,11 @@ const doc = {
   description: "Luggage",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
-  displayLastUpdate: {
-    EN: "3 Jun 2021",
-    TC: "2021年6月3日",
-    SC: "2021年6月3日",
-  },
   effective: {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
   },
   display: {
-    type: "withicon",
     icon: "Ico0016",
     title: {
       EN: "You can't access your luggage during the wait.",
@@ -29,10 +23,15 @@ const doc = {
       TC: "",
       SC: "",
     },
-    collapse: {
+    showCollapse: {
       EN: false,
       TC: false,
-      SC: false,
+      SC: false
+    },
+    collapse: {
+      EN: "",
+      TC: "",
+      SC: "",
     }
   },
 };

@@ -7,11 +7,6 @@ const doc = {
   description: "Proceed to immigration check and reclaim baggage",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
-  displayLastUpdate: {
-    EN: "3 Jun 2021",
-    TC: "2021年6月3日",
-    SC: "2021年6月3日",
-  },
   effective: {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
@@ -21,6 +16,16 @@ const doc = {
       EN: "Proceed to immigration check and reclaim baggage",
       TC: "繼續進行移民檢查並領取行李",
       SC: "继续进行移民检查并领取行李"
+    },
+    showCollapse: {
+      EN: false,
+      TC: false,
+      SC: false
+    },
+    collapse: {
+      EN: "",
+      TC: "",
+      SC: "",
     }
   },
   parameters: []

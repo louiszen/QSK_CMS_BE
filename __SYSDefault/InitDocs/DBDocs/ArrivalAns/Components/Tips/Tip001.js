@@ -7,17 +7,11 @@ const doc = {
   description: "Virus test time",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
-  displayLastUpdate: {
-    EN: "3 Jun 2021",
-    TC: "2021年6月3日",
-    SC: "2021年6月3日",
-  },
   effective: {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
   },
   display: {
-    type: "withicon",
     icon: "Ico0006",
     title: {
       EN: "It takes approximately 2 to hours (but could be up to 12 hours or more during busy days) to get the virus test result.",
@@ -29,10 +23,15 @@ const doc = {
       TC: "",
       SC: "",
     },
-    collapse: {
+    showCollapse: {
       EN: false,
       TC: false,
-      SC: false,
+      SC: false
+    },
+    collapse: {
+      EN: "",
+      TC: "",
+      SC: "",
     }
   },
 };

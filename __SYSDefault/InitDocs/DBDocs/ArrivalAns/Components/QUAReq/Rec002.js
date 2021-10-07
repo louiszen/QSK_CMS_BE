@@ -7,11 +7,6 @@ const doc = {
   description: "Self-monitoring",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
-  displayLastUpdate: {
-    EN: "3 Jun 2021",
-    TC: "2021年6月3日",
-    SC: "2021年6月3日",
-  },
   effective: {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
@@ -29,10 +24,20 @@ const doc = {
       SC: "#1",
     },
     remark: {
-      EN: "<url href=\"http://www.google.com\">Points to note </url> regarding self-monitory period",
-      TC: "關於自我監控期的<url href=\"http://www.google.com\">注意事項</url>",
-      SC: "关于自我监控期的<url href=\"http://www.google.com\">注意事项</url>",
+      EN: "<a href=\"http://www.google.com\">Points to note </a> regarding self-monitory period",
+      TC: "關於自我監控期的<a href=\"http://www.google.com\">注意事項</a>",
+      SC: "关于自我监控期的<a href=\"http://www.google.com\">注意事项</a>",
     },
+    showCollapse: {
+      EN: false,
+      TC: false,
+      SC: false
+    },
+    collapse: {
+      EN: "",
+      TC: "",
+      SC: "",
+    }
   },
   parameters: [
     {

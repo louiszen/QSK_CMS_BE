@@ -8,27 +8,21 @@ const actName = path.basename(__filename, path.extname(__filename));
 const _ = require('lodash');
 const EffectiveDocsX = require('../../../modules/EffectiveDocsX');
 const QFlowX = require('../../../modules/QFlowX');
-const { QSevX } = require('../../../modules');
+const { QSevX, QOrderX } = require('../../../modules');
 
 const {Chalk, Response, Time} = _base.Utils;
 
 module.exports = async (_opt, _param) => {
   
   let {answer} = _opt.data;
+  let res;
   let rtn = {};
 
   //arrival date
   let arrivalDate = Time.Parse(answer._QDate);
 
   //get Effective Post Order
-  let res = await EffectiveDocsX.GetByRefID("QOrder", "Order", arrivalDate);
-  if(!res.Success){
-    let msg = res.message;
-    console.log(Chalk.CLog("[!]", msg, [catName, actName]));
-    return Response.Send(false, "", msg);
-  }
-  let orderDoc = res.payload.doc;
-  let order = orderDoc.post;
+  let order = await QOrderX.GetPost(arrivalDate);
 
   //get analysised Severity
   let _21daysago = Time.Add(arrivalDate, -21, 'days');

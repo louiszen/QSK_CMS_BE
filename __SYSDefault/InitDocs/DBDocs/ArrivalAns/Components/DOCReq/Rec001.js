@@ -7,11 +7,6 @@ const doc = {
   description: "Recognised Vaccination record",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
-  displayLastUpdate: {
-    EN: "3 Jun 2021",
-    TC: "2021年6月3日",
-    SC: "2021年6月3日",
-  },
   effective: {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
@@ -21,6 +16,16 @@ const doc = {
       EN: "Recognised Vaccination record",
       TC: "認可的疫苗接種記錄",
       SC: "认可的疫苗接种记录"
+    },
+    showCollapse: {
+      EN: false,
+      TC: false,
+      SC: false
+    },
+    collapse: {
+      EN: "",
+      TC: "",
+      SC: "",
     }
   },
   parameters: []

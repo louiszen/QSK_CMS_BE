@@ -12,6 +12,28 @@ const doc = {
     End: null
   },
   canEntry: true,
+  displayLastUpdate: {
+    QUAReq: {
+      EN: "3 Jun 2021",
+      TC: "2021年6月3日",
+      SC: "2021年6月3日",
+    },
+    DOCReq: {
+      EN: "3 Jun 2021",
+      TC: "2021年6月3日",
+      SC: "2021年6月3日",
+    },
+    APProc: {
+      EN: "3 Jun 2021",
+      TC: "2021年6月3日",
+      SC: "2021年6月3日",
+    },
+    Tips: {
+      EN: "3 Jun 2021",
+      TC: "2021年6月3日",
+      SC: "2021年6月3日",
+    },
+  },
   QUAReq: [
     {
       refID: "QUAReq002",
@@ -22,8 +44,8 @@ const doc = {
       parameters: []
     },
     {
-      refID: "QUAReq006",
-      parameters: ["3rd#, 5th#, 9th#, 12th#, 16th#, 19th# day"]
+      refID: "QUAReq005",
+      parameters: ["1st*, 3rd#, 5th#, 9th#, 12th#, 16th#, 19th# day"]
     }
   ],
   DOCReq: [
@@ -62,6 +84,20 @@ const doc = {
       refID: "APProc007",
       parameters: []
     },
+  ],
+  Tips: [
+    {
+      refID: "Tip001",
+      parameters: []
+    },
+    {
+      refID: "Tip002",
+      parameters: []
+    },
+    {
+      refID: "Tip003",
+      parameters: []
+    }
   ]
 };
 

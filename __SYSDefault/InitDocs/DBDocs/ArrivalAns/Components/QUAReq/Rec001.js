@@ -7,11 +7,6 @@ const doc = {
   description: "compulsory quarantine",
   version: 3,
   lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
-  displayLastUpdate: {
-    EN: "3 Jun 2021",
-    TC: "2021年6月3日",
-    SC: "2021年6月3日",
-  },
   effective: {
     Start: moment('2021/06/03', 'YYYY/MM/DD'),
     End: null
@@ -29,9 +24,19 @@ const doc = {
       SC: "#1 日",
     },
     remark: {
-      EN: "At <url href=\"http://www.google.com\">#2</url>",
-      TC: "在 <url href=\"http://www.google.com\">#2</url>",
-      SC: "在 <url href=\"http://www.google.com\">#2</url>"
+      EN: "At <a href=\"http://www.google.com\">#2</a>",
+      TC: "在 <a href=\"http://www.google.com\">#2</a>",
+      SC: "在 <a href=\"http://www.google.com\">#2</a>"
+    },
+    showCollapse: {
+      EN: true,
+      TC: true,
+      SC: true
+    },
+    collapse: {
+      EN: "TEST",
+      TC: "測試",
+      SC: "测试",
     }
   },
   parameters: [
