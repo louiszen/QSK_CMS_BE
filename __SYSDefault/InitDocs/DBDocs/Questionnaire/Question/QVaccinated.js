@@ -24,7 +24,7 @@ const doc = {
       SC: "已全面接种疫苗"
     },
     no: {
-      EN: "Not a Hong Kong resident",
+      EN: "Not fully vaccinated",
       TC: "未全面接種疫苗",
       SC: "未全面接种疫苗"
     }

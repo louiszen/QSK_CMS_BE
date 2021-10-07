@@ -58,7 +58,6 @@ class QAnsX {
     });
 
     rtn.display = rtnDisplay;
-    console.log(rtn);
     return rtn;
   }
 
