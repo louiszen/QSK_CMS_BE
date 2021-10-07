@@ -44,11 +44,9 @@ class QAnsX {
     _.map(allFields, (o, i) => {
       rtnDisplay[o] = {};
       if(ansDoc.display[o]){
-        console.log(ansDoc.display[o])
         _.map(ansDoc.display[o], (v, x) => {
           rtnDisplay[o][x] = v.replace(/(#)[0-9]+/g, (s) => {
             if(!modMapping[s][x]){
-              console.log(mapping, modMapping, s, x);
               throw Error(s);
             }
             return modMapping[s][x];

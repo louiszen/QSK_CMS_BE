@@ -56,7 +56,6 @@ module.exports = async (_opt, _param) => {
       let fromTemp = tempDoc[o];
       for(let x=0; x<fromTemp.length; x++){
         let v = fromTemp[x];
-        console.log(v);
         let ARes = await EffectiveDocsX.GetByRefID(o, v.refID, arrivalDate);
         if(!ARes.Success) throw Error("No " + o + ", RefID: " + v.refID);
         let AnsDoc = ARes.payload.doc;   
