@@ -30,6 +30,7 @@ module.exports = async (_opt, _param) => {
     userAns: answer,
     highestSeverity: sev.highestSeverity,
     highestLoc: sev.highestLoc,
+    relevantPeriod: sev.relevantPeriod,
     template: ans
   }
 

@@ -67,7 +67,7 @@ class QVerdictX {
       SC: "其他",
     }
 
-    let {arrivalDate, highestLoc} = userRecord;
+    let {arrivalDate, highestLoc, relevantPeriod} = userRecord;
     //@date
     let locale = lang === "EN"? "en" : "zh_cn";
     rtn = rtn.replace('@date', moment(arrivalDate).locale(locale).format("LL"));
@@ -83,6 +83,9 @@ class QVerdictX {
       else locstr += doc.display[lang];
     });
     rtn = rtn.replace('@loc', locstr);
+
+    //@reldays
+    rtn = rtn.replace('@reldays', relevantPeriod);
 
     return rtn;
     

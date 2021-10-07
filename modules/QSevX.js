@@ -45,6 +45,7 @@ class QSevX {
         }
         o.severity = severity;
         o.relevant = relevant;
+        o.period = 14;
       }else{
         let sevDoc = sevRes.payload.doc;
         let relevantGroupDoc = _.find(sevGroups, o => o.refID === sevDoc.group);
@@ -57,6 +58,7 @@ class QSevX {
         }
         o.severity = severity;
         o.relevant = relevant;
+        o.period = period;
       }
 
       console.log("RefID: " + o.refID + " Severity: " + o.severity + " Relevant: " + o.relevant);
@@ -64,15 +66,18 @@ class QSevX {
     }));
     
     let highestSeverity = 99;
+    let relevantPeriod = 14;
     _.map(allLocs, (o, i) => {
       if(o.relevant && o.severity <= highestSeverity){
         highestSeverity = o.severity;
+        relevantPeriod = o.period;
       }
     });
   
     _.map(allLocs, (o, i) => {
       if(o.relevant && o.severity == highestSeverity){
         highestLoc.push(o.refID);
+        relevantPeriod = o.period;
       }
     });
   
@@ -80,7 +85,8 @@ class QSevX {
 
     return {
       highestSeverity: highestSeverity,
-      highestLoc: highestLoc
+      highestLoc: highestLoc,
+      relevantPeriod: relevantPeriod
     }
   }
 
