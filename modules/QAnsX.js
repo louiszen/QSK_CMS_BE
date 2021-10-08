@@ -25,6 +25,7 @@ class QAnsX {
     
     //params map
     let mapping = {};
+    let paramFormat = {};
     let modMapping = {};
     _.map(reqParams, (o, i) => {
        let refParam = ansDoc.parameters[i];
@@ -35,9 +36,11 @@ class QAnsX {
        if(!refAns) {
          throw Error("Incorrect Parameters Format.");
        }
-       mapping["#" + (i+ 1)] = refAns;
-       modMapping = this.ModMapping(mapping, refParam.format);
+       mapping["#" + (i+ 1)] = refAns;  
+       paramFormat["#" + (i+ 1)] = refParam.format
     });
+
+    modMapping = this.ModMapping(mapping, paramFormat);
 
     let allFields = ["title", "content", "remark", "collapse"];
     //["title", "content", "remark", "collapse"]
@@ -59,14 +62,14 @@ class QAnsX {
     return rtn;
   }
 
-  static ModMapping(mapping, type){
+  static ModMapping(mapping, paramFormat){
     let rtn = {};
     _.map(mapping, (o, i) => {
       rtn[i] = {};
       _.map(o, (v, x) => {
-        if(type === "Highlighted Number"){
+        if(paramFormat[i] === "Highlighted Number"){
           rtn[i][x] = v.replace(/([0-9])+/g, "<span class=\"css_bignumber\">$&</span>");
-        }else if(type === "Highlighted Ordered Number"){
+        }else if(paramFormat[i] === "Highlighted Ordered Number"){
           rtn[i][x] = v
             .replace(/([0-9])+(th|st|nd|rd|)(\*|\^|#|†|‡|∆)/g, "<span class=\"css_bignumber\">$&</span>")
             .replace(/(th|st|nd|rd|)(\*|\^|#|†|‡|∆)+/g, "<sup>$&</sup>");

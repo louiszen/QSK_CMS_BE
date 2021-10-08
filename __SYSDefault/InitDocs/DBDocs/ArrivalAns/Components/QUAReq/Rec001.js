@@ -12,16 +12,16 @@ const doc = {
     End: null
   },
   display: {
-    icon: "Ico0008",
+    icon: "Ico0009",
     title: {
       EN: "Compulsory Quarantine",
       TC: "強制隔離",
       SC: "强制隔离"
     },
     content: {
-      EN: "#1 days",
-      TC: "#1 日",
-      SC: "#1 日",
+      EN: "#1",
+      TC: "#1",
+      SC: "#1",
     },
     remark: {
       EN: "At <a href=\"http://www.google.com\">#2</a>",

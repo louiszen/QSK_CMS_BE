@@ -12,7 +12,7 @@ const doc = {
     End: null
   },
   display: {
-    icon: "Ico0028",
+    icon: "Ico0032",
     title: {
       EN: "Virus testing",
       TC: "病毒檢測",

@@ -160,7 +160,7 @@ const doc = {
     Answer: {
       QUAReq: {
         caption: {
-          EN: "Quarantine Requirement",
+          EN: "Quarantine Requirements",
           TC: "檢疫要求",
           SC: "检疫要求"
         },
