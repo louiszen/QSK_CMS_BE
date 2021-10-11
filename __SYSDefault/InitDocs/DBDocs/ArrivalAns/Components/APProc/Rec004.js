@@ -1,34 +1,34 @@
-const moment = require('moment');
-const { v1 } = require('uuid');
+const moment = require("moment");
+const { v1 } = require("uuid");
 
 const doc = {
   _id: v1(),
   refID: "APProc004",
   description: "Provide your contact phone number",
   version: 3,
-  lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
+  lastUpdate: moment("2021/06/03", "YYYY/MM/DD"),
   effective: {
-    Start: moment('2021/06/03', 'YYYY/MM/DD'),
-    End: null
+    Start: moment("2021/06/03", "YYYY/MM/DD"),
+    End: null,
   },
   display: {
     content: {
       EN: "Provide your contact phone number",
-      TC: "提供您的聯繫電話",
-      SC: "提供您的联系电话"
+      TC: "提供你的聯絡電話",
+      SC: "提供你的联络电话",
     },
     showCollapse: {
       EN: false,
       TC: false,
-      SC: false
+      SC: false,
     },
     collapse: {
       EN: "",
       TC: "",
       SC: "",
-    }
+    },
   },
-  parameters: []
+  parameters: [],
 };
 
 module.exports = doc;
