@@ -32,6 +32,17 @@ const config = {
         }
       },
     },
+    MongoDB: {
+      type: "MongoDB",
+      envs: {
+        local: {
+          BASE: "mongodb+srv://",
+          USERNAME: "admin",
+          PASSWORD: "zK79wLuarJuKcr8A",
+          URL: "clusterfree.x1bip.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+        }  
+      }
+    }
   },
   RootUser: {
     username: "root",

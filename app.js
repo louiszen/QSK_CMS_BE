@@ -21,6 +21,7 @@ const LRequest = require('./IZOGears/Log/LRequest');
 const LUserRecord = require('./modules/LUserRecords');
 const Authorize = require('./IZOGears/User/Authorize');
 const { Accessor } = require('./IZOGears/__ZBase/Utils');
+const MongoDB = require('./IZOGears/__ZBase/Modules/Database/MongoDB/MongoDB');
 
 const {Chalk, Response} = _base.Utils;
 
@@ -37,6 +38,11 @@ Start();
 
 /*Dynamic Routing*/
 async function Start(){
+
+  let mdb = new MongoDB();
+  let docs = mdb.List2Docs("QSK", "TESTING");
+  console.log(docs);
+
   //Auto Init
   if(_config.AutoInit){
     console.log(Chalk.Log("[-] Auto Initialization."));
