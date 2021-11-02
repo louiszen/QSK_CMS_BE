@@ -2,7 +2,7 @@ const config = {
   Console: true,
   AutoInit: true,
   CleanDBInit: true, 
-  name: "HKAA COVID19 (Backend)",
+  name: "Quick Starter Kit",
   jwtTokenSecret: "QSK_BE",
   jwtExpire: 1000 * 60 * 60 * 24 * 7,
   Server: {
@@ -48,10 +48,9 @@ const config = {
     username: "root",
     password: "root",
     UserDisplayName: "Root",
-    Version: 4,
-    Level: 1,
-    authority: {
-    },
+    Version: 1,
+    Level: 0,
+    authority: [],
   },
 };
 
