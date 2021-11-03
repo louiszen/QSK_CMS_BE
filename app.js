@@ -8,7 +8,7 @@ const app = express();
 const _ = require('lodash');
 
 const _base = require('./IZOGears/__ZBase');
-const _config = require('./_config');
+const _config = require('./__SYSDefault/SYSConfig');
 const _remote = require('./remoteConfig');
 _remote.Init();
 
@@ -39,7 +39,7 @@ Start();
 async function Start(){
 
   //Auto Init
-  if(_config.AutoInit){
+  if(_config.Init.OnStart){
     console.log(Chalk.Log("[-] Auto Initialization."));
     await cores.Base.Env.Init({});
   }
