@@ -12,7 +12,6 @@ module.exports = async (_opt, _param) => {
   let db = await _remote.BaseDB();
   let dbname = await _remote.GetDBName(catName);
 
-  
   let res = {Success: false, payload: {}};
 
   console.log(Chalk.CLog("[-]", "<MESSAGE>", [catName, actName]));

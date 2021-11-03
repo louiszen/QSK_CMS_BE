@@ -3,6 +3,7 @@ const _ = require('lodash');
 class ByPass {
 
   /**
+   * Routing Rules that bypasses the authentication
    * @type {[String]}
    */
   static rules = [

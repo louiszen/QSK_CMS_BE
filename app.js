@@ -16,7 +16,7 @@ const cores = require('./__SYSDefault/APIConfig/cores');
 const inits = require('./__SYSDefault/APIConfig/inits');
 
 const ByPass = require('./__SYSDefault/APIConfig/bypass');
-const TempStore = require("./IZOGears/Storage/TempStore");
+const TempStore = require('./IZOGears/Storage/TempStore');
 const LRequest = require('./IZOGears/Log/LRequest');
 const LUserRecord = require('./modules/LUserRecords');
 const Authorize = require('./IZOGears/User/Authorize');

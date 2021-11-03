@@ -1,7 +1,6 @@
 let internal = '__Internal';
-let cores = {};
 
-cores = {
+let cores = {
   Minisite: require('../../cores/Minisite'),
   Base: require('../../IZOGears/Base'),
   Config: require('../../cores/Config'),
