@@ -2,15 +2,25 @@ const _ = require('lodash');
 
 class ByPass {
 
-  static bypass = [
+  /**
+   * @type {[String]}
+   */
+  static rules = [
     "Base/Authorize/*",
     "Base/Name/*",
     "Minisite/*/*"
   ];
 
+  /**
+   * @readonly
+   * @param {String} cat 
+   * @param {String} subcat 
+   * @param {String} func 
+   * @returns 
+   */
   static Includes(cat, subcat, func){
-    for(let i = 0; i<this.bypass.length; i++){
-      let o = this.bypass[i];
+    for(let i = 0; i<this.rules.length; i++){
+      let o = this.rules[i];
       let splited = o.split('/');
       let acat = splited[0];
       let asubcat = splited[1];

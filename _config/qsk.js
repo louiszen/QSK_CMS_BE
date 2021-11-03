@@ -1,3 +1,8 @@
+/**
+ * @type {{
+ *  
+ * }}
+ */
 const config = {
   Console: true,
   AutoInit: true,
