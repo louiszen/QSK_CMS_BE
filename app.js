@@ -9,16 +9,16 @@ const _ = require('lodash');
 
 const _base = require('./IZOGears/__ZBase');
 const _config = require('./__SYSDefault/SYSConfig');
-const _remote = require('./remoteConfig');
-_remote.Init();
+const _remote = require('$/remoteConfig');
 
 const cores = require('./__SYSDefault/APIConfig/cores');
 const inits = require('./__SYSDefault/APIConfig/inits');
 
 const ByPass = require('./__SYSDefault/APIConfig/bypass');
 const TempStore = require('./IZOGears/Storage/TempStore');
+
 const LRequest = require('./IZOGears/Log/LRequest');
-const LUserRecord = require('./modules/LUserRecords');
+
 const Authorize = require('./IZOGears/User/Authorize');
 const { Accessor } = require('./IZOGears/__ZBase/Utils');
 
@@ -38,6 +38,8 @@ Start();
 /*Dynamic Routing*/
 async function Start(){
 
+  await _remote.OnLoad();
+
   //Auto Init
   if(_config.Init.OnStart){
     console.log(Chalk.Log("[-] Auto Initialization."));
@@ -45,11 +47,11 @@ async function Start(){
   }
   //init all
   await LRequest.OnLoad();
-  await LUserRecord.OnLoad();
   await TempStore.OnLoad();
+
   await Promise.all(_.map(inits, async (o, i) => {
     await o.OnLoad();
-  }));
+  }))
 
   app.post('/:cat/:subcat/:action', multer().single('upload'), async (req, res) => {
     try {

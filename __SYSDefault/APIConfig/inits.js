@@ -1,7 +1,5 @@
-let inits = {};
-
-inits = {
-  
+let inits = {
+  LUserRecord: require('$/modules/LUserRecords')
 };
 
 module.exports = inits;

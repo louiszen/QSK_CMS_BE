@@ -20,9 +20,13 @@
  *      Expire: Number
  *    }
  *  },
+ *  Authorization: {
+ *    Mode: "AuthorityTree"
+ *  },
  *  Debug: {
  *    Console: Boolean,
- *    Color: Boolean
+ *    Color: Boolean,
+ *    InstanceID: Boolean
  *  },
  *  Init: {
  *    OnStart: Boolean,
@@ -46,6 +50,15 @@
  *        URL: String,
  *        DATABASE: String
  *      }>
+ *    }
+ *  },
+ *  Blob: {
+ *    Provider: "Local",
+ *    Local?: {
+ *      Path: {
+ *        Upload: String,
+ *        Download: String
+ *      }
  *    }
  *  }
  * }}
@@ -71,9 +84,13 @@ const config = {
       Expire: 1000 * 60 * 60 * 24 * 7
     }
   },
+  Authorization: {
+    Mode: "AuthorityTree"
+  },
   Debug: {
     Console: true,
-    Color: true
+    Color: true,
+    InstanceID: true
   },
   Init: {
     OnStart: true,
@@ -100,6 +117,15 @@ const config = {
           URL: "clusterfree.x1bip.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
           DATABASE: "QSK"
         }  
+      }
+    }
+  },
+  Blob: {
+    Provider: "Local",
+    Local: {
+      Path: {
+        Upload: "_upload",
+        Download: "_download"
       }
     }
   }

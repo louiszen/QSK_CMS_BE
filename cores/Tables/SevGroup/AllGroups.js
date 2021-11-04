@@ -11,7 +11,7 @@ const {Chalk, Response} = _base.Utils;
 
 module.exports = async (_opt, _param) => {
 
-  let db = await _remote.RemoteDB();
+  let db = await _remote.BaseDB();
   let dbname = await _remote.GetDBName(catName);
   
   let res = await db.List(dbname, true);

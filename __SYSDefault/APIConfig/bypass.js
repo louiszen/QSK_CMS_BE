@@ -1,5 +1,8 @@
 const _ = require('lodash');
 
+/**
+ * Class governs the autheuthication bypass rules
+ */
 class ByPass {
 
   /**

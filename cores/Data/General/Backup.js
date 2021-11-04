@@ -13,7 +13,7 @@ module.exports = async (_opt, _param) => {
 
   let datetime = Time.Now().format('YYYYMMDDHHmmss');
 
-  let db = await _remote.RemoteDB();
+  let db = await _remote.BaseDB();
 
   let res = await db.Backup(datetime);
   

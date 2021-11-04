@@ -8,7 +8,7 @@ const {Chalk, Time} = _base.Utils;
 class EffectiveDocsX {
 
   static async GetAllWithin(dbKey, refID, dateStart, dateEnd){
-    let db = await _remote.RemoteDB();
+    let db = await _remote.BaseDB();
     let dbname = await _remote.GetDBName(dbKey);
 
     let res = await db.Find(dbname, {
@@ -60,7 +60,7 @@ class EffectiveDocsX {
   }
 
   static async GetAllUnique(dbKey, date){
-    let db = await _remote.RemoteDB();
+    let db = await _remote.BaseDB();
     let dbname = await _remote.GetDBName(dbKey);
 
     let res = await db.Find(dbname, {
@@ -145,7 +145,7 @@ class EffectiveDocsX {
   }
 
   static async GetByRefID(dbKey, refID, date){
-    let db = await _remote.RemoteDB();
+    let db = await _remote.BaseDB();
     let dbname = await _remote.GetDBName(dbKey);
 
     let res = await db.Find(dbname, {

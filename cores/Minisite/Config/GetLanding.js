@@ -13,7 +13,7 @@ const {Chalk, Response} = _base.Utils;
 
 module.exports = async (_opt, _param) => {
 
-  let db = await _remote.RemoteDB();
+  let db = await _remote.BaseDB();
   let dbname = await _remote.GetDBName("Config");
 
   let res = await db.getDocQ(dbname, "Landing");

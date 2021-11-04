@@ -10,7 +10,7 @@ const Backup = require('./Backup');
 
 module.exports = async (_opt, _param) => {
 
-  let db = await _remote.RemoteDB();
+  let db = await _remote.BaseDB();
 
   let {datestr} = _opt.data;
   
