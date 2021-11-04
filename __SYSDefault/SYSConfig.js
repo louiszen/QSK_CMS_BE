@@ -34,6 +34,7 @@
  *  },
  *  BaseDB: {
  *    Provider: "CouchDB" | "MongoDB",
+ *    Backup: "All" | [String],
  *    CouchDB?: {
  *      envs: Object.<string, {
  *        BASE: String,
