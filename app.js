@@ -56,11 +56,11 @@ async function Start(){
   app.post('/:cat/:subcat/:action', multer().single('upload'), async (req, res) => {
     try {
       res.setHeader("Content-Type", "application/json; charset=utf-8");
-      console.log(Chalk.Log("[<] Receive [" + req.params.action + "] Request on [" + req.params.cat + "/" + req.params.subcat +"]"));
-      console.log(Chalk.Log("[<] Data Received << "));
+      console.log(Chalk.Log("[<] Request << [" + req.params.action + "] " + Chalk.Color("on", "grey") + " [" + req.params.cat + Chalk.Color("/", "grey") + req.params.subcat +"]"));
+      console.log(Chalk.Log("[<] Data << "));
       console.log(req.body);
       if(req.file){
-        console.log(Chalk.Log("[<] File Received << "));
+        console.log(Chalk.Log("[<] File << "));
         console.log(req.file);
       }
 
