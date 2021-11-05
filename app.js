@@ -20,7 +20,7 @@ const TempStore = require('./IZOGears/Storage/TempStore');
 const LRequest = require('./IZOGears/Log/LRequest');
 
 const Authorize = require('./IZOGears/User/Authorize');
-const { Accessor } = require('./IZOGears/__ZBase/Utils');
+const { Accessor, ZError } = require('./IZOGears/__ZBase/Utils');
 
 const {Chalk, Response} = _base.Utils;
 

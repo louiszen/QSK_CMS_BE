@@ -1,5 +1,5 @@
-const _base = require('../../../IZOGears/__ZBase');
-const _remote = require('../../../remoteConfig');
+const _base = require('$/IZOGears/__ZBase');
+const _remote = require('$/remoteConfig');
 const DBDocs = require('../DBDocs');
 const ConfigDocs = require('../ConfigDocs');
 

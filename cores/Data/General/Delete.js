@@ -1,8 +1,8 @@
-const _base = require('../../../IZOGears/__ZBase');
-const _remote = require('../../../remoteConfig');
+const _base = require('$/IZOGears/__ZBase');
+const _remote = require('$/remoteConfig');
 
 const path = require('path');
-const { Fs } = require('../../../IZOGears/__ZBase/Utils');
+const { Fs } = require('$/IZOGears/__ZBase/Utils');
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
@@ -12,7 +12,7 @@ module.exports = async (_opt, _param) => {
 
   let {datestr} = _opt.data;
 
-  let backupDir = './ΩRUNTIME/_backup/' + process.env.NODE_PROJECT + '/' + process.env.NODE_ENV + '/' + datestr;
+  let backupDir = './ΩRUNTIME/_backup/' + process.env.NODE_ENV + '/' + datestr;
   
   try{
     let res = await Fs.rmdir(backupDir);

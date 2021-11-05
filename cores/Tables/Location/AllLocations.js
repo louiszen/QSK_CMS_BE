@@ -1,5 +1,5 @@
-const _base = require('../../../IZOGears/__ZBase');
-const _remote = require('../../../remoteConfig');
+const _base = require('$/IZOGears/__ZBase');
+const _remote = require('$/remoteConfig');
 
 const path = require('path');
 const catName = path.basename(__dirname);
@@ -14,7 +14,7 @@ module.exports = async (_opt, _param) => {
   let db = await _remote.BaseDB();
   let dbname = await _remote.GetDBName(catName);
   
-  let res = await db.List(dbname, true);
+  let res = await db.List2Docs(dbname, true);
 
   console.log(Chalk.CLog("[-]", "Get All Locations", [catName, actName]));
 

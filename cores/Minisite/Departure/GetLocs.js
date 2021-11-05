@@ -1,12 +1,12 @@
-const _base = require('../../../IZOGears/__ZBase');
-const _remote = require('../../../remoteConfig');
+const _base = require('$/IZOGears/__ZBase');
+const _remote = require('$/remoteConfig');
 
 const path = require('path');
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
 const _ = require('lodash');
-const EffectiveDocsX = require('../../../modules/EffectiveDocsX');
+const EffectiveDocsX = require('$/modules/EffectiveDocsX');
 
 const {Chalk, Response, Time} = _base.Utils;
 

@@ -1,5 +1,4 @@
-const _base = require("../../../IZOGears/__ZBase");
-const { Time } = _base.Utils;
+const { Time } = require("$/IZOGears/__ZBase/Utils");
 
 const doc = {
   _id: "INITIALIZED",

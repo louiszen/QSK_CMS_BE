@@ -1,5 +1,5 @@
-const _base = require('../../../IZOGears/__ZBase');
-const _remote = require('../../../remoteConfig');
+const _base = require('$/IZOGears/__ZBase');
+const _remote = require('$/remoteConfig');
 
 const path = require('path');
 const catName = path.basename(__dirname);
@@ -14,7 +14,7 @@ module.exports = async (_opt, _param) => {
   let db = await _remote.BaseDB();
 
   //Get all databases name
-  let resQ = await db.GetAllDatabases();
+  let resQ = await db.GetAllDrawers();
 
   if(!resQ.Success){
     let msg = resQ.payload.Message;
@@ -23,7 +23,7 @@ module.exports = async (_opt, _param) => {
 
   let dbs = resQ.payload;
 
-  let backupDir = './ΩRUNTIME/_backup/' + process.env.NODE_PROJECT + '/' + process.env.NODE_ENV + '/';
+  let backupDir = './ΩRUNTIME/_backup/' + process.env.NODE_ENV + '/';
   
   let LastBackup = undefined;
   let Backups = [];

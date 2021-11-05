@@ -1,5 +1,5 @@
-const _base = require('../../../IZOGears/__ZBase');
-const _remote = require('../../../remoteConfig');
+const _base = require('$/IZOGears/__ZBase');
+const _remote = require('$/remoteConfig');
 
 const path = require('path');
 const catName = path.basename(__dirname);
@@ -11,11 +11,9 @@ const {Chalk, Response, Time} = _base.Utils;
 
 module.exports = async (_opt, _param) => {
 
-  let datetime = Time.Now().format('YYYYMMDDHHmmss');
-
   let db = await _remote.BaseDB();
-
-  let res = await db.Backup(datetime);
+  
+  let res = await db.Backup();
   
   if(!res.Success){
     let msg = res.payload.Message;
