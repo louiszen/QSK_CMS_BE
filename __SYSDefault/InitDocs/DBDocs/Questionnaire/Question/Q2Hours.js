@@ -7,9 +7,9 @@ const doc = {
   refID: "Q2Hours",
   description: "Stayed at the relevant location for more than 2 hours (For severity 1 location(s) only)",
   version: 3,
-  lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
+  lastUpdate: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
   effective: {
-    Start: moment('2021/06/03', 'YYYY/MM/DD'),
+    Start: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
     End: null
   },
   question: {

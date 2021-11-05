@@ -6,9 +6,9 @@ const doc = {
   refID: "Ico002",
   description: "Self-monitoring",
   version: 3,
-  lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
+  lastUpdate: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
   effective: {
-    Start: moment('2021/06/03', 'YYYY/MM/DD'),
+    Start: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
     End: null
   },
   link: "Images/Icons/Ico002.png"

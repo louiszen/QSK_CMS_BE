@@ -6,14 +6,14 @@ const doc = {
   refID: "Tra001",
   description: "Transfer / Transit",
   version: 3,
-  lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
+  lastUpdate: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
   displayLastUpdate: {
     EN: "3 Jun 2021",
     TC: "2021年6月3日",
     SC: "2021年6月3日",
   },
   effective: {
-    Start: moment('2021/06/03', 'YYYY/MM/DD'),
+    Start: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
     End: null
   },
   display: {

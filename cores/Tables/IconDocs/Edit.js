@@ -25,7 +25,7 @@ module.exports = async (_opt, _param, _file) => {
 
   data.lastUpdate = Time.Now().toISOString();
 
-  let rtn = await db.Insert(dbname, data);
+  let rtn = await db.Update(dbname, data);
 
   console.log(Chalk.CLog("[-]", _opt.data, [_param.subcat, _param.action]));
 

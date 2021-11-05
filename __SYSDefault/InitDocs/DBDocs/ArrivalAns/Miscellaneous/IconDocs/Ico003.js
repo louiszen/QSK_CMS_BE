@@ -6,9 +6,9 @@ const doc = {
   refID: "Ico003",
   description: "Compulsory test",
   version: 3,
-  lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
+  lastUpdate: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
   effective: {
-    Start: moment('2021/06/03', 'YYYY/MM/DD'),
+    Start: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
     End: null
   },
   link: "Images/Icons/Ico003.png"

@@ -6,9 +6,9 @@ const doc = {
   refID: "DOCReq005",
   description: "Documentary proof for recognized testing institution (Wechat Mini Program screenshot for Return2HK Scheme)",
   version: 3,
-  lastUpdate: moment('2021/06/03', 'YYYY/MM/DD'),
+  lastUpdate: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
   effective: {
-    Start: moment('2021/06/03', 'YYYY/MM/DD'),
+    Start: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
     End: null
   },
   display: {
