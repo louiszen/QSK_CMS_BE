@@ -20,7 +20,7 @@ module.exports = async (_opt, _param) => {
   delete docDBNAME._id;
   delete docDBNAME._rev;
 
-  let docDBConfig = await _remote.GetCouchDB();
+  let docDBConfig = await _remote.GetDatabase();
 
   let rtnDBName = [];
   _.map(docDBNAME, (o, i) => {

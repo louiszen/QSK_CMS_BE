@@ -1,7 +1,7 @@
 const _base = require('$/IZOGears/__ZBase');
 const _remote = require('$/remoteConfig');
-const DBDocs = require('../DBDocs');
-const ConfigDocs = require('../ConfigDocs');
+const DBDocs = require('../InitDocs/DBDocs');
+const ConfigDocs = require('../InitDocs/ConfigDocs');
 
 const _ = require('lodash');
 
@@ -18,53 +18,79 @@ module.exports = async () => {
   let dbName;
   
   try{
-    dbName = ConfigDocs.DBNAME.Question;
+    dbName = ConfigDocs.DBNAME.DepartAnsCT;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.Questionnaire.Question, async (o, i) => {
+    await Promise.all(_.map(DBDocs.DepartAns.CT, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 
     ///
 
-    dbName = ConfigDocs.DBNAME.DefaultQ;
+    dbName = ConfigDocs.DBNAME.DepartAnsTA;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.Questionnaire.DefaultQ, async (o, i) => {
+    await Promise.all(_.map(DBDocs.DepartAns.TA, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 
     ///
 
-    dbName = ConfigDocs.DBNAME.QFlow;
+    dbName = ConfigDocs.DBNAME.DepartAnsTemp;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.Questionnaire.QFlow, async (o, i) => {
+    await Promise.all(_.map(DBDocs.DepartAns.Template, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 
     ///
 
-    dbName = ConfigDocs.DBNAME.QOrder;
+    dbName = ConfigDocs.DBNAME.DepartAnsLoc;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.Questionnaire.QOrder, async (o, i) => {
+    await Promise.all(_.map(DBDocs.DepartAns.Loc, async (o, i) => {
+      res = await db.Insert(dbName, o);
+    }));
+
+    ///
+
+    dbName = ConfigDocs.DBNAME.DepartAnsLink;
+    res = await db.DestroyDatabase(dbName);
+    res = await db.CreateDatabase(dbName);
+    if(!res.Success){
+      throw new Error(res.payload.Error)
+    }
+
+    await Promise.all(_.map(DBDocs.DepartAns.Link, async (o, i) => {
+      res = await db.Insert(dbName, o);
+    }));
+
+    ///
+
+    dbName = ConfigDocs.DBNAME.DepartAnsTest;
+    res = await db.DestroyDatabase(dbName);
+    res = await db.CreateDatabase(dbName);
+    if(!res.Success){
+      throw new Error(res.payload.Error)
+    }
+
+    await Promise.all(_.map(DBDocs.DepartAns.VirusTest, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 

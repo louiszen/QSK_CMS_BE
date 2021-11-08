@@ -41,20 +41,20 @@ module.exports = async (_opt, _param) => {
     return Response.Send(false, "", "");
   }
 
-  let docDBConfig = await _remote.GetCouchDB();
+  let docDBConfig = await _remote.GetDatabase();
   docDBConfig.include = includeArray;
 
   docDBConfig.envs[process.env.NODE_ENV] = ENV;
 
   let doc = {
-    _id: "CouchDB",
-    type: "CouchDB",
+    _id: "Database",
+    type: "Database",
     Config: docDBConfig
   };
 
   res = await db.Update(configDBName, doc);
   if(!res.Success){
-    let msg = "Cannot update CouchDB Config";
+    let msg = "Cannot update Database Config";
     console.error(Chalk.CLog('[x]', msg, [catName, actName]));
     return Response.Send(false, "", "");
   }

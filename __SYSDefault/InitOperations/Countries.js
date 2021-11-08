@@ -1,7 +1,7 @@
 const _base = require('$/IZOGears/__ZBase');
 const _remote = require('$/remoteConfig');
-const DBDocs = require('../DBDocs');
-const ConfigDocs = require('../ConfigDocs');
+const DBDocs = require('../InitDocs/DBDocs');
+const ConfigDocs = require('../InitDocs/ConfigDocs');
 
 const _ = require('lodash');
 

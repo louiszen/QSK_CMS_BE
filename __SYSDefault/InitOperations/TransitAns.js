@@ -1,7 +1,7 @@
 const _base = require('$/IZOGears/__ZBase');
 const _remote = require('$/remoteConfig');
-const DBDocs = require('../DBDocs');
-const ConfigDocs = require('../ConfigDocs');
+const DBDocs = require('../InitDocs/DBDocs');
+const ConfigDocs = require('../InitDocs/ConfigDocs');
 
 const _ = require('lodash');
 
@@ -18,14 +18,25 @@ module.exports = async () => {
   let dbName;
   
   try{
-    dbName = ConfigDocs.DBNAME.Miscellaneous;
+    dbName = ConfigDocs.DBNAME.TransitAnsComp;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
       throw new Error(res.payload.Error)
     }
 
-    await Promise.all(_.map(DBDocs.Miscellaneous, async (o, i) => {
+    await Promise.all(_.map(DBDocs.TransitAns.Components, async (o, i) => {
+      res = await db.Insert(dbName, o);
+    }));
+
+    dbName = ConfigDocs.DBNAME.TransitAnsTemp;
+    res = await db.DestroyDatabase(dbName);
+    res = await db.CreateDatabase(dbName);
+    if(!res.Success){
+      throw new Error(res.payload.Error)
+    }
+
+    await Promise.all(_.map(DBDocs.TransitAns.Template, async (o, i) => {
       res = await db.Insert(dbName, o);
     }));
 

@@ -18,7 +18,7 @@ module.exports = async (_opt, _param) => {
 
   console.log(Chalk.CLog("[<][o]", "CouchDB Config Edit: " + dbname + ".include => " + include, [catName, actName]));
 
-  let docDBConfig = await _remote.GetCouchDB(true);
+  let docDBConfig = await _remote.GetDatabase(true);
   let incArray = docDBConfig.Config.include;
 
   if(include){

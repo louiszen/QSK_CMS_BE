@@ -1,5 +1,5 @@
-const DEVUSER = {
-  RootUser: {
+const DEVUSERS = [
+  {
     username: "Sys@Dev",
     password: "SysP@ssw0rd",
     UserDisplayName: "Sys@Dev",
@@ -58,6 +58,6 @@ const DEVUSER = {
       }
     }
   }
-}
+];
 
-module.exports = DEVUSER;
+module.exports = DEVUSERS;

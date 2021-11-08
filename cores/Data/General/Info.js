@@ -21,7 +21,7 @@ module.exports = async (_opt, _param) => {
     console.log(Chalk.CLog("[!]", msg, [catName, actName]));
   }
 
-  let dbs = resQ.payload;
+  let dbs = resQ.payload.sort();
 
   let backupDir = './ΩRUNTIME/_backup/' + process.env.NODE_ENV + '/';
   
@@ -39,7 +39,7 @@ module.exports = async (_opt, _param) => {
     }
   }catch(e){}
 
-  let dbSettings = await _remote.GetCouchDB();
+  let dbSettings = await _remote.GetDatabase();
 
   let rtn = {
     dbs: dbs,

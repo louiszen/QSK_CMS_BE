@@ -1,7 +1,7 @@
-const CouchDB = require('./CouchDB');
+const Database = require('./Database');
 const Landing = require('./Landing');
 
 module.exports = {
-  CouchDB,
+  Database,
   Landing
 };

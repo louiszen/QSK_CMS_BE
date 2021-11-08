@@ -1,8 +1,6 @@
 const doc = {
   _id: "SERVICES",
-  Services: [
-    "CouchDB"
-  ]
+  Services: []
 }
 
 module.exports = doc;
