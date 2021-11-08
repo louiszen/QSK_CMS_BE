@@ -1,5 +1,5 @@
 const INITIALIZED = require("./INITIALIZED");
-const DBNAME = require("./DBNAME");
+const DBNAME = require("../../_DBMAP");
 const SERVICES = require("./SERVICES");
 const Database = require("./Database");
 const Landing = require("./Landing");

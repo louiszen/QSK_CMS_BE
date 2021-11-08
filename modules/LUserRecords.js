@@ -1,5 +1,6 @@
-const _base = require("$/IZOGears/__ZBase");
+const _base = require("$/IZOGears/_CoreWheels");
 const _remote = require("$/remoteConfig");
+const _DBMAP = require("$/__SYSDefault/_DBMAP");
 
 class LUserRecord extends _base.Extensible.ExpirableDB {
 
@@ -11,7 +12,7 @@ class LUserRecord extends _base.Extensible.ExpirableDB {
         return {Success: false};
       }
     }
-    let dbName = await _remote.GetDBName("$UserRec");
+    let dbName = _DBMAP["UserRec$"];
     return await super.Init({
       db: db, 
       DBName: dbName, 

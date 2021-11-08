@@ -3,16 +3,22 @@
     "semi": ["error", "always"],
     "quotes": ["error", "double"],
     "no-unused-vars": ["warn", { "vars": "all", "args": "none", "ignoreRestSiblings": false }],
-    "no-empty": ["error", { "allowEmptyCatch": true }]
+    "no-empty": ["error", { "allowEmptyCatch": true }],
+    "require-await": "off",
+    "no-await-async-call/no-await-async-call": "warn"
   },
+  "extends": "eslint:recommended",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 2020,
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true
-    }
+    },
+    "requireConfigFile": false
   },
   "env": {
     "node": true,
     "es6": true
-  }
+  },
+  "plugins": ["no-await-async-call"]
 }

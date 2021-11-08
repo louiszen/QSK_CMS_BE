@@ -1,5 +1,6 @@
-const _base = require("../IZOGears/__ZBase");
-const _remote = require("../remoteConfig");
+const _base = require("../IZOGears/_CoreWheels");
+const _remote = require("$/remoteConfig");
+const _DBMAP = require("$/__SYSDefault/_DBMAP");
 
 const _ = require("lodash");
 
@@ -9,7 +10,7 @@ class EffectiveDocsX {
 
   static async GetAllWithin(dbKey, refID, dateStart, dateEnd){
     let db = await _remote.BaseDB();
-    let dbname = await _remote.GetDBName(dbKey);
+    let dbname = _DBMAP[dbKey];
 
     let res = await db.Find(dbname, {
       $or: [
@@ -61,7 +62,7 @@ class EffectiveDocsX {
 
   static async GetAllUnique(dbKey, date){
     let db = await _remote.BaseDB();
-    let dbname = await _remote.GetDBName(dbKey);
+    let dbname = _DBMAP[dbKey];
 
     let res = await db.Find(dbname, {
       $or: [
@@ -146,7 +147,7 @@ class EffectiveDocsX {
 
   static async GetByRefID(dbKey, refID, date){
     let db = await _remote.BaseDB();
-    let dbname = await _remote.GetDBName(dbKey);
+    let dbname = _DBMAP[dbKey];
 
     let res = await db.Find(dbname, {
       $or: [

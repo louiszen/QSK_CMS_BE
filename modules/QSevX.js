@@ -1,8 +1,9 @@
-const _base = require("../IZOGears/__ZBase");
+const _base = require("../IZOGears/_CoreWheels");
 const _remote = require("../remoteConfig");
 
 const _ = require("lodash");
 const EffectiveDocsX = require("./EffectiveDocsX");
+const _DBMAP = require("../__SYSDefault/_DBMAP");
 
 const {Chalk, Time} = _base.Utils;
 
@@ -29,7 +30,7 @@ class QSevX {
         console.log(Chalk.CLog("[!]", msg, [this.name]));
 
         let db = await _remote.BaseDB();
-        let configDBName = await _remote.GetDBName("Config");
+        let configDBName = _DBMAP.Config;
         let configRes = await db.getDocQ(configDBName, "Landing");
         if(!configRes.Success){
           let msg = configRes.message;

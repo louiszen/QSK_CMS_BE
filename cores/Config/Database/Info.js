@@ -1,4 +1,4 @@
-const _base = require("$/IZOGears/__ZBase");
+const _base = require("$/IZOGears/_CoreWheels");
 const _remote = require("$/remoteConfig");
 
 const path = require("path");
@@ -6,6 +6,7 @@ const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
 const _ = require("lodash");
+const _DBMAP = require("../../../__SYSDefault/_DBMAP");
 
 const {Chalk, Response} = _base.Utils;
 
@@ -13,9 +14,7 @@ module.exports = async (_opt, _param) => {
 
   let db = await _remote.BaseDB();
 
-  let configDBName = await _remote.GetDBName("Config");
-
-  let resDBNAME = await db.getDocQ(configDBName, "DBNAME");
+  let resDBNAME = await db.getDocQ(_DBMAP.Config, "DBNAME");
   let docDBNAME = resDBNAME.payload;
   delete docDBNAME._id;
   delete docDBNAME._rev;

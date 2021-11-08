@@ -1,4 +1,4 @@
-const _base = require("$/IZOGears/__ZBase");
+const _base = require("$/IZOGears/_CoreWheels");
 
 const _ = require("lodash");
 const Excel = require("exceljs");

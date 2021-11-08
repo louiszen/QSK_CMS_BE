@@ -1,4 +1,4 @@
-const _base = require("$/IZOGears/__ZBase");
+const _base = require("$/IZOGears/_CoreWheels");
 const _remote = require("$/remoteConfig");
 
 const path = require("path");
@@ -6,6 +6,7 @@ const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
 const _ = require("lodash");
+const _DBMAP = require("../../../__SYSDefault/_DBMAP");
 
 const {Chalk, Response} = _base.Utils;
 
@@ -16,10 +17,8 @@ module.exports = async (_opt, _param) => {
   let {DBNAME, ENV} = _opt.data;
 
   console.log(Chalk.CLog("[<][o]", "CouchDB Config Edit Request", [catName, actName]));
-
-  let configDBName = await _remote.GetDBName("Config");
-
-  let resDBNAME = await db.getDocQ(configDBName, "DBNAME");
+  
+  let resDBNAME = await db.getDocQ(_DBMAP.Config, "DBNAME");
   let docDBNAME = resDBNAME.payload;
   delete docDBNAME._rev;
 
@@ -34,7 +33,7 @@ module.exports = async (_opt, _param) => {
 
   let res = {};
 
-  res = await db.Update(configDBName, docDBNAME);
+  res = await db.Update(_DBMAP.Config, docDBNAME);
   if(!res.Success){
     let msg = "Cannot update DBNAME";
     console.error(Chalk.CLog("[x]", msg, [catName, actName]));
@@ -52,7 +51,7 @@ module.exports = async (_opt, _param) => {
     Config: docDBConfig
   };
 
-  res = await db.Update(configDBName, doc);
+  res = await db.Update(_DBMAP.Config, doc);
   if(!res.Success){
     let msg = "Cannot update Database Config";
     console.error(Chalk.CLog("[x]", msg, [catName, actName]));

@@ -2,7 +2,7 @@ let internal = "__Internal";
 
 let cores = {
   Minisite: require("$/cores/Minisite"),
-  Base: require("$/IZOGears/Base"),
+  Common: require("$/IZOGears/CommonAPI"),
   Config: require("$/cores/Config"),
   Tables: require("$/cores/Tables"),
   Data: require("$/cores/Data"),

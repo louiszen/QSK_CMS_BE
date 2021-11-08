@@ -1,7 +1,7 @@
-const _base = require("$/IZOGears/__ZBase");
+const _base = require("$/IZOGears/_CoreWheels");
 
 const path = require("path");
-const { Fs } = require("$/IZOGears/__ZBase/Utils");
+const { Fs } = require("$/IZOGears/_CoreWheels/Utils");
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 

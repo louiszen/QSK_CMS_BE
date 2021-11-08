@@ -1,4 +1,4 @@
-const _base = require("$/IZOGears/__ZBase");
+const _base = require("$/IZOGears/_CoreWheels");
 const _remote = require("$/remoteConfig");
 const DBDocs = require("../InitDocs/DBDocs");
 const ConfigDocs = require("../InitDocs/ConfigDocs");

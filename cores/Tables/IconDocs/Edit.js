@@ -1,5 +1,6 @@
-const _base = require("$/IZOGears/__ZBase");
+const _base = require("$/IZOGears/_CoreWheels");
 const _remote = require("$/remoteConfig");
+const _DBMAP = require("../../../__SYSDefault/_DBMAP");
 
 const {Chalk, Response, Fs, Time} = _base.Utils;
 
@@ -8,7 +9,7 @@ const {Chalk, Response, Fs, Time} = _base.Utils;
 module.exports = async (_opt, _param, _file) => {
 
   let db = await _remote.BaseDB();
-  let dbname = await _remote.GetDBName(_param.subcat);
+  let dbname = _DBMAP[_param.subcat];
 
   let data = JSON.parse(_opt.data);
 

@@ -1,5 +1,4 @@
-const doc = {
-  _id: "DBNAME",
+const _DBMAP = {
   User: "user",
   Config: "config",
   Miscellaneous: "miscellaneous",
@@ -29,4 +28,4 @@ const doc = {
   UserRec$: "xuserrecord",
 };
 
-module.exports = doc;
+module.exports = _DBMAP;

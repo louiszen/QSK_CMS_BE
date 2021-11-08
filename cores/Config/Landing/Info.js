@@ -1,7 +1,8 @@
-const _base = require("$/IZOGears/__ZBase");
+const _base = require("$/IZOGears/_CoreWheels");
 const _remote = require("$/remoteConfig");
 
 const path = require("path");
+const _DBMAP = require("../../../__SYSDefault/_DBMAP");
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
@@ -11,9 +12,7 @@ module.exports = async (_opt, _param) => {
 
   let db = await _remote.BaseDB();
 
-  let configDBName = await _remote.GetDBName("Config");
-
-  let res = await db.getDocQ(configDBName, "Landing");
+  let res = await db.getDocQ(_DBMAP.Config, "Landing");
 
   if(!res.Success){
     let msg = res.payload.Message;
