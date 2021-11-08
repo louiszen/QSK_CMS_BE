@@ -16,7 +16,7 @@ module.exports = async (_opt, _param) => {
   let db = await _remote.BaseDB();
   let dbname = _DBMAP[catName];
   
-  let res = await db.List(dbname, true);
+  let res = await db.List2Docs(dbname, true);
 
   console.log(Chalk.CLog("[-]", "Get All Groups", [catName, actName]));
 
@@ -25,10 +25,10 @@ module.exports = async (_opt, _param) => {
     console.log(Chalk.CLog("[!]", msg, [catName, actName]));
   }
 
-  let rtn = _.map(res.payload.rows, (o, i) => {
+  let rtn = _.map(res.payload, (o, i) => {
     return {
-      refID: o.doc.refID,
-      display: o.doc.display || "<No Display Text>"
+      refID: o.refID,
+      display: o.display || "<No Display Text>"
     };
   });
 

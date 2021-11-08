@@ -1,6 +1,6 @@
 const _base = require("$/IZOGears/_CoreWheels");
 const _remote = require("$/remoteConfig");
-const _DBMAP = require("../../../__SYSDefault/_DBMAP");
+const _DBMAP = require("$/__SYSDefault/_DBMAP");
 
 const {Chalk, Response, Fs, Time} = _base.Utils;
 

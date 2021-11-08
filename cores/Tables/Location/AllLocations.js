@@ -24,10 +24,10 @@ module.exports = async (_opt, _param) => {
     console.log(Chalk.CLog("[!]", msg, [catName, actName]));
   }
 
-  let rtn = _.map(res.payload.rows, (o, i) => {
+  let rtn = _.map(res.payload, (o, i) => {
     return {
-      refID: o.doc.refID,
-      display: o.doc.display && o.doc.display.EN || "<No Display Text>"
+      refID: o.refID,
+      display: o.display && o.display.EN || "<No Display Text>"
     };
   });
 

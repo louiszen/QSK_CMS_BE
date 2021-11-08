@@ -1,3 +1,3 @@
-const _Generic = require("../../IZOGears/GENERIC/WithLastUpdate");
+const _Generic = require("$/IZOGears/GENERIC/WithLastUpdate");
 
 module.exports = _Generic;

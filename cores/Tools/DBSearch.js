@@ -1,5 +1,5 @@
-const _base = require("../../IZOGears/_CoreWheels");
-const _remote = require("../../remoteConfig");
+const _base = require("$/IZOGears/_CoreWheels");
+const _remote = require("$/remoteConfig");
 
 const path = require("path");
 const catName = path.basename(__dirname);

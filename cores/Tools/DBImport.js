@@ -1,5 +1,5 @@
-const _base = require("../../IZOGears/_CoreWheels");
-const _remote = require("../../remoteConfig");
+const _base = require("$/IZOGears/_CoreWheels");
+const _remote = require("$/remoteConfig");
 
 const _ = require("lodash");
 
