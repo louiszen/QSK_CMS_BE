@@ -1,5 +1,5 @@
-const _base = require('$/IZOGears/__ZBase');
-const _remote = require('$/remoteConfig');
+const _base = require("$/IZOGears/__ZBase");
+const _remote = require("$/remoteConfig");
 
 class LUserRecord extends _base.Extensible.ExpirableDB {
 
@@ -11,12 +11,12 @@ class LUserRecord extends _base.Extensible.ExpirableDB {
         return {Success: false};
       }
     }
-    let dbName = await _remote.GetDBName('$UserRec');
+    let dbName = await _remote.GetDBName("$UserRec");
     return await super.Init({
       db: db, 
       DBName: dbName, 
       keep: 12, 
-      mode: 'M'
+      mode: "M"
     });
   }
 

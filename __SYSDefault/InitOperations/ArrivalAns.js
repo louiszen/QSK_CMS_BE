@@ -1,12 +1,12 @@
-const _base = require('$/IZOGears/__ZBase');
-const _remote = require('$/remoteConfig');
-const DBDocs = require('../InitDocs/DBDocs');
-const ConfigDocs = require('../InitDocs/ConfigDocs');
+const _base = require("$/IZOGears/__ZBase");
+const _remote = require("$/remoteConfig");
+const DBDocs = require("../InitDocs/DBDocs");
+const ConfigDocs = require("../InitDocs/ConfigDocs");
 
-const _ = require('lodash');
-const moment = require('moment');
+const _ = require("lodash");
+const moment = require("moment");
 
-const path = require('path');
+const path = require("path");
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
@@ -23,7 +23,7 @@ module.exports = async () => {
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
-      throw new Error(res.payload.Error)
+      throw new Error(res.payload.Error);
     }
 
     await Promise.all(_.map(DBDocs.ArrivalAns.Template, async (o, i) => {
@@ -36,7 +36,7 @@ module.exports = async () => {
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
-      throw new Error(res.payload.Error)
+      throw new Error(res.payload.Error);
     }
 
     await Promise.all(_.map(DBDocs.ArrivalAns.Components.APProc, async (o, i) => {
@@ -49,7 +49,7 @@ module.exports = async () => {
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
-      throw new Error(res.payload.Error)
+      throw new Error(res.payload.Error);
     }
 
     await Promise.all(_.map(DBDocs.ArrivalAns.Components.DOCReq, async (o, i) => {
@@ -62,7 +62,7 @@ module.exports = async () => {
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
-      throw new Error(res.payload.Error)
+      throw new Error(res.payload.Error);
     }
 
     await Promise.all(_.map(DBDocs.ArrivalAns.Components.ENTReq, async (o, i) => {
@@ -75,7 +75,7 @@ module.exports = async () => {
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
-      throw new Error(res.payload.Error)
+      throw new Error(res.payload.Error);
     }
 
     await Promise.all(_.map(DBDocs.ArrivalAns.Components.QUAReq, async (o, i) => {
@@ -88,7 +88,7 @@ module.exports = async () => {
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
-      throw new Error(res.payload.Error)
+      throw new Error(res.payload.Error);
     }
 
     await Promise.all(_.map(DBDocs.ArrivalAns.Components.Tips, async (o, i) => {
@@ -101,7 +101,7 @@ module.exports = async () => {
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
-      throw new Error(res.payload.Error)
+      throw new Error(res.payload.Error);
     }
 
     await Promise.all(_.map(DBDocs.ArrivalAns.Miscellaneous.Footnote, async (o, i) => {
@@ -114,7 +114,7 @@ module.exports = async () => {
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
-      throw new Error(res.payload.Error)
+      throw new Error(res.payload.Error);
     }
 
     let filenames = await Fs.readdir("Images/Icons");
@@ -125,14 +125,14 @@ module.exports = async () => {
         refID: iconName,
         description: iconName + ": " + o,
         version: 3,
-        lastUpdate: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
+        lastUpdate: moment("2021/06/03", "YYYY/MM/DD").toISOString(),
         effective: {
-          Start: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
+          Start: moment("2021/06/03", "YYYY/MM/DD").toISOString(),
           End: null
         },
         link: "Images/Icons/" + o
       };
-    })
+    });
 
     await Promise.all(_.map(docs, async (o, i) => {
       res = await db.Insert(dbName, o);
@@ -141,9 +141,9 @@ module.exports = async () => {
     return Response.Send(true);
 
   }catch(e){
-    console.error(Chalk.CLog('[x]', e, [catName, actName]));
+    console.error(Chalk.CLog("[x]", e, [catName, actName]));
     return Response.SendError(9001, e);
   }
   
 
-}
+};

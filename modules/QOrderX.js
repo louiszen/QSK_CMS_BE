@@ -1,10 +1,8 @@
-const _base = require('../IZOGears/__ZBase');
-const _remote = require('../remoteConfig');
+const _base = require("../IZOGears/__ZBase");
 
-const _ = require('lodash');
 const EffectiveDocsX = require("./EffectiveDocsX");
 
-const {Chalk, Time} = _base.Utils;
+const {Chalk} = _base.Utils;
 
 class QOrderX {
 
@@ -12,7 +10,7 @@ class QOrderX {
     let res = await EffectiveDocsX.GetByRefID("QOrder", "Order", date);
     if(!res.Success){
       let msg = res.message;
-      console.log(Chalk.CLog("[!]", msg, [catName, actName]));
+      console.log(Chalk.CLog("[!]", msg, this.name));
       throw Error(msg);
     }
     let orderDoc = res.payload.doc;
@@ -24,7 +22,7 @@ class QOrderX {
     let res = await EffectiveDocsX.GetByRefID("QOrder", "Order", date);
     if(!res.Success){
       let msg = res.message;
-      console.log(Chalk.CLog("[!]", msg, [catName, actName]));
+      console.log(Chalk.CLog("[!]", msg, this.name));
       throw Error(msg);
     }
     let orderDoc = res.payload.doc;

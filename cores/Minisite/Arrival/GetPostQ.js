@@ -1,14 +1,12 @@
-const _base = require('$/IZOGears/__ZBase');
-const _remote = require('$/remoteConfig');
+const _base = require("$/IZOGears/__ZBase");
 
-const path = require('path');
+const path = require("path");
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
-const _ = require('lodash');
-const EffectiveDocsX = require('$/modules/EffectiveDocsX');
-const QFlowX = require('$/modules/QFlowX');
-const { QSevX, QOrderX } = require('$/modules');
+const EffectiveDocsX = require("$/modules/EffectiveDocsX");
+const QFlowX = require("$/modules/QFlowX");
+const { QSevX, QOrderX } = require("$/modules");
 
 const {Chalk, Response, Time} = _base.Utils;
 
@@ -25,8 +23,8 @@ module.exports = async (_opt, _param) => {
   let order = await QOrderX.GetPost(arrivalDate);
 
   //get analysised Severity
-  let _21daysago = Time.Add(arrivalDate, -21, 'days');
-  console.log("Arrival Date: " + arrivalDate.format("LLL"))
+  let _21daysago = Time.Add(arrivalDate, -21, "days");
+  console.log("Arrival Date: " + arrivalDate.format("LLL"));
   console.log("21 Days Ago: " + _21daysago.format("LLL"));
 
   //analyse severity
@@ -69,7 +67,7 @@ module.exports = async (_opt, _param) => {
     qorder: order,
     highestSeverity: sev.highestSeverity,
     highestLoc: sev.highestLoc
-  }
+  };
 
   return Response.Send(true, rtn, "");
-}
+};

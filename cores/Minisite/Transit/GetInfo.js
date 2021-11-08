@@ -1,5 +1,4 @@
 const _base = require("$/IZOGears/__ZBase");
-const _remote = require("$/remoteConfig");
 
 const path = require("path");
 const catName = path.basename(__dirname);
@@ -11,7 +10,7 @@ const EffectiveDocsX = require("$/modules/EffectiveDocsX");
 const { Chalk, Response, Time } = _base.Utils;
 
 module.exports = async (_opt, _param) => {
-  let rtn = {};
+
   let now = Time.Now();
 
   //get valid transit master doc

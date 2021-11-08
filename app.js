@@ -1,26 +1,26 @@
-'use strict'
-const express = require('express');
-const helmet = require('helmet');
-const cors = require('cors');
+"use strict";
+const express = require("express");
+const helmet = require("helmet");
+const cors = require("cors");
 
-const multer = require('multer');
+const multer = require("multer");
 const app = express();
-const _ = require('lodash');
+const _ = require("lodash");
 
-const _base = require('./IZOGears/__ZBase');
-const _config = require('./__SYSDefault/SYSConfig');
-const _remote = require('$/remoteConfig');
+const _base = require("./IZOGears/__ZBase");
+const _config = require("./__SYSDefault/SYSConfig");
+const _remote = require("$/remoteConfig");
 
-const cores = require('./__SYSDefault/APIConfig/cores');
-const inits = require('./__SYSDefault/APIConfig/inits');
+const cores = require("./__SYSDefault/APIConfig/cores");
+const inits = require("./__SYSDefault/APIConfig/inits");
 
-const ByPass = require('./__SYSDefault/APIConfig/bypass');
-const TempStore = require('./IZOGears/Storage/TempStore');
+const ByPass = require("./__SYSDefault/APIConfig/bypass");
+const TempStore = require("./IZOGears/Storage/TempStore");
 
-const LRequest = require('./IZOGears/Log/LRequest');
+const LRequest = require("./IZOGears/Log/LRequest");
 
-const Authorize = require('./IZOGears/User/Authorize');
-const { Accessor, ZError } = require('./IZOGears/__ZBase/Utils');
+const Authorize = require("./IZOGears/User/Authorize");
+const { Accessor } = require("./IZOGears/__ZBase/Utils");
 
 const {Chalk, Response} = _base.Utils;
 
@@ -28,7 +28,7 @@ app.use(helmet()); //XSS protection
 app.use(express.json());
 app.use(express.urlencoded({
   extended: true,
-  limit: '10mb'
+  limit: "10mb"
 }));
 app.use(cors());
 app.use("/Images", express.static("Images"));
@@ -51,9 +51,9 @@ async function Start(){
 
   await Promise.all(_.map(inits, async (o, i) => {
     await o.OnLoad();
-  }))
+  }));
 
-  app.post('/:cat/:subcat/:action', multer().single('upload'), async (req, res) => {
+  app.post("/:cat/:subcat/:action", multer().single("upload"), async (req, res) => {
     try {
       res.setHeader("Content-Type", "application/json; charset=utf-8");
       console.log(Chalk.Log("[<] Request << [" + req.params.action + "] " + Chalk.Color("on", "grey") + " [" + req.params.cat + Chalk.Color("/", "grey") + req.params.subcat +"]"));

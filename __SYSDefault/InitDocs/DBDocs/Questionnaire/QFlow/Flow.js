@@ -1,5 +1,5 @@
-const moment = require('moment');
-const { v1 } = require('uuid');
+const moment = require("moment");
+const { v1 } = require("uuid");
 
 const doc = {
   _id: v1(),

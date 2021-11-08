@@ -1,8 +1,8 @@
-const fs = require('fs');
-const mkdir = require('make-dir');
-const rimraf = require('rimraf');
+const fs = require("fs");
+const mkdir = require("make-dir");
+const rimraf = require("rimraf");
 
-const { promisify } = require('util');
+const { promisify } = require("util");
 
 /**
  * Promisify fs module

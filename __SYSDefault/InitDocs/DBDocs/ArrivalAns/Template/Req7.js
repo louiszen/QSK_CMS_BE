@@ -1,14 +1,14 @@
-const moment = require('moment');
-const { v1 } = require('uuid');
+const moment = require("moment");
+const { v1 } = require("uuid");
 
 const doc = {
   _id: v1(),
   refID: "Req7",
   description: "Template 7",
   version: 3,
-  lastUpdate: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
+  lastUpdate: moment("2021/06/03", "YYYY/MM/DD").toISOString(),
   effective: {
-    Start: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
+    Start: moment("2021/06/03", "YYYY/MM/DD").toISOString(),
     End: null
   },
   canEntry: true,

@@ -1,10 +1,9 @@
-const _base = require('../IZOGears/__ZBase');
-const _remote = require('../remoteConfig');
+const _base = require("../IZOGears/__ZBase");
 
-const _ = require('lodash');
+const _ = require("lodash");
 const EffectiveDocsX = require("./EffectiveDocsX");
 
-const {Chalk, Time} = _base.Utils;
+const {Chalk} = _base.Utils;
 
 class QFlowX {
 
@@ -68,10 +67,11 @@ class QFlowX {
             throw Error(msg);
           }
           break;
-        default: 
+        default: {
           let msg = "Flow structure error: not a valid node!";
           console.log(Chalk.CLog("[x]", msg, [this.name])); 
           throw Error(msg);
+        }
       }
 
       if(popNode.position) delete popNode.position;

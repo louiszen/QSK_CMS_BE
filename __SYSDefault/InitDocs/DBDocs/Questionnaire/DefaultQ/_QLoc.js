@@ -1,5 +1,5 @@
 
-const moment = require('moment');
+const moment = require("moment");
 const { v1 } = require("uuid");
 
 const doc = {
@@ -7,9 +7,9 @@ const doc = {
   refID: "_QLoc",
   description: "The highest severity among all location(s) the pax has been to during the relevant",
   version: 3,
-  lastUpdate: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
+  lastUpdate: moment("2021/06/03", "YYYY/MM/DD").toISOString(),
   effective: {
-    Start: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
+    Start: moment("2021/06/03", "YYYY/MM/DD").toISOString(),
     End: null
   },
   question: {
@@ -33,6 +33,6 @@ const doc = {
     TC: "",
     SC: ""
   }, 
-}
+};
 
 module.exports = doc;

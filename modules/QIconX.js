@@ -1,10 +1,6 @@
-const _base = require('../IZOGears/__ZBase');
-const _remote = require('../remoteConfig');
+const _remote = require("../remoteConfig");
 
-const _ = require('lodash');
-const EffectiveDocsX = require("./EffectiveDocsX");
-
-const {Chalk, Time} = _base.Utils;
+const _ = require("lodash");
 
 class QIconX {
 

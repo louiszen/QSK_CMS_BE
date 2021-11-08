@@ -1,11 +1,11 @@
-const _base = require('$/IZOGears/__ZBase');
-const _remote = require('$/remoteConfig');
+const _base = require("$/IZOGears/__ZBase");
+const _remote = require("$/remoteConfig");
 
-const path = require('path');
+const path = require("path");
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
-const _ = require('lodash');
+const _ = require("lodash");
 
 const {Chalk, Response} = _base.Utils;
 
@@ -37,7 +37,7 @@ module.exports = async (_opt, _param) => {
   res = await db.Update(configDBName, docDBNAME);
   if(!res.Success){
     let msg = "Cannot update DBNAME";
-    console.error(Chalk.CLog('[x]', msg, [catName, actName]));
+    console.error(Chalk.CLog("[x]", msg, [catName, actName]));
     return Response.Send(false, "", "");
   }
 
@@ -55,7 +55,7 @@ module.exports = async (_opt, _param) => {
   res = await db.Update(configDBName, doc);
   if(!res.Success){
     let msg = "Cannot update Database Config";
-    console.error(Chalk.CLog('[x]', msg, [catName, actName]));
+    console.error(Chalk.CLog("[x]", msg, [catName, actName]));
     return Response.Send(false, "", "");
   }
 
@@ -63,4 +63,4 @@ module.exports = async (_opt, _param) => {
   
   return Response.Send(true, "", "");
 
-}
+};

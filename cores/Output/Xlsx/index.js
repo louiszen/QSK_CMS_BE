@@ -1,5 +1,5 @@
-const Generic = require('./Generic');
+const Generic = require("./Generic");
 
 module.exports = {
   Generic
-}
+};

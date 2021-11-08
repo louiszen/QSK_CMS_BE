@@ -1,11 +1,9 @@
-const moment = require('moment');
-const { v1 } = require('uuid');
+const moment = require("moment");
+const { v1 } = require("uuid");
 
 let s1 = v1();
 let s2 = v1();
 let s3 = v1();
-let s4 = v1();
-let s5 = v1();
 let s99 = v1();
 
 const doc = {
@@ -13,9 +11,9 @@ const doc = {
   refID: "Flow001",
   description: "3 Jun 2021",
   version: 3,
-  lastUpdate: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
+  lastUpdate: moment("2021/06/03", "YYYY/MM/DD").toISOString(),
   effective: {
-    Start: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
+    Start: moment("2021/06/03", "YYYY/MM/DD").toISOString(),
     End: null
   },
   flow: [

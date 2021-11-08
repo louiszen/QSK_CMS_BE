@@ -1,4 +1,4 @@
-const MC = require('./MC');
+const MC = require("./MC");
 
 module.exports = {
   MC

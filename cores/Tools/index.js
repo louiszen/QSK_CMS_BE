@@ -1,7 +1,7 @@
-const DBSearch = require('./DBSearch');
-const DBImport = require('./DBImport');
+const DBSearch = require("./DBSearch");
+const DBImport = require("./DBImport");
 
 module.exports = {
   DBSearch,
   DBImport
-}
+};

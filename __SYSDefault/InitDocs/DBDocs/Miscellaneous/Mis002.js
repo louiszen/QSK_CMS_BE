@@ -1,14 +1,14 @@
-const moment = require('moment');
-const { v1 } = require('uuid');
+const moment = require("moment");
+const { v1 } = require("uuid");
 
 const doc = {
   _id: v1(),
   refID: "Mis002",
   description: "Disclaimer on the arrival wizard question pages & Disclaimer on the shared arrival wizard result page",
   version: 3,
-  lastUpdate: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
+  lastUpdate: moment("2021/06/03", "YYYY/MM/DD").toISOString(),
   effective: {
-    Start: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
+    Start: moment("2021/06/03", "YYYY/MM/DD").toISOString(),
     End: null
   },
   display: {

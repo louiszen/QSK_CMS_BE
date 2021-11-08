@@ -1,4 +1,4 @@
-const Order = require('./Order');
+const Order = require("./Order");
 
 module.exports = {
   Order,

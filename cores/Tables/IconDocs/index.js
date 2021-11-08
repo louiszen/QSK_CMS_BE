@@ -1,10 +1,10 @@
-const _Generic = require('../_GenricOnlyLU');
+const _Generic = require("../_GenricOnlyLU");
 
-const Add = require('./Add');
-const Delete = require('./Delete');
-const DeleteBulk = require('./DeleteBulk');
+const Add = require("./Add");
+const Delete = require("./Delete");
+const DeleteBulk = require("./DeleteBulk");
 const Duplicate = _Generic.Duplicate;
-const Edit = require('./Edit');
+const Edit = require("./Edit");
 const Export = _Generic.Export;
 const Get = _Generic.Get;
 const Import = _Generic.Import;
@@ -22,4 +22,4 @@ module.exports = {
   Import,
   Info,
   List
-}
+};

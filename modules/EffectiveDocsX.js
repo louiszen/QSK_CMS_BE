@@ -1,7 +1,7 @@
-const _base = require('../IZOGears/__ZBase');
-const _remote = require('../remoteConfig');
+const _base = require("../IZOGears/__ZBase");
+const _remote = require("../remoteConfig");
 
-const _ = require('lodash');
+const _ = require("lodash");
 
 const {Chalk, Time} = _base.Utils;
 
@@ -204,7 +204,7 @@ class EffectiveDocsX {
     let docs = res.payload.docs;
     let doc = null;
     if(docs.length == 0){
-      let msg = "Cannot find related documents."
+      let msg = "Cannot find related documents.";
       return {
         Success: false,
         message: msg

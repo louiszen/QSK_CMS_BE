@@ -1,4 +1,4 @@
-const GetLanding = require('./GetLanding');
+const GetLanding = require("./GetLanding");
 
 module.exports = {
   GetLanding

@@ -1,4 +1,4 @@
-const _Generic = require('../_Generic');
+const _Generic = require("../_Generic");
 
 const Add = _Generic.Add;
 const Delete = _Generic.Delete;
@@ -10,7 +10,7 @@ const Get = _Generic.Get;
 const Import = _Generic.Import;
 const Info = _Generic.Info;
 const List = _Generic.List;
-const AllLocations = require('./AllLocations');
+const AllLocations = require("./AllLocations");
 
 module.exports = {
   Add,
@@ -24,4 +24,4 @@ module.exports = {
   Info,
   List,
   AllLocations
-}
+};

@@ -1,11 +1,9 @@
-const _base = require('$/IZOGears/__ZBase');
-const _remote = require('$/remoteConfig');
+const _base = require("$/IZOGears/__ZBase");
+const _remote = require("$/remoteConfig");
 
-const path = require('path');
+const path = require("path");
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
-
-const _ = require('lodash');
 
 const {Chalk, Response, Time, Fs} = _base.Utils;
 
@@ -23,19 +21,19 @@ module.exports = async (_opt, _param) => {
 
   let dbs = resQ.payload.sort();
 
-  let backupDir = './ΩRUNTIME/_backup/' + process.env.NODE_ENV + '/';
+  let backupDir = "./ΩRUNTIME/_backup/" + process.env.NODE_ENV + "/";
   
   let LastBackup = undefined;
   let Backups = [];
   try{
     let res = await Fs.readdir(backupDir);
-    console.log(Chalk.CLog('[-]', 'Search Backup in ' + backupDir + ": " + res.length, [catName, actName]));
+    console.log(Chalk.CLog("[-]", "Search Backup in " + backupDir + ": " + res.length, [catName, actName]));
 
     Backups = res;
     if(Backups.length > 0){
       Backups = Backups.reverse();
-      let lastbkup = Time.Parse(Backups[0], 'YYYYMMDDHHmmss');
-      LastBackup = lastbkup.format('DD MMM, YYYY HH:mm:ss');
+      let lastbkup = Time.Parse(Backups[0], "YYYYMMDDHHmmss");
+      LastBackup = lastbkup.format("DD MMM, YYYY HH:mm:ss");
     }
   }catch(e){}
 
@@ -50,4 +48,4 @@ module.exports = async (_opt, _param) => {
 
   return Response.Send(true, rtn, "");
   
-}
+};

@@ -1,19 +1,17 @@
-const _ = require('lodash');
+/**
+ * Routing Rules that bypasses the authentication
+ * @type {[String]}
+ */
+ const RULES = [
+  "Base/Authorize/*",
+  "Base/Name/*",
+  "Minisite/*/*"
+];
 
 /**
  * Class governs the autheuthication bypass rules
  */
 class ByPass {
-
-  /**
-   * Routing Rules that bypasses the authentication
-   * @type {[String]}
-   */
-  static rules = [
-    "Base/Authorize/*",
-    "Base/Name/*",
-    "Minisite/*/*"
-  ];
 
   /**
    * @readonly
@@ -23,9 +21,9 @@ class ByPass {
    * @returns 
    */
   static Includes(cat, subcat, func){
-    for(let i = 0; i<this.rules.length; i++){
-      let o = this.rules[i];
-      let splited = o.split('/');
+    for(let i = 0; i<RULES.length; i++){
+      let o = RULES[i];
+      let splited = o.split("/");
       let acat = splited[0];
       let asubcat = splited[1];
       let afunc = splited[2];

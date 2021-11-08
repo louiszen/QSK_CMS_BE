@@ -141,4 +141,4 @@ module.exports = {
   SevGroup,
   Grouping,
   Location
-}
+};

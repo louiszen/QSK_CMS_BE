@@ -1,19 +1,14 @@
-const _base = require('../IZOGears/__ZBase');
-const _remote = require('../remoteConfig');
-
-const _ = require('lodash');
+const _ = require("lodash");
 const EffectiveDocsX = require("./EffectiveDocsX");
-const QFlowX = require('./QFlowX');
-const QLocX = require('./QLocX');
+const QFlowX = require("./QFlowX");
+const QLocX = require("./QLocX");
 
-const moment = require('moment');
-
-const {Chalk, Time} = _base.Utils;
+const moment = require("moment");
 
 class QVerdictX {
 
   static async GetModVerdict(userRecord){
-    let {userAns, arrivalDate, highestSeverity, highestLoc} = userRecord;
+    let {userAns, arrivalDate, highestSeverity} = userRecord;
 
     let locDocs = await QLocX.AllLocations(arrivalDate);
 
@@ -65,27 +60,27 @@ class QVerdictX {
       EN: "Other",
       TC: "其他",
       SC: "其他",
-    }
+    };
 
     let {arrivalDate, highestLoc, relevantPeriod} = userRecord;
     //@date
     let locale = lang === "EN"? "en" : "zh_cn";
-    rtn = rtn.replace('@date', moment(arrivalDate).locale(locale).format("LL"));
+    rtn = rtn.replace("@date", moment(arrivalDate).locale(locale).format("LL"));
     //@loc
     let locstr = "";
     _.map(highestLoc, (o, i) => {
       let doc = _.find(locDocs, v => v.refID === o);
       
       if(i !== 0){
-        locstr += ',';
+        locstr += ",";
       }
       if(!doc) locstr += otherCap[lang];
       else locstr += doc.display[lang];
     });
-    rtn = rtn.replace('@loc', locstr);
+    rtn = rtn.replace("@loc", locstr);
 
     //@reldays
-    rtn = rtn.replace('@reldays', relevantPeriod);
+    rtn = rtn.replace("@reldays", relevantPeriod);
 
     return rtn;
     

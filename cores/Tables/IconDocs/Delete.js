@@ -1,9 +1,5 @@
-const _base = require('$/IZOGears/__ZBase');
-const _remote = require('$/remoteConfig');
-
-const path = require('path');
-const catName = path.basename(__dirname);
-const actName = path.basename(__filename, path.extname(__filename));
+const _base = require("$/IZOGears/__ZBase");
+const _remote = require("$/remoteConfig");
 
 const {Chalk, Response, Fs} = _base.Utils;
 
@@ -30,4 +26,4 @@ module.exports = async (_opt, _param) => {
     return Response.SendError(9001, rtn.payload);
   }
 
-}
+};

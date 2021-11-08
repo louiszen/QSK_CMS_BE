@@ -1,4 +1,4 @@
-const GetAnswer = require('./GetAnswer');
+const GetAnswer = require("./GetAnswer");
 
 module.exports = {
   GetAnswer

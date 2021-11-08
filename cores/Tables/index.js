@@ -1,27 +1,27 @@
-const SevGroup = require('./SevGroup');
-const Grouping = require('./Grouping');
-const Location = require('./Location');
-const Question = require('./Question');
-const APProc = require('./APProc');
-const DOCReq = require('./DOCReq');
-const ENTReq = require('./ENTReq');
-const QUAReq = require('./QUAReq');
-const Scenario = require('./Scenario');
-const ArrivalAns = require('./ArrivalAns');
-const QFlow = require('./QFlow');
-const QOrder = require('./QOrder');
-const Tips = require('./Tips');
-const Footnote = require('./Footnote');
-const IconDocs = require('./IconDocs');
-const DefaultQ = require('./DefaultQ');
-const TransitAnsComp = require('./TransitAnsComp');
-const TransitAnsTemp = require('./TransitAnsTemp');
-const DepartAnsCT = require('./DepartAnsCT');
-const DepartAnsTA = require('./DepartAnsTA');
-const DepartAnsTemp = require('./DepartAnsTemp');
-const DepartAnsLoc = require('./DepartAnsLoc');
-const DepartAnsLink = require('./DepartAnsLink');
-const DepartAnsTest = require('./DepartAnsTest');
+const SevGroup = require("./SevGroup");
+const Grouping = require("./Grouping");
+const Location = require("./Location");
+const Question = require("./Question");
+const APProc = require("./APProc");
+const DOCReq = require("./DOCReq");
+const ENTReq = require("./ENTReq");
+const QUAReq = require("./QUAReq");
+const Scenario = require("./Scenario");
+const ArrivalAns = require("./ArrivalAns");
+const QFlow = require("./QFlow");
+const QOrder = require("./QOrder");
+const Tips = require("./Tips");
+const Footnote = require("./Footnote");
+const IconDocs = require("./IconDocs");
+const DefaultQ = require("./DefaultQ");
+const TransitAnsComp = require("./TransitAnsComp");
+const TransitAnsTemp = require("./TransitAnsTemp");
+const DepartAnsCT = require("./DepartAnsCT");
+const DepartAnsTA = require("./DepartAnsTA");
+const DepartAnsTemp = require("./DepartAnsTemp");
+const DepartAnsLoc = require("./DepartAnsLoc");
+const DepartAnsLink = require("./DepartAnsLink");
+const DepartAnsTest = require("./DepartAnsTest");
 
 module.exports = {
   SevGroup,
@@ -48,4 +48,4 @@ module.exports = {
   DepartAnsLoc,
   DepartAnsLink,
   DepartAnsTest
-}
+};

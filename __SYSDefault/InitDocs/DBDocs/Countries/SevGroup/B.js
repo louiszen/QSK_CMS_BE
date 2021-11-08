@@ -4,12 +4,12 @@ const { v1 } = require("uuid");
 const doc = {
   _id: v1(),
   refID: "B",
-  lastUpdate: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
+  lastUpdate: moment("2021/06/03", "YYYY/MM/DD").toISOString(),
   display: "B",
   severity: 2,
   period: 14,
   effective: {
-    Start: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
+    Start: moment("2021/06/03", "YYYY/MM/DD").toISOString(),
     End: null
   }
 };

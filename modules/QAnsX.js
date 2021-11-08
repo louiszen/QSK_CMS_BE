@@ -1,10 +1,4 @@
-const _base = require('../IZOGears/__ZBase');
-const _remote = require('../remoteConfig');
-
-const _ = require('lodash');
-const EffectiveDocsX = require("./EffectiveDocsX");
-
-const {Chalk, Time} = _base.Utils;
+const _ = require("lodash");
 
 class QAnsX {
 
@@ -37,7 +31,7 @@ class QAnsX {
          throw Error("Incorrect Parameters Format.");
        }
        mapping["#" + (i+ 1)] = refAns;  
-       paramFormat["#" + (i+ 1)] = refParam.format
+       paramFormat["#" + (i+ 1)] = refParam.format;
     });
 
     modMapping = this.ModMapping(mapping, paramFormat);
@@ -76,7 +70,7 @@ class QAnsX {
         }else{
           rtn[i][x] = v;
         }
-      })
+      });
     });
     
     return rtn;

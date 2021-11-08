@@ -1,13 +1,12 @@
-const _base = require('$/IZOGears/__ZBase');
-const _remote = require('$/remoteConfig');
+const _base = require("$/IZOGears/__ZBase");
 
-const path = require('path');
-const LUserRecord = require('$/modules/LUserRecords');
-const { EffectiveDocsX, QIconX, QFlowX, QVerdictX, QAnsX } = require('$/modules');
+const path = require("path");
+const LUserRecord = require("$/modules/LUserRecords");
+const { EffectiveDocsX, QIconX, QVerdictX, QAnsX } = require("$/modules");
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
-const {Chalk, Response, Time} = _base.Utils;
+const {Chalk, Response} = _base.Utils;
 
 module.exports = async (_opt, _param) => {
 
@@ -73,4 +72,4 @@ module.exports = async (_opt, _param) => {
 
   
 
-}
+};

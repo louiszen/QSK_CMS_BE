@@ -1,9 +1,8 @@
-const _base = require('$/IZOGears/__ZBase');
-const _remote = require('$/remoteConfig');
+const _base = require("$/IZOGears/__ZBase");
 
-const path = require('path');
-const { QFlowX, QSevX } = require('$/modules');
-const LUserRecord = require('$/modules/LUserRecords');
+const path = require("path");
+const { QFlowX, QSevX } = require("$/modules");
+const LUserRecord = require("$/modules/LUserRecords");
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
@@ -23,7 +22,7 @@ module.exports = async (_opt, _param) => {
   let flow = await QFlowX.GetBySeverity(sev.highestSeverity, arrivalDate);
   let ans = QFlowX.GetAnswer(flow, answer);
 
-  console.log(localID, ans)
+  console.log(localID, ans);
 
   let doc = {
     arrivalDate: arrivalDate,
@@ -32,7 +31,7 @@ module.exports = async (_opt, _param) => {
     highestLoc: sev.highestLoc,
     relevantPeriod: sev.relevantPeriod,
     template: ans
-  }
+  };
 
   await LUserRecord.Write(localID, doc);
   let flag = LUserRecord.CurrentFlag();
@@ -47,4 +46,4 @@ module.exports = async (_opt, _param) => {
 
   
 
-}
+};

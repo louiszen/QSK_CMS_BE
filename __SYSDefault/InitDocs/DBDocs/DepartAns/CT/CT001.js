@@ -1,19 +1,19 @@
-const moment = require('moment');
-const { v1 } = require('uuid');
+const moment = require("moment");
+const { v1 } = require("uuid");
 
 const doc = {
   _id: v1(),
   refID: "DepCT",
   description: "COVID-19 Test for Passengers at HKIA",
   version: 3,
-  lastUpdate: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
+  lastUpdate: moment("2021/06/03", "YYYY/MM/DD").toISOString(),
   displayLastUpdate: {
     EN: "3 Jun 2021",
     TC: "2021年6月3日",
     SC: "2021年6月3日",
   },
   effective: {
-    Start: moment('2021/06/03', "YYYY/MM/DD").toISOString(),
+    Start: moment("2021/06/03", "YYYY/MM/DD").toISOString(),
     End: null
   },
   display: {

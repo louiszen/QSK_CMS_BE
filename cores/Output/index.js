@@ -1,5 +1,5 @@
-const Xlsx = require('./Xlsx');
+const Xlsx = require("./Xlsx");
 
 module.exports = {
   Xlsx
-}
+};

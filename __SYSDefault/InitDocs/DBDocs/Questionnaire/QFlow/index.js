@@ -1,4 +1,4 @@
-const Flow = require('./Flow');
+const Flow = require("./Flow");
 
 module.exports = {
   Flow

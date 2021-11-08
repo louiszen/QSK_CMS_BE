@@ -1,7 +1,7 @@
-const _base = require('../IZOGears/__ZBase');
-const _remote = require('../remoteConfig');
+const _base = require("../IZOGears/__ZBase");
+const _remote = require("../remoteConfig");
 
-const _ = require('lodash');
+const _ = require("lodash");
 const EffectiveDocsX = require("./EffectiveDocsX");
 
 const {Chalk, Time} = _base.Utils;
@@ -41,7 +41,7 @@ class QSevX {
         let period = configRes.payload.Config.defaultRelevantPeriod;
         let relevant = true;
         if(o.date){
-          relevant = Time.Parse(o.date).isAfter(Time.Add(arrivalDate, -period, 'days'));
+          relevant = Time.Parse(o.date).isAfter(Time.Add(arrivalDate, -period, "days"));
         }
         o.severity = severity;
         o.relevant = relevant;
@@ -54,7 +54,7 @@ class QSevX {
         
         let relevant = true;
         if(o.date){
-          relevant = Time.Parse(o.date).isAfter(Time.Add(arrivalDate, -period, 'days'));
+          relevant = Time.Parse(o.date).isAfter(Time.Add(arrivalDate, -period, "days"));
         }
         o.severity = severity;
         o.relevant = relevant;
@@ -87,7 +87,7 @@ class QSevX {
       highestSeverity: highestSeverity,
       highestLoc: highestLoc,
       relevantPeriod: relevantPeriod
-    }
+    };
   }
 
 }

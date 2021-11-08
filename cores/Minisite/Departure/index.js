@@ -1,5 +1,5 @@
-const GetInfo = require('./GetInfo');
-const GetLocs = require('./GetLocs');
+const GetInfo = require("./GetInfo");
+const GetLocs = require("./GetLocs");
 
 module.exports = {
   GetInfo,

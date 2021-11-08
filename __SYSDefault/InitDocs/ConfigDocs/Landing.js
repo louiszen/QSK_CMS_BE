@@ -130,7 +130,7 @@ const doc = {
       content: {
         EN: "The information regarding the COVID-19 related travel restrictions and measures on this website is collected from the official websites of the <a href=\"https://www.coronavirus.gov.hk/eng/inbound-travel.html\">HKSAR Government</a> or other place, It is for reference only and is not legally binding. Due to the constant changes in the epidemic situation, before traveling, you must consult the HKSAR or the destination government’s information issuing channel to obtain the latest entry and quarantine requirements.",
         TC: "本網站與2019冠狀病毒疫情相關的旅遊限制和措施的信息，均收集自<a href=\"https://www.coronavirus.gov.hk/chi/inbound-travel.html\">香港特別行政區政府</a>或其他地方之官方網站，僅供參考，不具有法律約束力。由於疫情不斷變化，出行前請務必諮詢香港特別行政區或目的地政府之信息發方渠道以獲取最新的入境及檢疫要求。",
-        SC: "本网站与2019冠状病毒疫情相关的旅游限制和措施的信息，均收集自<a href=\”https://www.coronavirus.gov.hk/chi/inbound-travel.html\">香港特别行政区政府</a>或其他地方之官方网站，翻译参考，不具有法律约束力。因疫情不断变化，出行前请通知香港特别行政区或目的地政府之信息发方以获取最新消息的入境及检疫要求。"
+        SC: "本网站与2019冠状病毒疫情相关的旅游限制和措施的信息，均收集自<a href=\"https://www.coronavirus.gov.hk/chi/inbound-travel.html\">香港特别行政区政府</a>或其他地方之官方网站，翻译参考，不具有法律约束力。因疫情不断变化，出行前请通知香港特别行政区或目的地政府之信息发方以获取最新消息的入境及检疫要求。"
       }
     },
     SharingText: {

@@ -1,9 +1,5 @@
-const _base = require('$/IZOGears/__ZBase');
-const _remote = require('$/remoteConfig');
-
-const path = require('path');
-const catName = path.basename(__dirname);
-const actName = path.basename(__filename, path.extname(__filename));
+const _base = require("$/IZOGears/__ZBase");
+const _remote = require("$/remoteConfig");
 
 const {Chalk, Response, Fs, Time} = _base.Utils;
 
@@ -19,7 +15,6 @@ module.exports = async (_opt, _param, _file) => {
   if(_file){
     let path = data.link;
     //add _file
-    await Fs.mkdir(fpath.Icons);
     await Fs.writeFile(path, _file.buffer);
   }
 
@@ -35,4 +30,4 @@ module.exports = async (_opt, _param, _file) => {
     return Response.SendError(9001, rtn.payload);
   }
 
-}
+};

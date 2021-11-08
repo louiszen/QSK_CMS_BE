@@ -1,5 +1,5 @@
-const Info = require('./Info');
-const Edit = require('./Edit');
+const Info = require("./Info");
+const Edit = require("./Edit");
 
 module.exports = {
   Info,

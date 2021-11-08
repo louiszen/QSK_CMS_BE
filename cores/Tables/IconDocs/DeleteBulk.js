@@ -1,11 +1,7 @@
-const _base = require('$/IZOGears/__ZBase');
-const _remote = require('$/remoteConfig');
+const _base = require("$/IZOGears/__ZBase");
+const _remote = require("$/remoteConfig");
 
-const path = require('path');
-const catName = path.basename(__dirname);
-const actName = path.basename(__filename, path.extname(__filename));
-
-const _ = require('lodash');
+const _ = require("lodash");
 
 const {Chalk, Response, Fs} = _base.Utils;
 
@@ -19,7 +15,7 @@ module.exports = async (_opt, _param) => {
   let {data} = _opt;
 
   let deleteDocs = [];
-  res = await db.Find(dbname, {}, data.skip, data.limit, data.fields, data.sort);
+  let res = await db.Find(dbname, {}, data.skip, data.limit, data.fields, data.sort);
   if(res.Success){
     deleteDocs = res.payload.docs;
   }else{
@@ -44,4 +40,4 @@ module.exports = async (_opt, _param) => {
     return Response.SendError(9001, rtn.payload);
   }
 
-}
+};

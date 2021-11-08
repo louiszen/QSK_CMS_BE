@@ -1,16 +1,16 @@
-const _base = require('$/IZOGears/__ZBase');
-const _remote = require('$/remoteConfig');
-const DBDocs = require('../InitDocs/DBDocs');
-const ConfigDocs = require('../InitDocs/ConfigDocs');
+const _base = require("$/IZOGears/__ZBase");
+const _remote = require("$/remoteConfig");
+const DBDocs = require("../InitDocs/DBDocs");
+const ConfigDocs = require("../InitDocs/ConfigDocs");
 
-const _ = require('lodash');
+const _ = require("lodash");
 
-const path = require('path');
+const path = require("path");
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
-const {Chalk, Response, Fs, Excel, Time} = _base.Utils;
-const schema = require('./schema');
+const {Chalk, Response, Fs, Excel} = _base.Utils;
+const schema = require("./schema");
 
 module.exports = async () => {
   
@@ -25,7 +25,7 @@ module.exports = async () => {
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
-      throw new Error(res.payload.Error)
+      throw new Error(res.payload.Error);
     }
 
     xlsxData = await Fs.readFile("__SYSDefault/__DATA/locations.xlsx");
@@ -42,7 +42,7 @@ module.exports = async () => {
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
-      throw new Error(res.payload.Error)
+      throw new Error(res.payload.Error);
     }
 
     xlsxData = await Fs.readFile("__SYSDefault/__DATA/location_severity.xlsx");
@@ -56,7 +56,7 @@ module.exports = async () => {
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
-      throw new Error(res.payload.Error)
+      throw new Error(res.payload.Error);
     }
 
     await Promise.all(_.map(DBDocs.Countries.SevGroup, async (o, i) => {
@@ -66,9 +66,9 @@ module.exports = async () => {
     return Response.Send(true);
 
   }catch(e){
-    console.error(Chalk.CLog('[x]', e, [catName, actName]));
+    console.error(Chalk.CLog("[x]", e, [catName, actName]));
     return Response.SendError(9001, e);
   }
   
 
-}
+};

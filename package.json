@@ -4,13 +4,16 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix --ext .js,.jsx .",
+    "postinstall": "npx basetag link"
   },
   "author": "Louiszen",
   "license": "ISC",
   "dependencies": {
     "@cloudant/cloudant": "^4.5.1",
     "axios": "^0.24.0",
+    "babel-eslint": "^10.1.0",
     "basetag": "^2.0.1",
     "cors": "^2.8.5",
     "cron": "^1.8.2",
