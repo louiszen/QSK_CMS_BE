@@ -43,7 +43,7 @@ async function Start(){
   //Auto Init
   if(_config.Init.OnStart){
     console.log(Chalk.Log("[-] Auto Initialization."));
-    await cores.Common.Env.Init({});
+    await cores.CommonAPI.Env.Init({});
   }
   //init all
   await LRequest.OnLoad();

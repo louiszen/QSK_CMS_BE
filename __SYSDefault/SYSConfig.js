@@ -14,14 +14,14 @@
  *    }
  *  },
  *  Authentication: {
- *    Mode: "JWT",
+ *    Method: "JWT",
  *    JWT?: {
  *      TokenSecret: String,
  *      Expire: Number
  *    }
  *  },
  *  Authorization: {
- *    Mode: "AuthorityTree"
+ *    Method: "AuthorityTree"
  *  },
  *  Debug: {
  *    Console: Boolean,
@@ -91,14 +91,14 @@ const config = {
     }
   },
   Authentication: {
-    Mode: "JWT",
+    Method: "JWT",
     JWT: {
       TokenSecret: "QSK_BE",
       Expire: 1000 * 60 * 60 * 24 * 7
     }
   },
   Authorization: {
-    Mode: "AuthorityTree"
+    Method: "AuthorityTree"
   },
   Debug: {
     Console: true,
