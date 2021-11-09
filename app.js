@@ -15,11 +15,11 @@ const cores = require("./__SYSDefault/APIConfig/cores");
 const inits = require("./__SYSDefault/APIConfig/inits");
 
 const ByPass = require("./__SYSDefault/APIConfig/bypass");
-const TempStore = require("./IZOGears/Storage/TempStore");
+const TempStore = require("./IZOGears/COGS/Storage/TempStore");
 
-const LRequest = require("./IZOGears/Log/LRequest");
+const LRequest = require("./IZOGears/COGS/Log/LRequest");
 
-const Authorize = require("./IZOGears/User/Authorize");
+const Authorize = require("./IZOGears/COGS/User/Authorize");
 const { Accessor } = require("./IZOGears/_CoreWheels/Utils");
 
 const {Chalk, Response} = _base.Utils;
@@ -55,7 +55,6 @@ async function Start(){
 
   app.post("/:cat/:subcat/:action", multer().single("upload"), async (req, res) => {
     try {
-      req;
       res.setHeader("Content-Type", "application/json; charset=utf-8");
       console.log(Chalk.Log("[<] Request << [" + req.params.action + "] " + Chalk.Color("on", "grey") + " [" + req.params.cat + Chalk.Color("/", "grey") + req.params.subcat +"]"));
       console.log(Chalk.Log("[<] Data << "));

@@ -1,5 +1,5 @@
 const _ = require("lodash");
-const EffectiveDocsX = require("../IZOGears/DataQueries/EffectiveDocsX");
+const EffectiveDocsX = require("$/IZOGears/COGS/Queries/EffectiveDocsX");
 const QFlowX = require("./QFlowX");
 const QLocX = require("./QLocX");
 

@@ -1,4 +1,3 @@
-const EffectiveDocsX = require("../IZOGears/DataQueries/EffectiveDocsX");
 const QFlowX = require("./QFlowX");
 const QSevX = require("./QSevX");
 const QIconX = require("./QIconX");
@@ -8,7 +7,6 @@ const QLocX = require("./QLocX");
 const QOrderX = require("./QOrderX");
 
 module.exports = {
-  EffectiveDocsX,
   QFlowX,
   QSevX,
   QIconX,
