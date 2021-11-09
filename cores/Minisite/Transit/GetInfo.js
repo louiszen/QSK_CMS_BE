@@ -5,7 +5,7 @@ const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
 const _ = require("lodash");
-const EffectiveDocsX = require("$/modules/EffectiveDocsX");
+const EffectiveDocsX = require("$/IZOGears/DataQueries/EffectiveDocsX");
 
 const { Chalk, Response, Time } = _base.Utils;
 

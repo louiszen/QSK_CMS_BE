@@ -4,7 +4,7 @@ const path = require("path");
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
-const EffectiveDocsX = require("$/modules/EffectiveDocsX");
+const EffectiveDocsX = require("$/IZOGears/DataQueries/EffectiveDocsX");
 const QFlowX = require("$/modules/QFlowX");
 const { QSevX, QOrderX } = require("$/modules");
 

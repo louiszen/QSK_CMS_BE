@@ -18,7 +18,7 @@ module.exports = async (_opt, _param) => {
   let deleteDocs = [];
   let res = await db.Find(dbname, {}, data.skip, data.limit, data.fields, data.sort);
   if(res.Success){
-    deleteDocs = res.payload.docs;
+    deleteDocs = res.payload;
   }else{
     return Response.SendError(9001, res.payload);
   }

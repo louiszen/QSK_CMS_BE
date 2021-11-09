@@ -2,7 +2,7 @@ const _base = require("../IZOGears/_CoreWheels");
 const _remote = require("../remoteConfig");
 
 const _ = require("lodash");
-const EffectiveDocsX = require("./EffectiveDocsX");
+const EffectiveDocsX = require("../IZOGears/DataQueries/EffectiveDocsX");
 const _DBMAP = require("../__SYSDefault/_DBMAP");
 
 const {Chalk, Time} = _base.Utils;

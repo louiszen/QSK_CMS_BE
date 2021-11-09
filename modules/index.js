@@ -1,4 +1,4 @@
-const EffectiveDocsX = require("./EffectiveDocsX");
+const EffectiveDocsX = require("../IZOGears/DataQueries/EffectiveDocsX");
 const QFlowX = require("./QFlowX");
 const QSevX = require("./QSevX");
 const QIconX = require("./QIconX");

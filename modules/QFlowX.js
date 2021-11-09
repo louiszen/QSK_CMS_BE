@@ -1,7 +1,7 @@
 const _base = require("../IZOGears/_CoreWheels");
 
 const _ = require("lodash");
-const EffectiveDocsX = require("./EffectiveDocsX");
+const EffectiveDocsX = require("../IZOGears/DataQueries/EffectiveDocsX");
 
 const {Chalk} = _base.Utils;
 

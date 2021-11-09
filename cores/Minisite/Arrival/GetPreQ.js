@@ -6,7 +6,7 @@ const actName = path.basename(__filename, path.extname(__filename));
 
 const {Chalk, Response, Time} = _base.Utils;
 const _ = require("lodash");
-const EffectiveDocsX = require("$/modules/EffectiveDocsX");
+const EffectiveDocsX = require("$/IZOGears/DataQueries/EffectiveDocsX");
 const { QLocX, QOrderX } = require("$/modules");
 
 module.exports = async (_opt, _param) => {
