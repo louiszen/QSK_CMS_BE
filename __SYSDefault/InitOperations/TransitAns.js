@@ -1,11 +1,11 @@
 const _base = require("$/IZOGears/_CoreWheels");
 const _remote = require("$/remoteConfig");
-const DBDocs = require("../InitDocs/DBDocs");
-const ConfigDocs = require("../InitDocs/ConfigDocs");
+const DBDocs = require("$/__SYSDefault/InitDocs/DBDocs");
 
 const _ = require("lodash");
 
 const path = require("path");
+const _DBMAP = require("$/__SYSDefault/_DBMAP");
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
@@ -18,7 +18,7 @@ module.exports = async () => {
   let dbName;
   
   try{
-    dbName = ConfigDocs.DBNAME.TransitAnsComp;
+    dbName = _DBMAP.TransitAnsComp;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
@@ -29,7 +29,7 @@ module.exports = async () => {
       res = await db.Insert(dbName, o);
     }));
 
-    dbName = ConfigDocs.DBNAME.TransitAnsTemp;
+    dbName = _DBMAP.TransitAnsTemp;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){

@@ -1,3 +1,13 @@
+/**
+ * @type {{
+ *  username: String,
+ *  password: String,
+ *  UserDisplayName: String,
+ *  Version: Number,
+ *  Level: Number,
+ *  authority: *
+ * }}
+ */
 const DEVUSERS = [
   {
     username: "Sys@Dev",

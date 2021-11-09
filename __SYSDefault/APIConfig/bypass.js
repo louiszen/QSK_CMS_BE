@@ -8,7 +8,7 @@ class ByPass {
    * @type {[String]}
    */
   static RULES = [
-    "CommonAPI/Authorization/*",
+    "CommonAPI/Auth/*",
     "CommonAPI/Env/Info",
     "Minisite/*/*"
   ];

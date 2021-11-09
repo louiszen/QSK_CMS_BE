@@ -14,14 +14,14 @@
  *    }
  *  },
  *  Authentication: {
+ *    Method: "Username-Password",
+ *  },
+ *  Authorization: {
  *    Method: "JWT",
  *    JWT?: {
  *      TokenSecret: String,
  *      Expire: Number
  *    }
- *  },
- *  Authorization: {
- *    Method: "AuthorityTree"
  *  },
  *  Debug: {
  *    Console: Boolean,
@@ -73,10 +73,15 @@
  *        Download: String
  *      }
  *    }
+ *  },
+ *  LogKeep: {
+ *    Request: Number,
+ *    SignIn: Number,
+ *    Gate: Number
  *  }
  * }}
  */
-const config = {
+const SYSConfig = {
   General: {
     Name: "Quick Start Kit"
   },
@@ -91,14 +96,14 @@ const config = {
     }
   },
   Authentication: {
+    Method: "Username-Password",
+  },
+  Authorization: {
     Method: "JWT",
     JWT: {
       TokenSecret: "QSK_BE",
       Expire: 1000 * 60 * 60 * 24 * 7
     }
-  },
-  Authorization: {
-    Method: "AuthorityTree"
   },
   Debug: {
     Console: true,
@@ -110,7 +115,7 @@ const config = {
     CleanDB: true
   },
   BaseDB: {
-    Provider: "MongoDB",
+    Provider: "CouchDB",
     Backup: {
       Include: "All"
     },
@@ -150,7 +155,12 @@ const config = {
         Download: "_download"
       }
     }
+  },
+  LogKeep: {
+    Request: 7,
+    SignIn: 7,
+    Gate: 12
   }
 };
 
-module.exports = config;
+module.exports = SYSConfig;

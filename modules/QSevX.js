@@ -1,9 +1,9 @@
-const _base = require("../IZOGears/_CoreWheels");
-const _remote = require("../remoteConfig");
+const _base = require("$/IZOGears/_CoreWheels");
+const _remote = require("$/remoteConfig");
 
 const _ = require("lodash");
 const EffectiveDocsX = require("$/IZOGears/COGS/Queries/EffectiveDocsX");
-const _DBMAP = require("../__SYSDefault/_DBMAP");
+const _DBMAP = require("$/__SYSDefault/_DBMAP");
 
 const {Chalk, Time} = _base.Utils;
 

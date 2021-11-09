@@ -1,4 +1,4 @@
-const _remote = require("../remoteConfig");
+const _remote = require("$/remoteConfig");
 const _DBMAP = require("$/__SYSDefault/_DBMAP");
 
 const _ = require("lodash");

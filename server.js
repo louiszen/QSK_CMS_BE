@@ -5,10 +5,10 @@ if(!process.env.NODE_ENV){
   process.exit();
 }
 
-const _base = require("./IZOGears/_CoreWheels");
-const _config = require("./__SYSDefault/SYSConfig");
+const _base = require("$/IZOGears/_CoreWheels");
+const _config = require("$/__SYSDefault/SYSConfig");
 
-const Version = require("./Version");
+const Version = require("$/Version");
 const {Chalk, ZServer} = _base.Utils;
 
 Chalk.Guide();

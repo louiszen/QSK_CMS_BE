@@ -1,11 +1,11 @@
 const _base = require("$/IZOGears/_CoreWheels");
 const _remote = require("$/remoteConfig");
-const DBDocs = require("../InitDocs/DBDocs");
-const ConfigDocs = require("../InitDocs/ConfigDocs");
+const DBDocs = require("$/__SYSDefault/InitDocs/DBDocs");
 
 const _ = require("lodash");
 
 const path = require("path");
+const _DBMAP = require("$/__SYSDefault/_DBMAP");
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
@@ -18,7 +18,7 @@ module.exports = async () => {
   let dbName;
   
   try{
-    dbName = ConfigDocs.DBNAME.Question;
+    dbName = _DBMAP.Question;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
@@ -31,7 +31,7 @@ module.exports = async () => {
 
     ///
 
-    dbName = ConfigDocs.DBNAME.DefaultQ;
+    dbName = _DBMAP.DefaultQ;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
@@ -44,7 +44,7 @@ module.exports = async () => {
 
     ///
 
-    dbName = ConfigDocs.DBNAME.QFlow;
+    dbName = _DBMAP.QFlow;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
@@ -57,7 +57,7 @@ module.exports = async () => {
 
     ///
 
-    dbName = ConfigDocs.DBNAME.QOrder;
+    dbName = _DBMAP.QOrder;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){

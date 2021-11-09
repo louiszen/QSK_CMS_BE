@@ -1,11 +1,11 @@
 const _base = require("$/IZOGears/_CoreWheels");
 const _remote = require("$/remoteConfig");
-const DBDocs = require("../InitDocs/DBDocs");
-const ConfigDocs = require("../InitDocs/ConfigDocs");
+const DBDocs = require("$/__SYSDefault/InitDocs/DBDocs");
 
 const _ = require("lodash");
 
 const path = require("path");
+const _DBMAP = require("$/__SYSDefault/_DBMAP");
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
@@ -18,7 +18,7 @@ module.exports = async () => {
   let dbName;
   
   try{
-    dbName = ConfigDocs.DBNAME.DepartAnsCT;
+    dbName = _DBMAP.DepartAnsCT;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
@@ -31,7 +31,7 @@ module.exports = async () => {
 
     ///
 
-    dbName = ConfigDocs.DBNAME.DepartAnsTA;
+    dbName = _DBMAP.DepartAnsTA;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
@@ -44,7 +44,7 @@ module.exports = async () => {
 
     ///
 
-    dbName = ConfigDocs.DBNAME.DepartAnsTemp;
+    dbName = _DBMAP.DepartAnsTemp;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
@@ -57,7 +57,7 @@ module.exports = async () => {
 
     ///
 
-    dbName = ConfigDocs.DBNAME.DepartAnsLoc;
+    dbName = _DBMAP.DepartAnsLoc;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
@@ -70,7 +70,7 @@ module.exports = async () => {
 
     ///
 
-    dbName = ConfigDocs.DBNAME.DepartAnsLink;
+    dbName = _DBMAP.DepartAnsLink;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
@@ -83,7 +83,7 @@ module.exports = async () => {
 
     ///
 
-    dbName = ConfigDocs.DBNAME.DepartAnsTest;
+    dbName = _DBMAP.DepartAnsTest;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){

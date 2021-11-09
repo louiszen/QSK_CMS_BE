@@ -1,7 +1,6 @@
 const _base = require("$/IZOGears/_CoreWheels");
 const _remote = require("$/remoteConfig");
-const DBDocs = require("../InitDocs/DBDocs");
-const ConfigDocs = require("../InitDocs/ConfigDocs");
+const DBDocs = require("$/__SYSDefault/InitDocs/DBDocs");
 
 const _ = require("lodash");
 
@@ -11,6 +10,7 @@ const actName = path.basename(__filename, path.extname(__filename));
 
 const {Chalk, Response, Fs, Excel} = _base.Utils;
 const schema = require("./schema");
+const _DBMAP = require("$/__SYSDefault/_DBMAP");
 
 module.exports = async () => {
   
@@ -21,7 +21,7 @@ module.exports = async () => {
   let docs;
   
   try{
-    dbName = ConfigDocs.DBNAME.Location;
+    dbName = _DBMAP.Location;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
@@ -38,7 +38,7 @@ module.exports = async () => {
       res = await db.Insert(dbName, o);
     }));
 
-    dbName = ConfigDocs.DBNAME.Grouping;
+    dbName = _DBMAP.Grouping;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){
@@ -52,7 +52,7 @@ module.exports = async () => {
       res = await db.Insert(dbName, o);
     }));
 
-    dbName = ConfigDocs.DBNAME.SevGroup;
+    dbName = _DBMAP.SevGroup;
     res = await db.DestroyDatabase(dbName);
     res = await db.CreateDatabase(dbName);
     if(!res.Success){

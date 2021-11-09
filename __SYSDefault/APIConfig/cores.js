@@ -6,7 +6,7 @@ let cores = {
   Config: require("$/cores/Config"),
   Tables: require("$/cores/Tables"),
   Data: require("$/cores/Data"),
-  Output: require("../../IZOGears/GENERIC/Output")
+  Output: require("$/IZOGears/GENERIC/Output")
 };
 
 try{

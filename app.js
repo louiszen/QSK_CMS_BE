@@ -7,20 +7,22 @@ const multer = require("multer");
 const app = express();
 const _ = require("lodash");
 
-const _base = require("./IZOGears/_CoreWheels");
-const _config = require("./__SYSDefault/SYSConfig");
+const _base = require("$/IZOGears/_CoreWheels");
+const _config = require("$/__SYSDefault/SYSConfig");
 const _remote = require("$/remoteConfig");
 
-const cores = require("./__SYSDefault/APIConfig/cores");
-const inits = require("./__SYSDefault/APIConfig/inits");
+const cores = require("$/__SYSDefault/APIConfig/cores");
+const inits = require("$/__SYSDefault/APIConfig/inits");
 
-const ByPass = require("./__SYSDefault/APIConfig/bypass");
-const TempStore = require("./IZOGears/COGS/Storage/TempStore");
+const ByPass = require("$/__SYSDefault/APIConfig/bypass");
+const TempStore = require("$/IZOGears/COGS/Storage/TempStore");
 
-const LRequest = require("./IZOGears/COGS/Log/LRequest");
+const LRequest = require("$/IZOGears/COGS/Log/LRequest");
+const LSignIn = require("$/IZOGears/COGS/Log/LSignIn");
 
-const Authorize = require("./IZOGears/COGS/User/Authorize");
-const { Accessor } = require("./IZOGears/_CoreWheels/Utils");
+const { Accessor } = require("$/IZOGears/_CoreWheels/Utils");
+const ZGate = require("$/IZOGears/COGS/ZGate/ZGate");
+const { v1 } = require("uuid");
 
 const {Chalk, Response} = _base.Utils;
 
@@ -46,7 +48,9 @@ async function Start(){
     await cores.CommonAPI.Env.Init({});
   }
   //init all
+  await ZGate.OnLoad();
   await LRequest.OnLoad();
+  await LSignIn.OnLoad();
   await TempStore.OnLoad();
 
   await Promise.all(_.map(inits, async (o, i) => {
@@ -71,39 +75,28 @@ async function Start(){
         res.sendStatus(404);
         return;
       }
-  
-      //JWT Check
-      let jwt = {};
 
-      if(req.body.JWT){
-        jwt = Authorize.Decode(req.body.JWT);
+      let validate;
+      let username;
 
-        let user = await Authorize.GetUserFromJWT(req.body.JWT);
-
-        if(jwt.version !== user.Version){
+      if(!ByPass.Includes(req.params.cat, req.params.subcat, req.params.action)){
+        //not bypass, need validate
+        validate = await ZGate.Validate(req.body);
+        if(!validate.Success){
           res.status(200);
-          console.error(Chalk.Log("[x][>] Version Not Match. (Client: " + jwt.version + " Backend: " + user.Version + ")"));
-          res.send(Response.SendError(4001, "Version Not Match. \nPlease Login Again."));
+          let message = validate.payload;
+          console.error(Chalk.Log("[x][>] " + message));
+          res.send(Response.SendError(4001, message + "\nPlease Login Again."));
           return;
         }
-  
-        if (Authorize.IsExpired(req.body.JWT)) {
-          res.status(200);
-          console.error(Chalk.Log("[x][>] JWT Token Expired."));
-          res.send(Response.SendError(4002, "JWT Token Expired. \nPlease Login Again."));
-          return;
-        }
-      }else if(!req.body.JWT && !(ByPass.Includes(req.params.cat, req.params.subcat, req.params.action))){
-        res.status(200);
-        console.error(Chalk.Log("[x][>] No JWT Token"));
-        res.send(Response.SendError(4003, "JWT Authorization Required. \nPlease Login Again."));
-        return;
+
+        username = validate.payload;
       }
   
       res.status(200);
       
       //Call Object
-      LRequest.Write(jwt.username, req);
+      LRequest.Write(username || v1(), req);
       let rtn = await func(req.body, req.params, req.file, res);
       console.log(Chalk.Log("[o][>] Success Sent"));
       res.send(rtn);

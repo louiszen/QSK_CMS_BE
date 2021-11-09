@@ -1,4 +1,4 @@
-const _base = require("../IZOGears/_CoreWheels");
+const _base = require("$/IZOGears/_CoreWheels");
 
 const _ = require("lodash");
 const EffectiveDocsX = require("$/IZOGears/COGS/Queries/EffectiveDocsX");
