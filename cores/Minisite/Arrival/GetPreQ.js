@@ -9,7 +9,7 @@ const _ = require("lodash");
 const EffectiveDocsX = require("$/IZOGears/COGS/Queries/EffectiveDocsX");
 const { QLocX, QOrderX } = require("$/modules");
 
-module.exports = async (_opt, _param) => {
+module.exports = async (_opt, _param, _username) => {
 
   let date = _opt.data && _opt.data.date? Time.Parse(date) : Time.Now();
   

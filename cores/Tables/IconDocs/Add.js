@@ -9,7 +9,7 @@ const fpath = require("./path");
 
 /* IMPORTANT: Generic Scripts Automation depends on FOLDER name */
 
-module.exports = async (_opt, _param, _file) => {
+module.exports = async (_opt, _param, _username, _file) => {
 
   let db = await _remote.BaseDB();
   let dbname = _DBMAP[_param.subcat];

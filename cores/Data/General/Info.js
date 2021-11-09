@@ -7,7 +7,7 @@ const actName = path.basename(__filename, path.extname(__filename));
 
 const {Chalk, Response, Time, Fs} = _base.Utils;
 
-module.exports = async (_opt, _param) => {
+module.exports = async (_opt, _param, _username) => {
 
   let db = await _remote.BaseDB();
 

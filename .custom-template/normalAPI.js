@@ -19,7 +19,7 @@ const express = require('express');
  * }} _param
  * @returns 
  */
-module.exports = async (_opt, _param) => {
+module.exports = async (_opt, _param, _username) => {
   
   let db = _remote.BaseDB();
   let dbname = DBNAME[catName];

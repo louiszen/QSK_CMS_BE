@@ -11,7 +11,7 @@ const EffectiveDocsX = require("$/IZOGears/COGS/Queries/EffectiveDocsX");
 
 const {Chalk, Response, Time} = _base.Utils;
 
-module.exports = async (_opt, _param) => {
+module.exports = async (_opt, _param, _username) => {
   
   let {answer} = _opt.data;
   let res;

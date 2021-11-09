@@ -8,7 +8,7 @@ const actName = path.basename(__filename, path.extname(__filename));
 
 const {Chalk, Response} = _base.Utils;
 
-module.exports = async (_opt, _param) => {
+module.exports = async (_opt, _param, _username) => {
 
   let rtn = {};
   let {id, flag} = _opt.data;

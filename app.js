@@ -94,10 +94,12 @@ async function Start(){
       }
   
       res.status(200);
+
+      username = username || ("Anonymous-" + v1());
       
       //Call Object
-      LRequest.Write(username || v1(), req);
-      let rtn = await func(req.body, req.params, req.file, res);
+      LRequest.Write(username, req);
+      let rtn = await func(req.body, req.params, username, req.file, res);
       console.log(Chalk.Log("[o][>] Success Sent"));
       res.send(rtn);
   

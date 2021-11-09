@@ -8,14 +8,14 @@ const actName = path.basename(__filename, path.extname(__filename));
 const {Chalk, Response} = _base.Utils;
 const Backup = require("./Backup");
 
-module.exports = async (_opt, _param) => {
+module.exports = async (_opt, _param, _username) => {
 
   let db = await _remote.BaseDB();
 
   let {datestr} = _opt.data;
   
   //Backup first to avoid mis-replacement
-  let res = await Backup(_opt, _param);
+  let res = await Backup(_opt, _param, _username);
 
   res = await db.Restore(process.env.NODE_ENV, datestr);
 
