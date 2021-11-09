@@ -115,7 +115,7 @@ const SYSConfig = {
     CleanDB: true
   },
   BaseDB: {
-    Provider: "CouchDB",
+    Provider: "MongoDB",
     Backup: {
       Include: "All"
     },
