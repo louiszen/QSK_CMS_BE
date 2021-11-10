@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropsType from 'prop-types';
+import { observer } from 'mobx-react';
 
 import { Box, Typography } from '@material-ui/core';
 
@@ -197,4 +198,4 @@ class ${1} extends Component {
 
 }
 
-export default ${1};
+export default observer(${1});
