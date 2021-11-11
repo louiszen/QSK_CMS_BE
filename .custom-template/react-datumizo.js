@@ -10,10 +10,12 @@ import datalink from './datalink';
 import Datumizo from 'IZOArc/LabIZO/Datumizo/Datumizo';
 import { VStack } from 'IZOArc/LabIZO/Stackizo';
 import { Accessor, ColorX, Authority, store } from 'IZOArc/STATIC';
-import { IZOTheme } from '__Base/config';
+import { IZOTheme } from '__SYSDefault/Theme';
 import { Denied } from 'IZOArc/Fallback';
 
 /**
+ * add ~react-datalink.js as datalink.js in the same scope
+ * add ~react-schema.js as schema.js in the same scope
  * @augments {Component<Props, State>}
  */
 class ${1} extends Component {
