@@ -9,8 +9,7 @@ class ByPass {
    */
   static RULES = [
     "CommonAPI/Auth/*",
-    "CommonAPI/Env/Info",
-    "Minisite/*/*"
+    "CommonAPI/Env/Info"
   ];
   /**
    * @readonly
