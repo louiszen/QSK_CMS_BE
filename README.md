@@ -3,7 +3,7 @@
 "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
   "lint": "eslint --fix --ext .js,.jsx .",
-  "postinstall": "npx basetag link"
+  "postinstall": "npx basetag link --hook"
 },
 ## Dev Prerequisites
 
