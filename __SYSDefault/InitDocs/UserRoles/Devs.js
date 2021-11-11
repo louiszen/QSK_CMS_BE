@@ -6,6 +6,6 @@ const doc = {
       User: ["Add", "Edit", "Delete"],
     }
   }
-}
+};
 
 module.exports = doc;
