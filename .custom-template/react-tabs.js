@@ -1,7 +1,6 @@
 /**
  * 
- * @param {Function} onDataChange 
- * @param {Function} onMountedGrouping 
+ * @param {*} addOns 
  * @returns {[
  *  {
  *    label: String,
@@ -17,7 +16,7 @@
  *  }
  * ]}}
  */
-const tabs = (onDataChange, onMountedGrouping) => {
+const tabs = (addOns) => {
   return [
     {
       

@@ -42,7 +42,8 @@ class ${1} extends Component {
   constructor(){
     super();
     this.state = {
-      selectedTab: 0
+      selectedTab: 0,
+      addOns: {}
     };
   }
 
@@ -71,6 +72,18 @@ class ${1} extends Component {
   onChangeTab = (e, tab) => {
     this.setState({
       selectedTab: tab
+    });
+  }
+
+  renderTabPanels(){
+    let {selectedTab, addOns} = this.state;
+    let renderTabs = _.isFunction(tabs)? tabs(addOns) : tabs;
+    return _.map(renderTabs, (o, i) => {
+      return (
+        <Box key={i} hidden={selectedTab !== i} style={{width: "100%", height: "100%"}}>
+          {_.isFunction(o.render)? o.render(addOns) : o.render}
+        </Box>
+      );
     });
   }
 

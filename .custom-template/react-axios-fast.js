@@ -1,5 +1,6 @@
 let { addOns } = this.props;
-let url = DOMAIN + ${1};
+let reqPath = "${1}"
+let url = DOMAIN + reqPath;
 let payloadOut = {
   JWT: store.user.JWT,
   data: {},
@@ -7,7 +8,7 @@ let payloadOut = {
 };
 try {
   let res = await axios.post(url, payloadOut);
-  console.log(${1}, res.data);
+  console.log(reqPath, res.data);
 
   let { Success, payload } = res.data;
 

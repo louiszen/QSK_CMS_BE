@@ -21,11 +21,13 @@ import { Denied } from 'IZOArc/Fallback';
 class ${1} extends Component {
 
   static propTypes = {
-    addOns: PropsType.object
+    addOns: PropsType.object,
+    onDataChange: PropsType.func
   }
 
   static defaultProps = {
-    addOns: {}
+    addOns: {},
+    onDataChange: undefined
   }
 
   constructor(){
@@ -173,7 +175,7 @@ class ${1} extends Component {
   }
 
   render(){
-    let {addOns} = this.props;
+    let {addOns, onDataChange} = this.props;
     let {base, serverSidePagination, title} = this.state;
     if(!Authority.IsAccessibleQ("${5}")) return <Denied/>;
     return (
@@ -193,6 +195,7 @@ class ${1} extends Component {
           addOns={addOns} 
           serverSidePagination={serverSidePagination} 
           onMounted={this.onMountDatumizo} 
+          onDataChange={onDataChange}
           />
       </VStack>
     );
