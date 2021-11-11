@@ -12,7 +12,6 @@ _uploads
 _downloads
 ΩRUNTIME/*
 Images/UploadedIcons/*
-.vscode
 
 # Runtime data
 pids
