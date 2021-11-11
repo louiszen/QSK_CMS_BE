@@ -101,10 +101,10 @@ class ${1} extends Component {
   renderTabButtons(){
     return _.map(tabs, (o, i) => {
       if(Authority.IsAccessibleQ(o.reqAuth, o.reqLevel, o.reqFunc)){
-        let label = o.label;
+        let label = _.isFunction(o.label)? o.label() : o.label;
         let icon = o.icon;
         if(o.noTransform){
-          label = <Typography style={{textTransform: 'none'}}>{o.label}</Typography>
+          label = <Typography style={{textTransform: 'none'}}>{label}</Typography>
         }
         switch(o.iconPos){
           case "top": default: 
