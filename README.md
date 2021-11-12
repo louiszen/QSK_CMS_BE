@@ -75,3 +75,14 @@ Checking command
 ```
 npm run lint
 ```
+
+## nexe
+```
+npm i -g nexe
+nexe server.js -o QSK.exe --build
+```
+if errors, 
+download https://www.nasm.us/pub/nasm/releasebuilds/2.15.04/win64/
+```
+npm i windows-build-tools -g
+```
