@@ -7,21 +7,21 @@ const multer = require("multer");
 const app = express();
 const _ = require("lodash");
 
-const _base = require("$/IZOGears/_CoreWheels");
-const _config = require("$/__SYSDefault/SYSConfig");
-const _remote = require("$/remoteConfig");
+const _base = require("./IZOGears/_CoreWheels");
+const _config = require("./__SYSDefault/SYSConfig");
+const _remote = require("./remoteConfig");
 
-const cores = require("$/__SYSDefault/APIConfig/cores");
-const inits = require("$/__SYSDefault/APIConfig/inits");
+const cores = require("./__SYSDefault/APIConfig/cores");
+const inits = require("./__SYSDefault/APIConfig/inits");
 
-const ByPass = require("$/__SYSDefault/APIConfig/bypass");
-const TempStore = require("$/IZOGears/COGS/Storage/TempStore");
+const ByPass = require("./__SYSDefault/APIConfig/bypass");
+const TempStore = require("./IZOGears/COGS/Storage/TempStore");
 
-const LRequest = require("$/IZOGears/COGS/Log/LRequest");
-const LSignIn = require("$/IZOGears/COGS/Log/LSignIn");
+const LRequest = require("./IZOGears/COGS/Log/LRequest");
+const LSignIn = require("./IZOGears/COGS/Log/LSignIn");
 
-const { Accessor } = require("$/IZOGears/_CoreWheels/Utils");
-const ZGate = require("$/IZOGears/COGS/ZGate/ZGate");
+const { Accessor } = require("./IZOGears/_CoreWheels/Utils");
+const ZGate = require("./IZOGears/COGS/ZGate/ZGate");
 const { v1 } = require("uuid");
 
 const {Chalk, Response} = _base.Utils;

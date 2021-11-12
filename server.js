@@ -5,16 +5,17 @@ if(!process.env.NODE_ENV){
   process.exit();
 }
 
-const _base = require("$/IZOGears/_CoreWheels");
-const _config = require("$/__SYSDefault/SYSConfig");
+const _base = require("./IZOGears/_CoreWheels");
+const SYSConfig = require("./__SYSDefault/SYSConfig");
 
-const Version = require("$/Version");
+const Version = require("./Version");
 const {Chalk, ZServer} = _base.Utils;
 
 Chalk.Guide();
 
 const app = require("./app");
 
+
 Chalk.Break();
-Chalk.Title(_config.General.Name + " (" + Version + ")");
-ZServer.Start(_config.Server, app, _config.Debug.Console);
+Chalk.Title(SYSConfig.General.Name + " (" + Version + ")");
+ZServer.Start(SYSConfig.Server, app, SYSConfig.Debug.Console);

@@ -1,4 +1,4 @@
-const _base = require("$/IZOGears/_CoreWheels");
+const _base = require("./IZOGears/_CoreWheels");
 
 class RemoteConfig extends _base.Extensible.RemoteConfig {
 

@@ -1,13 +1,11 @@
-const _base = require('$/IZOGears/_CoreWheels');
-const _remote = require('$/remoteConfig');
+const _base = require('../../../IZOGears/_CoreWheels');
+const _remote = require('../../../remoteConfig');
 
 const path = require('path');
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
 const {Chalk, Response} = _base.Utils;
-
-const express = require('express');
 
 /**
  * 

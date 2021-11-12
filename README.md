@@ -27,7 +27,7 @@ git push --all
 },
 ## Dev Prerequisites
 
-### Resolve ../../../path to $/path
+### Resolve ../../../path to $/path !!! not compatible to nexe/ dropped
 
 ```
 npm install -g npm@latest

@@ -1,4 +1,4 @@
-const { Time } = require("$/IZOGears/_CoreWheels/Utils");
+const { Time } = require("../../../IZOGears/_CoreWheels/Utils");
 
 const doc = {
   _id: "INITIALIZED",
