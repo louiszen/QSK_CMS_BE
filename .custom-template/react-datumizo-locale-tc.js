@@ -1,5 +1,5 @@
 {
-  PageTitle: "${1}訪問控制",
+  PageTitle: "${1}",
   Title: "${1}",
   Add: {
     title: "新增${1}",
@@ -23,9 +23,9 @@
     fail: "編輯${1}失敗: ",     
   },
   Info: {
-    title: "${1}訪問控制",
-    success: "成功載入${1}訪問控制",
-    fail: "載入${1}訪問控制失敗: ",
+    title: "${1}",
+    success: "成功載入${1}",
+    fail: "載入${1}失敗: ",
   },
   Import: {
     title: "導入${1}",

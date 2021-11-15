@@ -1,5 +1,5 @@
 {
-  PageTitle: "${1} Access Control",
+  PageTitle: "${1}",
   Title: "${1}",
   Add: {
     title: "Add ${1}",
@@ -23,9 +23,9 @@
     fail: "${1} Edit Failed: ",     
   },
   Info: {
-    title: "${1} Access Control",
-    success: "${1} Access Control Load Successfully",
-    fail: "${1} Access Control Load Failed: ",
+    title: "${1}",
+    success: "${1} Load Successfully",
+    fail: "${1} Load Failed: ",
   },
   Import: {
     title: "Import ${1}s",

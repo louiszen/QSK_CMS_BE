@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropsType from 'prop-types';
 import { observer } from 'mobx-react';
 
+import _ from 'lodash';
 import { Box, Typography } from '@material-ui/core';
 
 import schema from './schema';
@@ -137,7 +138,9 @@ class ${1} extends Component {
             //{ icon: "duplicate", func: "Duplicate", caption: () => LocaleX.Get("${2}.ButtonCaption.Duplicate"), reqFunc: "Duplicate" },
             //{ icon: "duplicate", func: "DuplicateAdd", caption: () => LocaleX.Get("${2}.ButtonCaption.Duplicate"), reqFunc: "Duplicate" },
           ],
-          left: [{ icon: "add", func: "Add", caption: () => LocaleX.Get("${2}.ButtonCaption.Add"), reqFunc: "Add" }],
+          left: [
+            { icon: "add", func: "Add", caption: () => LocaleX.Get("${2}.ButtonCaption.Add"), reqFunc: "Add" }
+          ],
           right: [
             { icon: "deletebulk", func: "DeleteBulk", caption: (n) => LocaleX.Get("${2}.ButtonCaption.DeleteBulk", {n: n}), reqFunc: "Delete", theme: "caution" },
             //{ icon: "export", func: "Export", caption: (n) => LocaleX.Get("${2}.ButtonCaption.Export", {n: n === 0? LocaleX.Get("__IZO.Datumizo.All") : n}), reqFunc: "Export" },
@@ -178,6 +181,12 @@ class ${1} extends Component {
     let {addOns, onDataChange} = this.props;
     let {base, serverSidePagination, title} = this.state;
     if(!Authority.IsAccessibleQ("${4}")) return <Denied/>;
+    
+    let pageTitle = title;
+    if(_.isFunction(title)){
+      pageTitle = title();
+    }
+
     return (
       <VStack>
         <Box padding={1} width="100%">
@@ -187,7 +196,7 @@ class ${1} extends Component {
             fontSize: 25,
             color: ColorX.GetColorCSS(IZOTheme.foreground)
             }}>
-            {title}
+            {pageTitle}
           </Typography>
         </Box>
         <Datumizo lang={store.lang}
