@@ -1,13 +1,12 @@
-const _base = require('$/IZOGears/_CoreWheels');
-const _remote = require('$/remoteConfig');
+const _base = require('../../../IZOGears/_CoreWheels');
+const _remote = require('../../../remoteConfig');
+const _DBMAP = require('../../../__SYSDefault/_DBMAP');
 
 const path = require('path');
 const catName = path.basename(__dirname);
 const actName = path.basename(__filename, path.extname(__filename));
 
 const {Chalk, Response} = _base.Utils;
-
-const express = require('express');
 
 /**
  * 
@@ -22,7 +21,7 @@ const express = require('express');
 module.exports = async (_opt, _param, _username) => {
   
   let db = _remote.BaseDB();
-  let dbname = DBNAME[catName];
+  let dbname = _DBMAP[catName];
 
   let res = {Success: false, payload: {}};
 
