@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --fix --ext .js,.jsx ."
+    "lint": "eslint --fix --ext .js,.jsx .",
+    "env": "bash -c 'echo NODE_ENV=%npm_config_env% > .env.temp '",
+    "build": "(if exist \"./_build\" rmdir /s /Q \"./_build\") && nexe server.js -o ./_build/release.exe --build && copy \".env.sample\" \"./_build/.env\"",
+    "docker": "docker build --pull --rm -f \"Dockerfile\" -t gptwcmsbe:latest \".\" && docker rmi $(docker images -f \"dangling=true\" -q)"
   },
   "author": "Louiszen",
   "license": "ISC",

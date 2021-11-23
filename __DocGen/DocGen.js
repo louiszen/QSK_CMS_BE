@@ -1,4 +1,4 @@
-const ts = require("typescript");
+//const ts = require("typescript");
 
 class DocGen {
 

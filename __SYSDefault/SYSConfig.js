@@ -83,7 +83,7 @@
  */
 const SYSConfig = {
   General: {
-    Name: "Quick Start Kit"
+    Name: "QSK (Backend)"
   },
   Server: {
     Port: 7777,
@@ -126,12 +126,24 @@ const SYSConfig = {
           USERNAME: "root",
           PASSWORD: "root",
           URL: "localhost:5984",
-        } 
+        },
+        dev: {
+          local: {
+            BASE: "http://",
+            USERNAME: "root",
+            PASSWORD: "root",
+            URL: "localhost:5984",
+          } 
+        }
       }
     },
     MongoDB: {
       envs: {
         local: {
+          ConnectString: "mongodb://digitalg-cosmo-aml:qUN1dhL5xARdSV0xrQI21I8sdFz2jTU7GJjevGW87j7YO1erh3Rh9NJ2AI6dBoc3oZWbS9oNBvnh7J9b2WHgdQ==@digitalg-cosmo-aml.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@digitalg-cosmo-aml@",
+          DATABASE: "gptw-dev"
+        },
+        dev: {
           ConnectString: "mongodb://digitalg-cosmo-aml:qUN1dhL5xARdSV0xrQI21I8sdFz2jTU7GJjevGW87j7YO1erh3Rh9NJ2AI6dBoc3oZWbS9oNBvnh7J9b2WHgdQ==@digitalg-cosmo-aml.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@digitalg-cosmo-aml@",
           DATABASE: "gptw-dev"
         }

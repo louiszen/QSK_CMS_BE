@@ -14,11 +14,14 @@ const DEVUSER = {
   username: "Sys@Dev",
   password: "SysP@ssw0rd",
   UserDisplayName: "Sys@Dev",
-  Version: 8,
+  Version: 1,
   Level: 0,
   Groups: ["*"],
   Role: "Devs",
   authority: {
+    Dashboard: ["*"],
+    Submission: ["*"],
+    SubmitPermit: ["*"],
     System: {
       BnR: ["*"],
       User: ["*"]

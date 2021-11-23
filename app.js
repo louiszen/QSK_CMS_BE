@@ -35,8 +35,6 @@ app.use(express.urlencoded({
 app.use(cors());
 app.use("/Images", express.static("Images"));
 
-Start();
-
 /*Dynamic Routing*/
 async function Start(){
 
@@ -56,6 +54,14 @@ async function Start(){
   await Promise.all(_.map(inits, async (o, i) => {
     await o.OnLoad();
   }));
+
+  app.get("/HealthCheck", async (req, res) => {
+    let rtn = {
+      Success: "OK",
+      payload: {}
+    };
+    res.send(rtn);
+  });
 
   app.post("/:cat/:subcat/:action", multer().single("upload"), async (req, res) => {
     try {
@@ -110,5 +116,7 @@ async function Start(){
     }
   });
 }
+
+Start();
 
 module.exports = app;

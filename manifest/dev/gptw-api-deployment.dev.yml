@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gptw-api-dev
+  labels:
+    app: gptwapidev
+    name: gptw-api-dev
+    kind: deployment
+    tier: api
+    purpose: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gptwapidev
+      name: gptw-api-dev
+      kind: deployment
+      tier: api
+      purpose: dev
+  template:
+    metadata:
+      labels:
+        app: gptwapidev
+        name: gptw-api-dev
+        kind: deployment
+        tier: api
+        purpose: dev
+    spec:
+      containers:
+      - name: api
+        image: gammondev.azurecr.io/gptw-api-dev
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 7777

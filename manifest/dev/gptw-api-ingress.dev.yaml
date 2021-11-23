@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubenetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    kubernetes.io/ingress.class: internal
+  name: gptw-api-dev-ingress-internal
+  namespace: aat-test
+  labels:
+    app: gptw-api-dev
+    name: gptw-api-dev
+    kind: ingress
+    tier: api
+    purpose: dev
+    ingress: internal
+spec:
+  # ingressClassName: internal
+  rules:
+  - host: "gptw-api-poc.dev.gammonconstruction.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+         service:
+           name: gptw-api-dev-svc
+           port: 
+            number: 80

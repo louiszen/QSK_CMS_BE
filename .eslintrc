@@ -4,7 +4,9 @@
     "quotes": ["error", "double"],
     "no-unused-vars": ["warn", { "vars": "all", "args": "none", "ignoreRestSiblings": false }],
     "no-empty": ["error", { "allowEmptyCatch": true }],
+    "no-console": "off",
     "require-await": "off",
+    "no-use-before-define": "error",
     "no-await-async-call/no-await-async-call": "warn"
   },
   "extends": "eslint:recommended",

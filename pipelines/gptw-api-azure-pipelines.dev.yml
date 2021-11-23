@@ -1,0 +1,47 @@
+name: '$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)'
+trigger:
+- none
+
+resources:
+- repo: self
+
+
+variables:
+- name: dockerRegistryServiceConnection
+  value: 'gammondev ACR connection'
+- name: imageRepository
+  value: 'gptw-api-dev'
+- name: tag
+  value: "$(Build.BuildNumber)"
+- name: vmImageName
+  value: "ubuntu-latest" 
+- name: dockerfilePath
+  value: "**/Dockerfile-dev"
+- name: env
+  value: $(SourceBranchName)
+
+stages:
+
+- stage: build_gptw_api_stage
+  displayName: Build GPTW API stage
+  dependsOn: []
+
+  jobs:
+    - job: build_gptw_api_image
+      displayName: Build GPTW API Image
+      pool:
+        vmImage: $(vmImageName)
+      steps:
+        - checkout: self  # identifier for your repository resource
+          clean: false  # if true, execute `execute git clean -ffdx && git reset --hard HEAD` before fetching
+          submodules: true # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules; defaults to not checking out submodules
+        - task: Docker@2
+          displayName: Build and push an image to container registry
+          inputs:
+            command: buildAndPush
+            repository: $(imageRepository)
+            dockerfile: $(dockerfilePath)
+            containerRegistry: $(dockerRegistryServiceConnection)
+            tags: |
+              $(tag)
+              latest

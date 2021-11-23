@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 import { Accessor } from 'IZOArc/STATIC';
 import PropsType from 'prop-types';
+import { HStack, VStack } from 'IZOArc/LabIZO/Stackizo';
+import _ from 'lodash';
 
 /**
  * @augments {Component<Props, State>}
@@ -9,11 +11,21 @@ import PropsType from 'prop-types';
 class ${1} extends Component {
 
   static propTypes = {
-
+    docID: PropsType.string,
+    doc: PropsType.object,
+    onQuit: PropsType.func,
+    onQuitRefresh: PropsType.func,
+    renderFormizo: PropsType.func,
+    addOns: PropsType.object
   }
 
   static defaultProps = {
-
+    docID: null,
+    doc: null,
+    onQuit: null,
+    onQuitRefresh: null,
+    renderFormizo: null,
+    addOns: null
   }
 
   constructor(){
@@ -44,10 +56,13 @@ class ${1} extends Component {
   }
 
   render(){
+    let {docID} = this.props;
     return (
-      <div>
-
-      </div>
+      <VStack>
+        <HStack>
+          {docID}
+        </HStack>
+      </VStack>
     );
   }
 

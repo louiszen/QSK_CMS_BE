@@ -76,7 +76,7 @@ Checking command
 npm run lint
 ```
 
-## nexe
+## nexe (Build exe from NodeJS)
 ```
 npm i -g nexe
 nexe server.js -o QSK.exe --build
@@ -85,4 +85,15 @@ if errors,
 download https://www.nasm.us/pub/nasm/releasebuilds/2.15.04/win64/
 ```
 npm i windows-build-tools -g
+```
+
+### Docker
+```
+docker build --pull --rm -f "Dockerfile" -t gptwcmsbe:latest "."
+```
+
+Please use
+```
+npm run envtemp <env>
+npm run docker
 ```
