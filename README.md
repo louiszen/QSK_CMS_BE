@@ -98,7 +98,7 @@ download https://www.nasm.us/pub/nasm/releasebuilds/2.15.04/win64/
 npm i windows-build-tools -g
 ```
 
-### Docker
+## Docker
 ```
 docker build --pull --rm -f "Dockerfile" -t qsk:latest "."
 ```
@@ -109,3 +109,8 @@ npm run envtemp <env>
 npm run docker
 ```
 
+## Azure Pipelines
+Generate Azure Pipelines Docs
+```
+npm run genpipes
+```
