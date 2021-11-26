@@ -100,7 +100,7 @@ npm i windows-build-tools -g
 
 ### Docker
 ```
-docker build --pull --rm -f "Dockerfile" -t gptwcmsbe:latest "."
+docker build --pull --rm -f "Dockerfile" -t qsk:latest "."
 ```
 
 Please use

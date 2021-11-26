@@ -7,6 +7,7 @@
  * 
  * @type {{
  *  General: {
+ *    ID: String,
  *    Name: String
  *  },
  *  Server: {
@@ -53,6 +54,7 @@
  */
 const SYSConfig = {
   General: {
+    ID: "GAuthZ",
     Name: "Gammon Authz (Backend)"
   },
   Server: {
