@@ -8,9 +8,8 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/server.js",
+      "program": "${workspaceFolder}/IZOGears/server.js",
       "env": {
-        "NODE_PROJECT": "qsk",
         "NODE_ENV": "local",
         "SERVER_PORT": "7777",
       }

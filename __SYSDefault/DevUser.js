@@ -1,8 +1,12 @@
+const { ZHash } = require("../IZOGears/_CoreWheels/Utils");
+
 /**
  * @type {{
  *  username: String,
  *  password: String,
  *  UserDisplayName: String,
+ *  Email: String,
+ *  TelNo: String,
  *  Version: Number,
  *  Level: Number,
  *  Groups: [String],
@@ -12,16 +16,16 @@
  */
 const DEVUSER = {
   username: "Sys@Dev",
-  password: "SysP@ssw0rd",
+  password: ZHash.HashPassword("SysP@ssw0rd"),
   UserDisplayName: "Sys@Dev",
+  Email: "HiuFai.Yip@gammonconstruction.com",
+  TelNo: "63460204",
   Version: 1,
   Level: 0,
   Groups: ["*"],
   Role: "Devs",
   authority: {
     Dashboard: ["*"],
-    Submission: ["*"],
-    SubmitPermit: ["*"],
     System: {
       BnR: ["*"],
       User: ["*"]

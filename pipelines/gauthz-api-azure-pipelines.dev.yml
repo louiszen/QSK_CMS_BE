@@ -10,7 +10,7 @@ variables:
 - name: dockerRegistryServiceConnection
   value: 'gammondev ACR connection'
 - name: imageRepository
-  value: 'gptw-api-dev'
+  value: 'gauthz-api-dev'
 - name: tag
   value: "$(Build.BuildNumber)"
 - name: vmImageName
@@ -22,19 +22,26 @@ variables:
 
 stages:
 
-- stage: build_gptw_api_stage
-  displayName: Build GPTW API stage
+- stage: build_gauthz_api_stage
+  displayName: Build gauthz API stage
   dependsOn: []
 
   jobs:
-    - job: build_gptw_api_image
-      displayName: Build GPTW API Image
+    - job: build_gauthz_api_image
+      displayName: Build GAuthZ API Image
       pool:
         vmImage: $(vmImageName)
       steps:
         - checkout: self  # identifier for your repository resource
           clean: false  # if true, execute `execute git clean -ffdx && git reset --hard HEAD` before fetching
           submodules: true # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules; defaults to not checking out submodules
+        - task: DownloadSecureFile@1
+          name: SYSCredentials
+          displayName: Download SYSCredentials
+          inputs:
+            secureFile: 'SYSCredentials.js'
+        - script: |
+            sudo cp $(SYSCredentials.secureFilePath) $(Build.Repository.LocalPath)/SYSCredentials.js
         - task: Docker@2
           displayName: Build and push an image to container registry
           inputs:
@@ -45,3 +52,5 @@ stages:
             tags: |
               $(tag)
               latest
+        - script: |
+            ls $(Build.Repository.LocalPath)

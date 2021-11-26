@@ -1,0 +1,15 @@
+CommonAPI/Auth/SignIn
+CommonAPI/Auth/CheckUserName
+CommonAPI/Auth/MSALConfig
+CommonAPI/Env/Init
+CommonAPI/Env/IsInitialized
+CommonAPI/Env/Info
+CommonAPI/User/AllAuth
+CommonAPI/User/List
+CommonAPI/DBConfig/Info
+CommonAPI/DBConfig/Edit
+CommonAPI/DBConfig/Include
+CommonAPI/BnR/Info
+CommonAPI/BnR/Backup
+CommonAPI/BnR/Restore
+CommonAPI/BnR/Delete

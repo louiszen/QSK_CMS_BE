@@ -1,6 +1,6 @@
 let url = DOMAIN + ${1};
 let payloadOut = {
-  JWT: store.user.JWT,
+  JWT: STORE.user.JWT,
   data: {
 
   },
@@ -11,9 +11,9 @@ try {
 
   console.log(${1}, payloadOut);
 
-  store.isLoading(true);
+  STORE.isLoading(true);
   let res = await axios.post(url, payloadOut);
-  store.isLoading(false);
+  STORE.isLoading(false);
 
   console.log(${1}, res.data);
 
@@ -23,9 +23,9 @@ try {
       /*Success*/
     }));
   } else {
-    store.Alert(ErrorX.Handle(res.data), "error");
+    STORE.Alert(ErrorX.Handle(res.data), "error");
   }
 } catch (e) {
-  store.isLoading(false);
-  store.Alert(ErrorX.Handle(e), "error");
+  STORE.isLoading(false);
+  STORE.Alert(ErrorX.Handle(e), "error");
 }

@@ -13,6 +13,7 @@ _downloads
 _build
 ΩRUNTIME/*
 Images/UploadedIcons/*
+SYSCredentials.js
 
 # Runtime data
 pids

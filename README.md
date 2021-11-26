@@ -1,3 +1,9 @@
+## Entry Point
+IZOGears/server.js > IZOGears/app.js
+```
+  npm start
+```
+
 ## Duplicate for use
 
 1. Create a repo <reponame> on Github
@@ -16,6 +22,11 @@ git remote set-url origin https://github.com/<userName>/<reponame>
 git remote add upstream https://github.com/<userName>/<reponame>
 git push origin master
 git push --all
+```
+
+## Build API Auth Tree
+```
+  npm run authtree
 ```
 
 ## Added scripts
@@ -97,3 +108,4 @@ Please use
 npm run envtemp <env>
 npm run docker
 ```
+

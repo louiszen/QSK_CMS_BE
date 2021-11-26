@@ -9,7 +9,7 @@ import datalink from './datalink';
 
 import Datumizo from 'IZOArc/LabIZO/Datumizo/Datumizo';
 import { VStack } from 'IZOArc/LabIZO/Stackizo';
-import { Accessor, ColorX, Authority, store } from 'IZOArc/STATIC';
+import { Accessor, ColorX, Authority, STORE } from 'IZOArc/STATIC';
 import { IZOTheme } from '__SYSDefault/Theme';
 import { Denied } from 'IZOArc/Fallback';
 
@@ -192,7 +192,7 @@ class ${1} extends Component {
             {title}
           </Typography>
         </Box>
-        <Datumizo lang={store.lang}
+        <Datumizo lang={STORE.lang}
           base={base}
           addOns={addOns} 
           serverSidePagination={serverSidePagination} 

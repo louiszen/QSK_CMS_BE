@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gptw-api-dev
+  name: gauthz-api-dev
   labels:
-    app: gptwapidev
-    name: gptw-api-dev
+    app: gauthzapidev
+    name: gauthz-api-dev
     kind: deployment
     tier: api
     purpose: dev
@@ -12,23 +12,23 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: gptwapidev
-      name: gptw-api-dev
+      app: gauthzapidev
+      name: gauthz-api-dev
       kind: deployment
       tier: api
       purpose: dev
   template:
     metadata:
       labels:
-        app: gptwapidev
-        name: gptw-api-dev
+        app: gauthzapidev
+        name: gauthz-api-dev
         kind: deployment
         tier: api
         purpose: dev
     spec:
       containers:
       - name: api
-        image: gammondev.azurecr.io/gptw-api-dev
+        image: gammondev.azurecr.io/gauthz-api-dev
         imagePullPolicy: Always
         ports:
         - containerPort: 7777

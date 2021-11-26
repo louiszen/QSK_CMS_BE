@@ -4,8 +4,7 @@ let cores = {
   CommonAPI: require("../../IZOGears/CommonAPI"),
   Config: require("../../cores/Config"),
   Data: require("../../cores/Data"),
-  Tables: require("../../cores/Tables"),
-  Output: require("../../IZOGears/GENERIC/Output")
+  Tables: require("../../cores/Tables")
 };
 
 try{

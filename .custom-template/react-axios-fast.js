@@ -2,7 +2,7 @@ let { addOns } = this.props;
 let reqPath = "${1}"
 let url = DOMAIN + reqPath;
 let payloadOut = {
-  JWT: store.user.JWT,
+  JWT: STORE.user.JWT,
   data: {},
   addOns: addOns,
 };

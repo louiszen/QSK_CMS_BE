@@ -4,9 +4,6 @@ RUN apk add --no-cache bash
 WORKDIR /app
 COPY . ./
 
-RUN npm run env --env=dev
-COPY .env.temp .env
-
 RUN npm install
 
 EXPOSE 7777
