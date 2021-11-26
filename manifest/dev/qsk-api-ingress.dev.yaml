@@ -1,4 +1,3 @@
-
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -24,7 +23,7 @@ spec:
       - pathType: Prefix
         path: "/"
         backend:
-         service:
-           name: qsk-api-dev-svc
-           port: 
-            number: 80
+          service:
+            name: qsk-api-dev-svc
+            port: 
+              number: 80
