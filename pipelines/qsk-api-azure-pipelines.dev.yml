@@ -1,3 +1,4 @@
+
 name: '$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)'
 trigger:
 - none
@@ -10,7 +11,7 @@ variables:
 - name: dockerRegistryServiceConnection
   value: 'gammondev ACR connection'
 - name: imageRepository
-  value: 'gauthz-api-dev'
+  value: 'qsk-api-dev'
 - name: tag
   value: "$(Build.BuildNumber)"
 - name: vmImageName
@@ -22,13 +23,13 @@ variables:
 
 stages:
 
-- stage: build_gauthz_api_stage
-  displayName: Build gauthz API stage
+- stage: build_qsk_api_stage
+  displayName: Build qsk API stage
   dependsOn: []
 
   jobs:
-    - job: build_gauthz_api_image
-      displayName: Build GAuthZ API Image
+    - job: build_qsk_api_image
+      displayName: Build qsk API Image
       pool:
         vmImage: $(vmImageName)
       steps:
@@ -54,3 +55,4 @@ stages:
               latest
         - script: |
             ls $(Build.Repository.LocalPath)
+  

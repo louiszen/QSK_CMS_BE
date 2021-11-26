@@ -1,10 +1,11 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gauthz-api-dev
+  name: qsk-api-dev
   labels:
-    app: gauthzapidev
-    name: gauthz-api-dev
+    app: qskapidev
+    name: qsk-api-dev
     kind: deployment
     tier: api
     purpose: dev
@@ -12,23 +13,23 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: gauthzapidev
-      name: gauthz-api-dev
+      app: qskapidev
+      name: qsk-api-dev
       kind: deployment
       tier: api
       purpose: dev
   template:
     metadata:
       labels:
-        app: gauthzapidev
-        name: gauthz-api-dev
+        app: qskapidev
+        name: qsk-api-dev
         kind: deployment
         tier: api
         purpose: dev
     spec:
       containers:
       - name: api
-        image: gammondev.azurecr.io/gauthz-api-dev
+        image: gammondev.azurecr.io/qsk-api-dev
         imagePullPolicy: Always
         ports:
         - containerPort: 7777

@@ -1,3 +1,4 @@
+
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -5,11 +6,11 @@ metadata:
     kubenetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
     kubernetes.io/ingress.class: internal
-  name: gauthz-api-dev-ingress-internal
+  name: qsk-api-dev-ingress-internal
   namespace: aat-test
   labels:
-    app: gauthz-api-dev
-    name: gauthz-api-dev
+    app: qsk-api-dev
+    name: qsk-api-dev
     kind: ingress
     tier: api
     purpose: dev
@@ -17,13 +18,13 @@ metadata:
 spec:
   # ingressClassName: internal
   rules:
-  - host: "gauthz-api-poc.dev.gammonconstruction.com"
+  - host: "qsk-api-poc.dev.gammonconstruction.com"
     http:
       paths:
       - pathType: Prefix
         path: "/"
         backend:
          service:
-           name: gauthz-api-dev-svc
+           name: qsk-api-dev-svc
            port: 
             number: 80

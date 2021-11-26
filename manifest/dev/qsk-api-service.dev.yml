@@ -1,17 +1,18 @@
+
 apiVersion: v1
 kind: Service
 metadata:
-  name: gauthz-api-dev-svc
+  name: qsk-api-dev-svc
   labels:
-    app: gauthzapidev
-    name: gauthz-api-dev
+    app: qskapidev
+    name: qsk-api-dev
     kind: service
     tier: api
     purpose: dev
 spec:
   selector:
-    app: gauthzapidev
-    name: gauthz-api-dev
+    app: qskapidev
+    name: qsk-api-dev
     kind: deployment
     tier: api
     purpose: dev

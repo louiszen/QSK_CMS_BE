@@ -54,8 +54,8 @@
  */
 const SYSConfig = {
   General: {
-    ID: "GAuthZ",
-    Name: "Gammon Authz (Backend)"
+    ID: "QSK",
+    Name: "Quick Starter Kit (Backend)"
   },
   Server: {
     Port: 7777,
