@@ -11,7 +11,8 @@
     "build": "(if exist \"./_build\" rmdir /s /Q \"./_build\") && nexe server.js -o ./_build/release.exe --build && copy \".env.sample\" \"./_build/.env\"",
     "docker": "docker build --pull --rm -f \"Dockerfile\" -t qsk:latest \".\" && docker rmi $(docker images -f \"dangling=true\" -q)",
     "genpipes": "node IZOGears/__CodeGen/AzurePipelines.js",
-    "authtree": "node IZOGears/__CodeGen/APIAuthTree.js"
+    "authtree": "node IZOGears/__CodeGen/APIAuthTree.js",
+    "credentials": "node IZOGears/__CodeGen/Credentials.js"
   },
   "author": "Louiszen",
   "license": "ISC",
@@ -27,17 +28,17 @@
     "exceljs": "^4.3.0",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
-    "htmlparser2": "^7.1.2",
+    "htmlparser2": "^7.2.0",
     "http": "0.0.0",
     "https": "^1.0.0",
     "jwt-simple": "^0.5.6",
     "lodash": "^4.17.21",
     "make-dir": "^3.1.0",
     "moment": "^2.29.1",
-    "mongodb": "^4.1.4",
+    "mongodb": "^4.2.0",
     "multer": "^1.4.3",
     "nano": "^9.0.5",
-    "nodemailer": "^6.7.0",
+    "nodemailer": "^6.7.2",
     "normalize-port": "^1.0.0",
     "p-queue": "^6.6.2",
     "path": "^0.12.7",
@@ -45,7 +46,7 @@
     "tar-stream": "^2.2.0",
     "targz": "^1.0.1",
     "train-test-split": "^1.0.0",
-    "typescript": "^4.4.4",
+    "typescript": "^4.5.2",
     "uuid": "^8.3.2"
   }
 }
