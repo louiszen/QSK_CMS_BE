@@ -8,6 +8,7 @@ Can be easily work with [Quick Starter Kit (**ReactJS** Frontend)](https://githu
 | *Authentication support* | Username-Password, SMSOTP, Window Authentication |
 | *Authorization method* | JWT |
 
+[Project Initialization](./README-Init.md)<br/>
 [Coding Instruction](./README-CodeGuy.md) <br/>
 [IZOGears](./IZOGears/README.md)
 
