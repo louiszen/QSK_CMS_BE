@@ -1,18 +1,7 @@
 const { ZHash } = require("../IZOGears/_CoreWheels/Utils");
 
 /**
- * @type {{
- *  username: String,
- *  password: String,
- *  UserDisplayName: String,
- *  Email: String,
- *  TelNo: String,
- *  Version: Number,
- *  Level: Number,
- *  Groups: [String],
- *  Role: String,
- *  authority: *
- * }}
+ * @type {user}
  */
 const DEVUSER = {
   username: "Sys@Dev",
