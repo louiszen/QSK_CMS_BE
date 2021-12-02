@@ -4,7 +4,7 @@
 class ByPass {
 
   /**
-   * Routing Rules that bypasses the authentication
+   * Routing Rules that bypasses the authentication, * as wildcards
    * @type {[String]}
    */
   static RULES = [

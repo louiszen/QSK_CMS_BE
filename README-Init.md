@@ -11,20 +11,3 @@ The initialization consists of the following procedures:
 4. Insert `INITIALIZED` to `Config` database to indicate the project is done initialization.
 
 You may need to add database name in `_DBMAP` to tell the system the database name - folder name matching.
-
-## **Add Database Name Mapping**
-
-1. Open [__SYSDefault/_DBMAP.js](__SYSDefault/_DBMAP.js)
-2. Add a `Test` field redirect to database `"test"`
-```js
-{
-  ...,
-  Test: "test"
-}
-```
-3. Get the database name through _DBMAP. <br/>
-( :warning: Do not hardcode the database name string. )
-```js
- const _DBMAP = require("~/__SYSDefault/_DBMAP");
- let dbname = _DBMAP.Test;
-```
