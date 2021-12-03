@@ -21,7 +21,8 @@ const SYSConfig = {
     TwoFactorExpires: 10
   },
   Authorization: {
-    Method: "JWT"
+    Method: "JWT",
+    GAuthZ: true,
   },
   Debug: {
     Console: true,
