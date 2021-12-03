@@ -255,7 +255,9 @@ module.exports = {
 }
 ```
 
-5. Restart the program.
+### **3. Restart the program.**
+
+You can now call the `/Tables/Item/*` API.
 
 :star: **FINISH** :star:
 
