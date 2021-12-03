@@ -1,59 +1,19 @@
+const SYSCredentials = require("../SYSCredentials");
+const envConfigs = require("./ENVConfig");
+const Chalk = require("../IZOGears/_CoreWheels/Utils/Chalk/Chalk");
+
 /**
  * @type {sysconfig}
  */
-const SYSConfig = {
-  General: {
-    ID: "QSK",
-    Name: "Quick Starter Kit (Backend)"
-  },
-  Server: {
-    Port: 7777,
-    UseHttps: false,
-    Https: {
-      Key: "",
-      Cert: "",
-      Intermediate: "",
-      PassPhrase: "",
-    }
-  },
-  Authentication: {
-    Method: ["Username-Password", "MSAL", "SMSOTP"],
-    TwoFactorExpires: 10
-  },
-  Authorization: {
-    Method: "JWT",
-    GAuthZ: true,
-  },
-  Debug: {
-    Console: true,
-    Color: true,
-    InstanceID: true
-  },
-  Init: {
-    OnStart: true,
-    CleanDB: true
-  },
-  BaseDB: {
-    Provider: "CouchDB",
-    Backup: {
-      Include: "All"
-    },
-    
-  },
-  Blob: {
-    Provider: "Local",
-    Local: {
-      Path: {
-        Upload: "_upload",
-        Download: "_download"
-      }
-    }
-  },
-  LogKeep: {
-    Request: 7,
-    SignIn: 7,
-    Gate: 12
-  }
-};
+let config; 
+try {
+  config = envConfigs[SYSCredentials.ENV];
+  if(!config) throw Error();
+  console.log(Chalk.Log("[-] Using __SYSDefault/ENVConfig/" + SYSCredentials.ENV + ".js as SYSConfig."));
+}catch{
+  let msg = "[x] Config for [" + SYSCredentials.ENV + "] not found.";
+  console.log(Chalk.Log(msg));
+  throw Error(msg);
+}
 
-module.exports = SYSConfig;
+module.exports = config;

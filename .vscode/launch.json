@@ -11,7 +11,7 @@
       "program": "${workspaceFolder}/IZOGears/server.js",
       "env": {
         "NODE_ENV": "local",
-        "SERVER_PORT": "7777",
+        "SERVER_PORT": "7777"
       }
     }
   ],
