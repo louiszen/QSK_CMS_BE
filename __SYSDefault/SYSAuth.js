@@ -1,7 +1,10 @@
 /**
  * @type {sysauth}
  */
-const SYSAuth = {
+ const SYSAuth = {
+  Level: [0, 999],
+  Groups: [],
+  Roles: ["Devs"],
   AuthTree:{
     Dashboard: ["Submit", "Approve"],
     System: {
