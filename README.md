@@ -56,9 +56,9 @@ If you have installed **CouchDB**,
 The default settings should be connecting to http://localhost:5984
 ### ***Generate Authority Controls*** ( :exclamation: Have to rerun if API changed )
 ```
-  npm run authtree
+  npm run auth
 ```
-`SYSAuthTree.js` will be generated at the root folder.
+`SYSReqAuth.js` will be generated at the root folder.
 
 ### **__SYSDefault**
 
@@ -126,7 +126,7 @@ The server entry app and the express routing is in `./IZOGears/app.js`
 | `Dockerfile` | Necessity for building Dockerize Image |
 | `remoteConfig.js` | The remote config is to get the database instance and other settings from database |
 | `SYSAPI.js` | Generated list of all available API from the system |
-| `SYSAuthTree.js` | Generated Control Setting Files for API Access |
+| `SYSReqAuth.js` | Generated Control Setting Files for API Access |
 | `SYSCredentials.js` | Generated Credentials files for setting |
 | `Version.js` | The project-wise Version sepcifier |
 ---
@@ -142,7 +142,7 @@ The server entry app and the express routing is in `./IZOGears/app.js`
   "docker": "docker build --pull --rm -f \"Dockerfile\" -t qsk:latest \".\" && docker rmi $(docker images -f \"dangling=true\" -q)",
   "lint": "eslint --fix --ext .js,.jsx .",
   "genpipes": "node IZOGears/__CodeGen/AzurePipelines.js",
-  "authtree": "node IZOGears/__CodeGen/APIAuthTree.js",
+  "auth": "node IZOGears/__CodeGen/APIReqAuth.js",
   "credentials": "node IZOGears/__CodeGen/Credentials.js"
 },
 ```
@@ -236,9 +236,9 @@ npm run genpipes
 
 ### ***Generate Authority Controls*** ( :exclamation: Have to rerun if API changed )
 ```
-  npm run authtree
+  npm run auth
 ```
-`SYSAuthTree.js` will be generated at the root folder. <br/>
+`SYSReqAuth.js` will be generated at the root folder. <br/>
 `SYSAPI.txt` is the entire API List out of the system.
 
 ## **Git Submodules**

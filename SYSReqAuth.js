@@ -13,7 +13,7 @@
  *    reqRole: String
  * }} auth
  * @type {Object.<string, Object.<string, Object.<string, auth>>}
- */const SYSAuthTree = {
+ */const SYSReqAuth = {
   CommonAPI: {
     Auth: {
       SignIn: {
@@ -122,4 +122,4 @@
   Internal: {}
 };
 
-module.exports = SYSAuthTree;
+module.exports = SYSReqAuth;

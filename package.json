@@ -11,7 +11,7 @@
     "build": "(if exist \"./_build\" rmdir /s /Q \"./_build\") && nexe server.js -o ./_build/release.exe --build && copy \".env.sample\" \"./_build/.env\"",
     "docker": "docker build --pull --rm -f \"Dockerfile\" -t qsk:latest \".\" && docker rmi $(docker images -f \"dangling=true\" -q)",
     "genpipes": "node IZOGears/__CodeGen/AzurePipelines.js",
-    "authtree": "node IZOGears/__CodeGen/APIAuthTree.js",
+    "auth": "node IZOGears/__CodeGen/APIReqAuth.js",
     "credentials": "node IZOGears/__CodeGen/Credentials.js"
   },
   "author": "Louiszen",
