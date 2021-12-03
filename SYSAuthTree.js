@@ -1,4 +1,3 @@
-
 /**
  * Code Generated for 3-Layer-API Authority Settings
  * reqAuth - Node exists in Authority Tree
@@ -14,8 +13,7 @@
  *    reqRole: String
  * }} auth
  * @type {Object.<string, Object.<string, Object.<string, auth>>}
- */
-const SYSAuthTree = {
+ */const SYSAuthTree = {
   CommonAPI: {
     Auth: {
       SignIn: {
@@ -31,6 +29,12 @@ const SYSAuthTree = {
         reqRole: ""
       },
       MSALConfig: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      VerifyOTP: {
         reqAuth: "",
         reqFunc: "",
         reqGroup: "",
@@ -58,12 +62,6 @@ const SYSAuthTree = {
       }
     },
     User: {
-      AllAuth: {
-        reqAuth: "",
-        reqFunc: "",
-        reqGroup: "",
-        reqRole: ""
-      },
       List: {
         reqAuth: "",
         reqFunc: "",

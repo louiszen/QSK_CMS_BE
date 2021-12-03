@@ -67,7 +67,7 @@ The default settings should be connecting to http://localhost:5984
 | :--- | :--- |
 | `SYSConfig.js` | The main settings for the system. To setup the fields, please also open typedef file [SYSConfig](./IZOGears/__Typedef/SysConfig.js) 
 | `DevUser.js` | The default dev user for local system admin. To setup the fields, please also open typedef file [User](./IZOGears/__Typedef/User.js)
-| `AllAuth.js` | The definition of the authority tree |
+| `ProjectInfo.js` | Project Information, including the definition of the authority tree |
 | `_DBMAP.js` | A key-match script for database name |
 
 **Folders**

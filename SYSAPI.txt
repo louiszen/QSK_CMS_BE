@@ -1,10 +1,10 @@
 CommonAPI/Auth/SignIn
 CommonAPI/Auth/CheckUserName
 CommonAPI/Auth/MSALConfig
+CommonAPI/Auth/VerifyOTP
 CommonAPI/Env/Init
 CommonAPI/Env/IsInitialized
 CommonAPI/Env/Info
-CommonAPI/User/AllAuth
 CommonAPI/User/List
 CommonAPI/DBConfig/Info
 CommonAPI/DBConfig/Edit
