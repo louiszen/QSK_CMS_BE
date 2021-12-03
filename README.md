@@ -15,7 +15,7 @@ Can be easily work with [Quick Starter Kit (**ReactJS** Frontend)](https://githu
 ---
 
 ## **Getting Started**
-You have to clone the object and rebase the project to your own repo before use.
+You have to clone the object and set the project to your own repo before use.
 
 1. Create a repo `<reponame>` on Github
 
