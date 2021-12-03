@@ -1,5 +1,8 @@
-const ProjectInfo = {
-  AllAuth: {
+/**
+ * @type {sysauth}
+ */
+const SYSAuth = {
+  AuthTree:{
     Dashboard: ["Submit", "Approve"],
     System: {
       BnR: ["Add", "Edit", "Delete"],
@@ -8,4 +11,4 @@ const ProjectInfo = {
   }
 };
 
-module.exports = ProjectInfo;
+module.exports = SYSAuth;
