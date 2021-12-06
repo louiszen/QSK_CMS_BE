@@ -3,7 +3,7 @@
 ## **Config / Credentials Referer** :warning:
 
 Everytime you want to reference to SYSConfig or SYSCredentials. <br/>
-Please refer to the corresponding SYSConfig.js or SYSCredentials in IZOGears folder. <br/>
+Please refer to the corresponding SYSConfig.js or SYSCredentials.js in IZOGears folder. <br/>
 It will redirect to the correct script.
 
 ---
