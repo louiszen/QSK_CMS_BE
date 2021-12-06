@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { observer } from 'mobx-react';
-import { Accessor } from 'IZOArc/STATIC';
-import PropsType from 'prop-types';
-import { HStack, VStack } from 'IZOArc/LabIZO/Stackizo';
-import _ from 'lodash';
+import React, { Component } from "react";
+import { observer } from "mobx-react";
+import { Accessor } from "IZOArc/STATIC";
+import PropsType from "prop-types";
+import { HStack, VStack } from "IZOArc/LabIZO/Stackizo";
+import _ from "lodash";
 
 /**
  * @augments {Component<Props, State>}

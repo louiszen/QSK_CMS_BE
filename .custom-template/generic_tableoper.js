@@ -1,4 +1,4 @@
-const _Generic = require('../_Generic');
+const _Generic = require("../_Generic");
 
 const Add = _Generic.Add;
 const Delete = _Generic.Delete;

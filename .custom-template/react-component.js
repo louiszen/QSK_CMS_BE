@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Accessor } from 'IZOArc/STATIC';
-import PropsType from 'prop-types';
+import React, { Component } from "react";
+import { Accessor } from "IZOArc/STATIC";
+import PropsType from "prop-types";
 
 /**
  * @augments {Component<Props, State>}

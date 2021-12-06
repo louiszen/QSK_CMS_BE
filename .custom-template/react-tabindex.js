@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import _ from 'lodash';
-import { Box, Paper, Tab, Tabs, Typography } from '@material-ui/core';
+import _ from "lodash";
+import { Box, Paper, Tab, Tabs, Typography } from "@material-ui/core";
 
-import tabs from './tabs';
+import tabs from "./tabs";
 
-import { Accessor, Authority } from 'IZOArc/STATIC';
-import { VStack, HStack, Spacer } from 'IZOArc/LabIZO/Stackizo';
-import { Denied } from 'IZOArc/Fallback';
+import { Accessor, Authority } from "IZOArc/STATIC";
+import { VStack, HStack, Spacer } from "IZOArc/LabIZO/Stackizo";
+import { Denied } from "IZOArc/Fallback";
 
 /** 
  * Add ~react-tabs.js as tab.js in the same scope
@@ -105,7 +105,7 @@ class ${1} extends Component {
         let label = _.isFunction(o.label)? o.label() : o.label;
         let icon = o.icon;
         if(o.noTransform){
-          label = <Typography style={{textTransform: 'none'}}>{label}</Typography>
+          label = <Typography style={{textTransform: "none"}}>{label}</Typography>
         }
         switch(o.iconPos){
           case "top": default: 

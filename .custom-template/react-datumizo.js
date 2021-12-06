@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import PropsType from 'prop-types';
-import { observer } from 'mobx-react';
+import React, { Component } from "react";
+import PropsType from "prop-types";
+import { observer } from "mobx-react";
 
-import { Box, Typography } from '@material-ui/core';
+import { Box, Typography } from "@material-ui/core";
 
-import schema from './schema';
-import datalink from './datalink';
+import schema from "./schema";
+import datalink from "./datalink";
 
-import Datumizo from 'IZOArc/LabIZO/Datumizo/Datumizo';
-import { VStack } from 'IZOArc/LabIZO/Stackizo';
-import { Accessor, ColorX, Authority, STORE } from 'IZOArc/STATIC';
-import { IZOTheme } from '__SYSDefault/Theme';
-import { Denied } from 'IZOArc/Fallback';
+import Datumizo from "IZOArc/LabIZO/Datumizo/Datumizo";
+import { VStack } from "IZOArc/LabIZO/Stackizo";
+import { Accessor, ColorX, Authority, STORE } from "IZOArc/STATIC";
+import { IZOTheme } from "__SYSDefault/Theme";
+import { Denied } from "IZOArc/Fallback";
 
 /**
  * add ~react-datalink.js as datalink.js in the same scope
