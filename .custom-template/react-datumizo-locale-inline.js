@@ -34,13 +34,13 @@ class ${1} extends Component {
   constructor(){
     super();
     this.state = {
-      title: () => LocaleX.Prase({
+      title: () => LocaleX.Parse({
         EN: "${2}",
         TC: "${3}"
       }),
       serverSidePagination: false, 
       base: {
-        title: () => LocaleX.Prase({
+        title: () => LocaleX.Parse({
           EN: "${2}",
           TC: "${3}"
         }),
@@ -73,16 +73,16 @@ class ${1} extends Component {
 
         operations: {
           Add: {
-            title: () => LocaleX.Prase({
+            title: () => LocaleX.Parse({
               EN: "Add ${2}",
               TC: "新增${3}"
             }),
             url: datalink.Request.Add,
-            success:  () => LocaleX.Prase({
+            success:  () => LocaleX.Parse({
               EN: "${2} Added Successfully",
               TC: "成功新增${3}"
             }),
-            fail:  () => LocaleX.Prase({
+            fail:  () => LocaleX.Parse({
               EN: "${2} Add Failed: ",
               TC: "新增${3}失敗: "
             }),
@@ -91,36 +91,36 @@ class ${1} extends Component {
             onSubmit: "Add"
           },
           Delete: {
-            title: () => LocaleX.Prase({
+            title: () => LocaleX.Parse({
               EN: "Delete this ${2}?",
               TC: "刪除${3}"
             }),
-            content: () => LocaleX.Prase({
+            content: () => LocaleX.Parse({
               EN: "Caution: This is irrevertable.",
               TC: "注意: 這操作不可逆轉"
             }),
             url: datalink.Request.Delete,
-            success: () => LocaleX.Prase({
+            success: () => LocaleX.Parse({
               EN: "${2} Deleted Successfully.",
               TC: "成功刪除${3}"
             }),
-            fail: () => LocaleX.Prase({
+            fail: () => LocaleX.Parse({
               EN: "${2} Delete Failed: ",
               TC: "刪除${3}失敗: "
             }),
             onSubmit: "Delete"
           },
           Edit: {
-            title: () => LocaleX.Prase({
+            title: () => LocaleX.Parse({
               EN: "Edit ${2}",
               TC: "編輯${3}"
             }),
             url: datalink.Request.Edit,
-            success: () => LocaleX.Prase({
+            success: () => LocaleX.Parse({
               EN: "${2} Edited Successfully",
               TC: "成功編輯${3}"
             }),
-            fail: () => LocaleX.Prase({
+            fail: () => LocaleX.Parse({
               EN: "${2} Edit Failed: ",
               TC: "編輯${3}失敗: "
             }),
@@ -129,16 +129,16 @@ class ${1} extends Component {
             onSubmit: "Edit"
           },
           Info: {
-            title: () => LocaleX.Prase({
+            title: () => LocaleX.Parse({
               EN: "${2}",
               TC: "${3}"
             }),
             url: datalink.Request.Info,
-            success: () => LocaleX.Prase({
+            success: () => LocaleX.Parse({
               EN: "${2} Load Successfully",
               TC: "成功載入${3}"
             }),
-            fail: () => LocaleX.Prase({
+            fail: () => LocaleX.Parse({
               EN: "${2} Load Failed: ",
               TC: "載入${3}失敗: "
             }),
@@ -146,33 +146,33 @@ class ${1} extends Component {
             readOnly: true
           },
           Duplicate: { //direct duplicate, for to Add, plz use func: "DuplicateAdd"
-            title: () => LocaleX.Prase({
+            title: () => LocaleX.Parse({
               EN: "Duplicate",
               TC: "複製"
             }),
             url: datalink.Request.Duplicate,
-            success: () => LocaleX.Prase({
+            success: () => LocaleX.Parse({
               EN: "${2} Duplicated Successfully.",
               TC: "成功複製${3}"
             }),
-            fail: () => LocaleX.Prase({
+            fail: () => LocaleX.Parse({
               EN: "${2} Duplicate Failed: ",
               TC: "複製${3}失敗: "
             }),
             onSubmit: "Duplicate"
           },
           Import: {
-            title: () => LocaleX.Prase({
+            title: () => LocaleX.Parse({
               EN: "Import ${2}s",
               TC: "導入${3}"
             }),
             content: "",
             url: datalink.Request.Import,
-            success: () => LocaleX.Prase({
+            success: () => LocaleX.Parse({
               EN: "${2}s Imported Successfully.",
               TC: "成功導入${3}"
             }),
-            fail: () => LocaleX.Prase({
+            fail: () => LocaleX.Parse({
               EN: "${2}s Import Failed: ",
               TC: "導入${3}失敗: "
             }),
@@ -184,20 +184,20 @@ class ${1} extends Component {
             schema: schema.Export,
           },
           DeleteBulk: {
-            title: (n) => LocaleX.Prase({
+            title: (n) => LocaleX.Parse({
               EN: "Delete these @n ${2}?",
               TC: "刪除這@n個${3}?"
             }, {n:n}),
-            content: () => LocaleX.Prase({
+            content: () => LocaleX.Parse({
               EN: "Caution: This is irrevertable.",
               TC: "注意: 這操作不可逆轉"
             }),
             url: datalink.Request.DeleteBulk,
-            success: () => LocaleX.Prase({
+            success: () => LocaleX.Parse({
               EN: "${2} Deleted Successfully.",
               TC: "成功刪除${3}"
             }),
-            fail: () => LocaleX.Prase({
+            fail: () => LocaleX.Parse({
               EN: "${2} Delete Failed: ",
               TC: "刪除${3}失敗: "
             }),
@@ -208,52 +208,52 @@ class ${1} extends Component {
         buttons: {
           inline: [
             { icon: "edit", func: "Edit", 
-              caption: () => LocaleX.Prase({
+              caption: () => LocaleX.Parse({
                 EN: "Edit",
                 TC: "編輯"
               }), 
               reqFunc: "Edit" },
             { icon: "info", func: "Info", 
-              caption: () => LocaleX.Prase({
+              caption: () => LocaleX.Parse({
                 EN: "Details",
                 TC: "詳細資料"
               })},
             { icon: "delete", func: "Delete", 
-              caption: () => LocaleX.Prase({
+              caption: () => LocaleX.Parse({
                 EN: "Delete",
                 TC: "刪除"
               }), reqFunc: "Delete" },
             //{ icon: "duplicate", func: "Duplicate", 
-            //  caption: () => LocaleX.Prase({
+            //  caption: () => LocaleX.Parse({
             //    EN: "Duplicate",
             //    TC: "複製"
             //  }), reqFunc: "Duplicate" },
             //{ icon: "duplicate", func: "DuplicateAdd", 
-            //  caption: () => LocaleX.Prase({
+            //  caption: () => LocaleX.Parse({
             //  EN: "Duplicate",
             //  TC: "複製"
             //}), reqFunc: "Duplicate" },
           ],
           left: [
             { icon: "add", func: "Add", 
-            caption: () => LocaleX.Prase({
+            caption: () => LocaleX.Parse({
               EN: "Add ${2}",
               TC: "新增${3}"
             }), reqFunc: "Add" }
           ],
           right: [
             { icon: "deletebulk", func: "DeleteBulk", 
-              caption: (n) => LocaleX.Prase({
+              caption: (n) => LocaleX.Parse({
                 EN: "Delete(@n)",
                 TC: "刪除(@n)"
               }, {n:n}), reqFunc: "Delete", theme: "caution" },
             //{ icon: "export", func: "Export", 
-            //  caption: (n) => LocaleX.Prase({
+            //  caption: (n) => LocaleX.Parse({
             //  EN: "Export(@n)",
             //  TC: "導出(@n)"
             //}, {n: n === 0? LocaleX.Get("__IZO.Datumizo.All") : n}), reqFunc: "Export" },
             //{ icon: "import", func: "Import", 
-            //  caption: () => LocaleX.Prase({
+            //  caption: () => LocaleX.Parse({
             //  EN: "Import",
             //  TC: "導入"
             // }), reqFunc: "Import" },
