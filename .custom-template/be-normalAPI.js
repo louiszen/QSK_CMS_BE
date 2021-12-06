@@ -20,7 +20,7 @@ const {Chalk, Response} = _base.Utils;
  */
 module.exports = async (_opt, _param, _username) => {
   
-  let db = _remote.BaseDB();
+  let db = await _remote.BaseDB();
   let dbname = _DBMAP[catName];
 
   let res = {Success: false, payload: {}};
