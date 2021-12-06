@@ -2,10 +2,6 @@
  * @type {sysconfig}
  */
 const doc = {
-  General: {
-    ID: "QSK",
-    Name: "Quick Starter Kit (Backend)"
-  },
   Server: {
     Port: 7777,
     UseHttps: false,
