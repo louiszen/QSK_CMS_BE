@@ -43,13 +43,18 @@ npm i
 
 ## **Config the program**
 
+### ***Define SYSGeneral***
+First you need to set a name and ID for your project. <br/>
+Please open [SYSGeneral.js](./__SYSDefault/SYSGeneral.js)
+
 ### ***Generate System Credentials*** & ***link up database***
-First you need to generate `SYSCredentials.js`. <br/>
+Then you need to generate `<projectID_in_lower_case>_SYSCredentials.js`. <br/>
 Please run:
 ```
   npm run credentials
 ```
-`SYSCredentials.js` will be generated at the root folder.
+For example, our project ID is `"QSK"`. <br/>
+`qsk_SYSCredentials.js` will be generated at the root folder.
 Please set minimal the `ENV`, `JWT.TokenSecret`, and the database credentials.
 
 If you have installed **CouchDB**,
@@ -127,7 +132,7 @@ The server entry app and the express routing is in `./IZOGears/app.js`
 | `remoteConfig.js` | The remote config is to get the database instance and other settings from database |
 | `SYSAPI.js` | Generated list of all available API from the system |
 | `SYSReqAuth.js` | Generated Control Setting Files for API Access |
-| `SYSCredentials.js` | Generated Credentials files for setting |
+| `*_SYSCredentials.js` | Generated Credentials files for setting |
 | `Version.js` | The project-wise Version sepcifier |
 ---
 
