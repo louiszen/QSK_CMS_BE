@@ -1,4 +1,5 @@
 /**
+ * Authority settings. Full authority of this project.
  * @type {sysauth}
  */
  const SYSAuth = {
