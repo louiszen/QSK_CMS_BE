@@ -1,7 +1,5 @@
 /**
- * 
- * @param {*} addOns 
- * @returns {[
+ * @type {[
  *  {
  *    label: String | (() => String),
  *    icon: String | JSX.Element | (() => String | JSX.Element)
@@ -16,12 +14,10 @@
  *  }
  * ]}}
  */
-const tabs = (addOns) => {
-  return [
-    {
-      
-    }
-  ];
-};
+const tabs = [
+  {
+    
+  }
+];
 
 export default tabs;
