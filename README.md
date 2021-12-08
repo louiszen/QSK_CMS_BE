@@ -79,6 +79,7 @@ The default settings should be connecting to http://localhost:5984
 | Folder & File | Description |
 | :--- | :--- |
 | `__DATA` | Data files for importing when project initialization. |
+| `_typedef` | Typedef files for database documents |
 | `APIConfig/bypass.js` | Bypass Authority Checking rules definition. |
 | `APIConfig/cores.js` | :exclamation: :exclamation: :exclamation: A JSObject that collects **ALL** the API |
 | `APIConfig/inits.js` | Classes / components used to be initialized at program start. |
