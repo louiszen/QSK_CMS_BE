@@ -11,15 +11,14 @@ const DEVUSER = {
   TelNo: "63460204",
   Version: 1,
   Level: 0,
-  Groups: ["*"],
+  Groups: [{
+    ID: "*",
+    Level: 0,
+    Role: "Devs",
+    override: {}
+  }],
   Role: "Devs",
-  authority: {
-    Dashboard: ["*"],
-    System: {
-      BnR: ["*"],
-      User: ["*"]
-    }
-  }
+  override: {}
 };
 
 module.exports = DEVUSER;
