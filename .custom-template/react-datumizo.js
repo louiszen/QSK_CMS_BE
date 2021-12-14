@@ -43,6 +43,7 @@ class ${1} extends Component {
 
         noDefaultTable: false,
         noDefaultButtons: false,
+        refreshButton: "none",
 
         tablizo: {
           columnsToolbar: true,
@@ -126,7 +127,7 @@ class ${1} extends Component {
             success: "${3} Deleted Successfully.",
             fail: "${3} Delete Failed: ",
             onSubmit: "DeleteBulk",
-          },
+          }
         },
 
         buttons: {

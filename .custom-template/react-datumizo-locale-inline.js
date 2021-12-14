@@ -50,6 +50,7 @@ class ${1} extends Component {
 
         noDefaultTable: false,
         noDefaultButtons: false,
+        refreshButton: "none",
 
         tablizo: {
           columnsToolbar: true,
@@ -251,7 +252,7 @@ class ${1} extends Component {
             //  caption: (n) => LocaleX.Parse({
             //  EN: "Export(@n)",
             //  TC: "導出(@n)"
-            //}, {n: n === 0? LocaleX.Get("__IZO.Datumizo.All") : n}), reqFunc: "Export" },
+            //}, {n: n === 0? LocaleX.GetIZO("Datumizo.All") : n}), reqFunc: "Export" },
             //{ icon: "import", func: "Import", 
             //  caption: () => LocaleX.Parse({
             //  EN: "Import",

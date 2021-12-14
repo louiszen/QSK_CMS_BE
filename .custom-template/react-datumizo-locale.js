@@ -44,6 +44,7 @@ class ${1} extends Component {
 
         noDefaultTable: false,
         noDefaultButtons: false,
+        refreshButton: "none",
 
         tablizo: {
           columnsToolbar: true,
@@ -143,7 +144,7 @@ class ${1} extends Component {
           ],
           right: [
             { icon: "deletebulk", func: "DeleteBulk", caption: (n) => LocaleX.Get("${2}.ButtonCaption.DeleteBulk", {n: n}), reqFunc: "Delete", theme: "caution" },
-            //{ icon: "export", func: "Export", caption: (n) => LocaleX.Get("${2}.ButtonCaption.Export", {n: n === 0? LocaleX.Get("__IZO.Datumizo.All") : n}), reqFunc: "Export" },
+            //{ icon: "export", func: "Export", caption: (n) => LocaleX.Get("${2}.ButtonCaption.Export", {n: n === 0? LocaleX.GetIZO("Datumizo.All") : n}), reqFunc: "Export" },
             //{ icon: "import", func: "Import", caption: () => LocaleX.Get("${2}.ButtonCaption.Import"), reqFunc: "Import" },
           ],
         },
