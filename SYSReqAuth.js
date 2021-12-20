@@ -114,6 +114,14 @@
         reqGroup: "",
         reqRole: ""
       }
+    },
+    Restore: {
+      RenewAuthority: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      }
     }
   },
   Config: {},

@@ -14,7 +14,8 @@ const doc = {
   },
   Authentication: {
     Method: ["Username-Password", "MSAL", "SMSOTP"],
-    TwoFactorExpires: 10
+    TwoFactorExpires: 10,
+    SeedChecking: false
   },
   Authorization: {
     Method: "JWT",

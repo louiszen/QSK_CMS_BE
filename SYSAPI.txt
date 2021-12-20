@@ -13,3 +13,4 @@ CommonAPI/BnR/Info
 CommonAPI/BnR/Backup
 CommonAPI/BnR/Restore
 CommonAPI/BnR/Delete
+CommonAPI/Restore/RenewAuthority

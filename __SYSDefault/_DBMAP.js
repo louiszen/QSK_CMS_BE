@@ -10,7 +10,8 @@
 const _DBMAP = {
   User: "user",
   Config: "config",
-  UserRole: "userrole"
+  UserRole: "userrole",
+  ResGroup: "resgroup",
 };
 
 module.exports = _DBMAP;
