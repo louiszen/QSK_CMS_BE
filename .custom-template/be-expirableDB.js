@@ -24,7 +24,7 @@ class ${1} extends ExpirableDB{
    * 
    * @param {*} doc 
    */
-   static async Write(doc){
+  static async Write(doc){
     await this.ReInit();
     
     try{
