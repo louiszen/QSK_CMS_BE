@@ -133,6 +133,8 @@ The server entry app and the express routing is in `./IZOGears/app.js`
 | `remoteConfig.js` | The remote config is to get the database instance and other settings from database |
 | `SYSAPI.js` | Generated list of all available API from the system |
 | `SYSReqAuth.js` | Generated Control Setting Files for API Access |
+| `SYSAuthCtrl.js` | Generated Control Setting Files for Authority Access Ctrl |
+| `SYSAPICtrl.js` | Generated Control Setting Files for API Access Ctrl |
 | `*_SYSCredentials.js` | Generated Credentials files for setting |
 | `Version.js` | The project-wise Version sepcifier |
 ---
