@@ -28,14 +28,18 @@ const doc = {
   },
   Init: {
     OnStart: true,
-    CleanDB: true
+    CleanDB: true,
+    Backup: true
+  },
+  SyncOnLoad: {
+    SysGAuth: true,
+    GAuth: false
   },
   BaseDB: {
     Provider: "CouchDB",
     Backup: {
       Include: "All"
     },
-    
   },
   Blob: {
     Provider: "Local",
@@ -49,7 +53,8 @@ const doc = {
   LogKeep: {
     Request: 7,
     SignIn: 7,
-    Gate: 12
+    Gate: 12,
+    Auth: 6
   }
 };
 

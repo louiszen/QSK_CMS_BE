@@ -14,7 +14,8 @@ const SYSAPI = [
   "CommonAPI/BnR/Backup",
   "CommonAPI/BnR/Restore",
   "CommonAPI/BnR/Delete",
-  "CommonAPI/Restore/RenewAuthority"
+  "CommonAPI/Restore/RenewAuthority",
+  "CommonAPI/Report/Bug"
 ];
 
 module.exports = SYSAPI;

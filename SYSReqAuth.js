@@ -122,6 +122,14 @@
         reqGroup: "",
         reqRole: ""
       }
+    },
+    Report: {
+      Bug: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      }
     }
   },
   Config: {},
