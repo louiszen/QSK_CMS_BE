@@ -132,6 +132,244 @@
       }
     }
   },
+  GAuth: {
+    PRole: {
+      Add: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      Delete: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      Edit: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      Info: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      List: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      }
+    },
+    PCtrl: {
+      Project: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      API: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      TreeNode: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      Role: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      RoleTreeNode: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      Group: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      GroupUser: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      User: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      UserGroupTreeNode: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      UserTreeNode: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      }
+    },
+    PGroup: {
+      Add: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      Delete: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      Edit: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      Info: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      List: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      AddGroupUser: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      DeleteGroupUser: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      EditGroupUser: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      }
+    },
+    PUser: {
+      Add: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      Delete: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      Edit: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      Info: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      List: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      AddResGroup: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      DeleteResGroup: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      }
+    },
+    PTicket: {
+      Info: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      List: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      Delete: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      Add: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      Edit: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      }
+    },
+    PAuthLog: {
+      List: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      }
+    },
+    Env: {
+      GetProjectDetails: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      }
+    }
+  },
   Config: {},
   Data: {},
   Tables: {},

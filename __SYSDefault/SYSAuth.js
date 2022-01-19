@@ -9,9 +9,12 @@
   AuthTree:{
     Dashboard: ["Submit", "Approve"],
     System: {
-      BnR: ["Add", "Edit", "Delete"],
-      User: ["Add", "Edit", "Delete"],
-    }
+      BnR: ["List", "Add", "Edit", "Delete"],
+      UAC: ["List", "Add", "Edit", "Delete"],
+      AuthLog: ["List"],
+      Tickets: ["List", "Add", "Edit", "Delete"],
+    },
+    BugReport: ["Submit"]
   }
 };
 

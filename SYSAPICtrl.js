@@ -14,7 +14,8 @@ const SYSAPICtrl = {
   "CommonAPI/BnR/Backup": true,
   "CommonAPI/BnR/Restore": true,
   "CommonAPI/BnR/Delete": true,
-  "CommonAPI/Restore/RenewAuthority": true
+  "CommonAPI/Restore/RenewAuthority": true,
+  "CommonAPI/Report/Bug": true
 };
 
 module.exports = SYSAPICtrl;

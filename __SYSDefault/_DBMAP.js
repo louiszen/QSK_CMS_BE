@@ -1,3 +1,5 @@
+const _DBMAP_IZO = require("../IZOGears/_CoreWheels/_DBMAP_IZO");
+
 /**
  * keys start with _ OR end with $ 
  * will NOT automatically create on initialization
@@ -8,10 +10,7 @@
  * @type {Object.<string, String>}
  */
 const _DBMAP = {
-  User: "user",
-  Config: "config",
-  UserRole: "userrole",
-  ResGroup: "resgroup",
+  ..._DBMAP_IZO
 };
 
 module.exports = _DBMAP;
