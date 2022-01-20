@@ -14,9 +14,9 @@
         General: ["View", "Edit"],
         API: ["View", "Edit"],
         AuthTree: ["View", "Edit"],
-        Roles: ["View", "Edit", "Add", "Delete", "TreeView", "TreeEdit"],
-        Groups: ["View", "Edit", "Add", "Delete", "TreeView", "TreeEdit"],
-        Users: ["View", "Edit", "Add", "Delete", "TreeView", "TreeEdit"]
+        Roles: ["View", "Terminate", "Edit", "Add", "Delete", "TreeView", "TreeEdit"],
+        Groups: ["View", "Terminate", "Edit", "Add", "Delete", "TreeView", "TreeEdit"],
+        Users: ["View", "Terminate", "Edit", "Add", "Delete", "TreeView", "TreeEdit"]
       },
       AuthLog: ["List"],
       Tickets: ["List", "Add", "Edit", "Delete"],
