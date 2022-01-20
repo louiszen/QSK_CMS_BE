@@ -10,7 +10,7 @@ import datalink from "./datalink";
 
 import Datumizo from "IZOArc/LabIZO/Datumizo/Datumizo";
 import { VStack } from "IZOArc/LabIZO/Stackizo";
-import { Accessor, ColorX, Authority, STORE, LocaleX } from "IZOArc/STATIC";
+import { Accessor, ColorX, AuthX, STORE, LocaleX } from "IZOArc/STATIC";
 import { IZOTheme } from "__SYSDefault/Theme";
 import { Denied } from "IZOArc/Fallback";
 
@@ -184,7 +184,7 @@ class ${1} extends Component {
   render(){
     let {addOns, onDataChange} = this.props;
     let {base, serverSidePagination, title} = this.state;
-    if(!Authority.IsAccessibleQ("${4}")) return <Denied/>;
+    if(!AuthX.IsAccessibleQ("${4}")) return <Denied/>;
     
     let pageTitle = title;
     if(_.isFunction(title)){

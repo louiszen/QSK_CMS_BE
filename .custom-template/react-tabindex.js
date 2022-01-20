@@ -5,7 +5,7 @@ import { Box, Paper, Tab, Tabs, Typography } from "@mui/material";
 
 import tabs from "./tabs";
 
-import { Accessor, Authority } from "IZOArc/STATIC";
+import { Accessor, AuthX } from "IZOArc/STATIC";
 import { VStack, HStack, Spacer } from "IZOArc/LabIZO/Stackizo";
 import { Denied } from "IZOArc/Fallback";
 
@@ -101,7 +101,7 @@ class ${1} extends Component {
 
   renderTabButtons(){
     return _.map(tabs, (o, i) => {
-      if(Authority.IsAccessibleQ(o.reqAuth, o.reqLevel, o.reqFunc, o.reqGroup, o.reqRole)){
+      if(AuthX.IsAccessibleQ(o.reqAuth, o.reqLevel, o.reqFunc, o.reqGroup, o.reqRole)){
         let label = _.isFunction(o.label)? o.label() : o.label;
         let icon = o.icon;
         if(o.noTransform){
@@ -137,7 +137,7 @@ class ${1} extends Component {
 
   render(){
     let {selectedTab} = this.state;
-    if(!Authority.IsAccessibleQ("${2}")) return <Denied/>;
+    if(!AuthX.IsAccessibleQ("${2}")) return <Denied/>;
     return (
       <VStack width="100%" height="100%">
         <Paper position="static" style={{width: "100%"}}>
