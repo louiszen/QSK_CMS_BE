@@ -296,7 +296,7 @@ class ${1} extends Component {
   render(){
     let {addOns, onDataChange} = this.props;
     let {base, serverSidePagination, title} = this.state;
-    if(!AuthX.IsAccessibleQ("${5}")) return <Denied/>;
+    if(!AuthX.Pass("${5}")) return <Denied/>;
     
     let pageTitle = title;
     if(_.isFunction(title)){

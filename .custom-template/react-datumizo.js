@@ -183,7 +183,7 @@ class ${1} extends Component {
   render(){
     let {addOns, onDataChange} = this.props;
     let {base, serverSidePagination, title} = this.state;
-    if(!AuthX.IsAccessibleQ("${5}")) return <Denied/>;
+    if(!AuthX.Pass("${5}")) return <Denied/>;
     return (
       <VStack>
         <Box padding={1} width="100%">

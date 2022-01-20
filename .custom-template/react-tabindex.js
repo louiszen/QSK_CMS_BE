@@ -101,7 +101,7 @@ class ${1} extends Component {
 
   renderTabButtons(){
     return _.map(tabs, (o, i) => {
-      if(AuthX.IsAccessibleQ(o.reqAuth, o.reqLevel, o.reqFunc, o.reqGroup, o.reqRole)){
+      if(AuthX.Pass(o.reqAuth, o.reqLevel, o.reqFunc, o.reqGroup, o.reqRole)){
         let label = _.isFunction(o.label)? o.label() : o.label;
         let icon = o.icon;
         if(o.noTransform){
@@ -137,7 +137,7 @@ class ${1} extends Component {
 
   render(){
     let {selectedTab} = this.state;
-    if(!AuthX.IsAccessibleQ("${2}")) return <Denied/>;
+    if(!AuthX.Pass("${2}")) return <Denied/>;
     return (
       <VStack width="100%" height="100%">
         <Paper position="static" style={{width: "100%"}}>
