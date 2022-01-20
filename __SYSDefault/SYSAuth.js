@@ -9,7 +9,7 @@
   AuthTree:{
     Dashboard: ["Submit", "Approve"],
     System: {
-      BnR: ["List", "Add", "Edit", "Delete"],
+      BnR: ["Database", "Backup", "Restore", "Delete"],
       UAC: {
         General: ["View", "Edit"],
         API: ["View", "Edit"],
