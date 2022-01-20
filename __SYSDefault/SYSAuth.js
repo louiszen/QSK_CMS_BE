@@ -14,14 +14,14 @@
         General: ["View"],
         API: ["View", "Edit"],
         AuthTree: ["View", "Edit"],
-        Roles: ["View", "Edit", "Add", "Delete"],
-        Groups: ["View", "Edit", "Add", "Delete"],
-        Users: ["View", "Edit", "Add", "Delete"]
+        Roles: ["View", "Edit", "Add", "Delete", "TreeView", "TreeEdit"],
+        Groups: ["View", "Edit", "Add", "Delete", "TreeView", "TreeEdit"],
+        Users: ["View", "Edit", "Add", "Delete", "TreeView", "TreeEdit"]
       },
       AuthLog: ["List"],
       Tickets: ["List", "Add", "Edit", "Delete"],
     },
-    BugReport: ["Submit"]
+    BugReport: ["Submit"],
   }
 };
 
