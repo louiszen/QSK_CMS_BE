@@ -1,0 +1,1 @@
+console.log(Chalk.CLog("${1}", "${2}", [cat, subcat, action]));

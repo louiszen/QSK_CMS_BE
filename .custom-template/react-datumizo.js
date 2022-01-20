@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropsType from "prop-types";
 import { observer } from "mobx-react";
 
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography } from "@mui/material";
 
 import schema from "./schema";
 import datalink from "./datalink";
@@ -38,12 +38,15 @@ class ${1} extends Component {
       base: {
         title: "${2}",
         exportDoc: "${4}",
+        rowIdAccessor: "_id",
         schema: schema,
         reqAuth: "${5}",
 
         noDefaultTable: false,
         noDefaultButtons: false,
         refreshButton: "none",
+        usePropsData: false,
+        timeRanged: "none",
 
         tablizo: {
           columnsToolbar: true,
@@ -56,7 +59,7 @@ class ${1} extends Component {
         },
 
         formizo: {
-
+          width: 700
         },
 
         Connect: {

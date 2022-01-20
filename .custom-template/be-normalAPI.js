@@ -17,13 +17,12 @@ const {Chalk, Response} = _base.Utils;
 module.exports = async (_opt, _param, _username) => {
 
   let rtn = {};
+  let {data, addOns} = _opt;
+  let {cat, subcat, action} = _param;
 
-  console.log(Chalk.CLog("[-]", "<MESSAGE>", [_param.cat, _param.subcat]));
+  let db = await _remote.BaseDB();
 
-  if(!res.Success){
-    let msg = res.payload.Message;
-    console.log(Chalk.CLog("[!]", msg, [_param.cat, _param.subcat]));
-  }
+  console.log(Chalk.CLog("[-]", "<MESSAGE>", [cat, subcat, action]));
 
   return Response.Send(true, rtn, "");
 

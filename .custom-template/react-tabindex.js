@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import _ from "lodash";
-import { Box, Paper, Tab, Tabs, Typography } from "@material-ui/core";
+import { Box, Paper, Tab, Tabs, Typography } from "@mui/material";
 
 import tabs from "./tabs";
 

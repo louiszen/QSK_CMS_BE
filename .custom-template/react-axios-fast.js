@@ -1,5 +1,5 @@
 let { addOns } = this.props;
-let reqPath = "${1}"
+let reqPath = "${1}";
 let url = DOMAIN + reqPath;
 let payloadOut = {
   JWT: STORE.user.JWT,
