@@ -16,7 +16,7 @@
         AuthTree: ["View", "Edit"],
         Roles: ["View", "Terminate", "Edit", "Add", "Delete", "TreeView", "TreeEdit"],
         Groups: ["View", "Terminate", "Edit", "Add", "Delete", 
-          "UserView", "UserAdd", "UserEdit", "UserDelete"],
+          "UserView", "UserTerminate", "UserAdd", "UserEdit", "UserDelete"],
         Users: ["View", "Terminate", "Edit", "Add", "Delete", 
           "TreeView", "TreeEdit", "GroupView", "GroupAdd", "GroupEdit", "GroupDelete"]
       },
