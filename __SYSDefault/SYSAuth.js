@@ -11,7 +11,7 @@
     System: {
       BnR: ["List", "Add", "Edit", "Delete"],
       UAC: {
-        General: ["View"],
+        General: ["View", "Edit"],
         API: ["View", "Edit"],
         AuthTree: ["View", "Edit"],
         Roles: ["View", "Edit", "Add", "Delete", "TreeView", "TreeEdit"],
