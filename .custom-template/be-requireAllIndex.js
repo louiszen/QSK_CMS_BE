@@ -1,10 +1,10 @@
 const path = require("path");
 const _ = require("lodash");
-const { Fs } = require("../../../../IZOGears/_CoreWheels/Utils");
+const fs = require("fs");
 
 module.exports = async () => {
   let link = __dirname;
-  let files = await Fs.readdir(link);
+  let files = await fs.promises.readdir(link);
   let docs = [];
   _.map(files, (o, i) => {
     if(o === "index.js") return;

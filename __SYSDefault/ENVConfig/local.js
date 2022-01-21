@@ -35,6 +35,11 @@ const doc = {
     SysGAuth: true,
     GAuth: false
   },
+  RecoverDBOnLoad: {
+    Check: true,
+    Create: true,
+    InitDocs: true
+  },
   BaseDB: {
     Provider: "CouchDB",
     Backup: {
