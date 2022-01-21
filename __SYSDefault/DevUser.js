@@ -14,8 +14,6 @@ const DEVUSER = {
   Level: 0,
   Groups: [{
     ID: "J0000",
-    Level: 0,
-    Role: "Devs",
     override: {}
   }],
   Role: "Devs",
