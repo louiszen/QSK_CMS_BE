@@ -13,7 +13,7 @@ const DEVUSER = {
   Version: 1,
   Level: 0,
   Groups: [{
-    ID: "DevResGroup",
+    ID: "J0000",
     Level: 0,
     Role: "Devs",
     override: {}
