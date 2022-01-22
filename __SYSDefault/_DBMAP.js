@@ -6,9 +6,6 @@ const _DBMAP_IZO = require("../IZOGears/_CoreWheels/_DBMAP_IZO");
  * which are used for combination or runtime purpose.
  */
 
-/**
- * @type {Object.<string, String>}
- */
 const _DBMAP = {
   ..._DBMAP_IZO
 };
