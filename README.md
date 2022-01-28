@@ -151,7 +151,9 @@ The server entry app and the express routing is in `./IZOGears/app.js`
   "lint": "eslint --fix --ext .js,.jsx .",
   "genpipes": "node IZOGears/__CodeGen/AzurePipelines.js",
   "auth": "node IZOGears/__CodeGen/APIReqAuth.js",
-  "credentials": "node IZOGears/__CodeGen/Credentials.js"
+  "credentials": "node IZOGears/__CodeGen/Credentials.js",
+  "cpfiles": "node IZOGears/__CodeGen/CPFiles.js",
+  "updatecp": "node IZOGears/__CodeGen/UpdateCPFiles.js"
 },
 ```
 
@@ -251,3 +253,15 @@ npm run genpipes
 
 ## **Git Submodules**
 Project is linked to [IZOGears](https://github.com/louiszen/IZOGears)
+
+## **.vscode & .customtemplate**
+When you want to copy from IZOGears:
+
+```
+  npm run cpfiles
+```
+
+When you want to update IZOGears:
+```
+  npm run updatecp
+```

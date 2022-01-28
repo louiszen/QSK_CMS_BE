@@ -12,13 +12,16 @@
     "docker": "docker build --pull --rm -f \"Dockerfile\" -t qsk:latest \".\" && docker rmi $(docker images -f \"dangling=true\" -q)",
     "genpipes": "node IZOGears/__CodeGen/AzurePipelines.js",
     "auth": "node IZOGears/__CodeGen/APIReqAuth.js",
-    "credentials": "node IZOGears/__CodeGen/Credentials.js"
+    "credentials": "node IZOGears/__CodeGen/Credentials.js",
+    "cpfiles": "node IZOGears/__CodeGen/CPFiles.js",
+    "updatecp": "node IZOGears/__CodeGen/UpdateCPFiles.js"
   },
   "author": "Louiszen",
   "license": "ISC",
   "dependencies": {
     "@babel/eslint-parser": "^7.16.3",
     "@cloudant/cloudant": "^4.5.1",
+    "applicationinsights": "^2.2.0",
     "axios": "^0.24.0",
     "cors": "^2.8.5",
     "cron": "^1.8.2",
