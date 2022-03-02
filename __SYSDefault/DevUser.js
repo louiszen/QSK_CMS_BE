@@ -1,4 +1,4 @@
-const { ZHash } = require("../IZOGears/_CoreWheels/Utils");
+const ZHash = require("../IZOGears/COGS/ZGate/ZHash");
 
 /**
  * @type {sysuser}

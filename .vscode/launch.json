@@ -11,9 +11,16 @@
       "program": "${workspaceFolder}/IZOGears/server.js",
       "env": {
         "NODE_ENV": "local",
-        "SERVER_PORT": "7777"
-      }
+        "SERVER_PORT": "7777",
+      },
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**/*.js",
+        "${workspaceFolder}\\node_modules\\**\\*.js",
+        "<node_internals>/**/*.js",
+        "<node_internals>\\**\\*.js"
+      ]
     }
   ],
+  
   "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"]
 }

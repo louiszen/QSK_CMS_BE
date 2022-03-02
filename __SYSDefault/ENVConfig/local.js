@@ -1,5 +1,5 @@
 /**
- * @type {sysconfig}
+ * @type {import("../../IZOGears/__Typedef/SYSConfig").sysconfig}
  */
 const doc = {
   Server: {
@@ -60,6 +60,9 @@ const doc = {
     SignIn: 7,
     Gate: 12,
     Auth: 6
+  },
+  Extra: {
+    ApplicationInsights: false
   }
 };
 

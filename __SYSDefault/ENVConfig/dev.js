@@ -1,7 +1,7 @@
 const local = require("./local");
 
 /**
- * @type {sysconfig}
+ * @type {import("../../IZOGears/__Typedef/SYSConfig").sysconfig}
  */
  const doc = {
   ...local,

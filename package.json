@@ -19,6 +19,7 @@
   "author": "Louiszen",
   "license": "ISC",
   "dependencies": {
+    "@azure/storage-blob": "^12.8.0",
     "@babel/eslint-parser": "^7.16.3",
     "@cloudant/cloudant": "^4.5.1",
     "applicationinsights": "^2.2.0",

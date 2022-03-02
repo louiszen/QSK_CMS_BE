@@ -1,5 +1,15 @@
-const DBDocs = require("./DBDocs");
+const path = require("path");
+const _ = require("lodash");
+const fs = require("fs");
 
-module.exports = {
-  DBDocs
+module.exports = async () => {
+  let link = __dirname;
+  let files = await fs.promises.readdir(link);
+  let docs = [];
+  _.map(files, (o, i) => {
+    if(o === "index.js" || o.startsWith("_")) return;
+    o = path.basename(o);
+    docs.push(require("./" + o));
+  });
+  return docs;
 };
