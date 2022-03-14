@@ -258,7 +258,7 @@ Project is linked to [IZOGears](https://github.com/louiszen/IZOGears)
 When you want to copy from IZOGears:
 
 ```
-  npm run cpfiles
+  npm run cpfiles85555555555555555555555555
 ```
 
 When you want to update IZOGears:
