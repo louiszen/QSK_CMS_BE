@@ -16,6 +16,8 @@ const SYSAPICtrl = {
   "CommonAPI/BnR/Delete": true,
   "CommonAPI/Restore/RenewAuthority": true,
   "CommonAPI/Report/Bug": true,
+  "CommonAPI/DANGER/DeleteINITIALIZED": true,
+  "CommonAPI/DANGER/GetOTP": true,
   "GAuth/PRole/Add": true,
   "GAuth/PRole/Delete": true,
   "GAuth/PRole/Edit": true,
@@ -31,6 +33,7 @@ const SYSAPICtrl = {
   "GAuth/PCtrl/User": true,
   "GAuth/PCtrl/UserGroupTreeNode": true,
   "GAuth/PCtrl/UserTreeNode": true,
+  "GAuth/PCtrl/Company": true,
   "GAuth/PGroup/Add": true,
   "GAuth/PGroup/Delete": true,
   "GAuth/PGroup/Edit": true,
@@ -52,6 +55,7 @@ const SYSAPICtrl = {
   "GAuth/PTicket/Add": true,
   "GAuth/PTicket/Edit": true,
   "GAuth/PAuthLog/List": true,
+  "GAuth/PCompany/List": true,
   "GAuth/Env/GetProjectDetails": true
 };
 

@@ -16,6 +16,8 @@ const SYSAPI = [
   "CommonAPI/BnR/Delete",
   "CommonAPI/Restore/RenewAuthority",
   "CommonAPI/Report/Bug",
+  "CommonAPI/DANGER/DeleteINITIALIZED",
+  "CommonAPI/DANGER/GetOTP",
   "GAuth/PRole/Add",
   "GAuth/PRole/Delete",
   "GAuth/PRole/Edit",
@@ -31,6 +33,7 @@ const SYSAPI = [
   "GAuth/PCtrl/User",
   "GAuth/PCtrl/UserGroupTreeNode",
   "GAuth/PCtrl/UserTreeNode",
+  "GAuth/PCtrl/Company",
   "GAuth/PGroup/Add",
   "GAuth/PGroup/Delete",
   "GAuth/PGroup/Edit",
@@ -52,6 +55,7 @@ const SYSAPI = [
   "GAuth/PTicket/Add",
   "GAuth/PTicket/Edit",
   "GAuth/PAuthLog/List",
+  "GAuth/PCompany/List",
   "GAuth/Env/GetProjectDetails"
 ];
 

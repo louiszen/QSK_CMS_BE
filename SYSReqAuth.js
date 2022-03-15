@@ -130,6 +130,20 @@
         reqGroup: "",
         reqRole: ""
       }
+    },
+    DANGER: {
+      DeleteINITIALIZED: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      GetOTP: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      }
     }
   },
   GAuth: {
@@ -221,6 +235,12 @@
         reqRole: ""
       },
       UserTreeNode: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      },
+      Company: {
         reqAuth: "",
         reqFunc: "",
         reqGroup: "",
@@ -354,6 +374,14 @@
       }
     },
     PAuthLog: {
+      List: {
+        reqAuth: "",
+        reqFunc: "",
+        reqGroup: "",
+        reqRole: ""
+      }
+    },
+    PCompany: {
       List: {
         reqAuth: "",
         reqFunc: "",
